@@ -4,6 +4,7 @@
 [![USD](https://img.shields.io/badge/USD-OpenUSD-green.svg)](https://openusd.org/)
 [![Isaac Sim](https://img.shields.io/badge/Isaac%20Sim-PhysX-nvidia.svg)](https://developer.nvidia.com/isaac-sim)
 [![Dependency Manager](https://img.shields.io/badge/dependency_manager-uv-purple.svg)](https://github.com/astral-sh/uv)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
 AutoTom Digital Twin turns a tomato plant skeleton into an articulated
 OpenUSD plant for NVIDIA Isaac Sim: rigid links joined by bending joints,
@@ -177,3 +178,13 @@ whose models are learned from the tomato leaflet photos of Chitwood et al. (2013
 [Zenodo, CC BY 4.0](https://zenodo.org/records/19656245)) for outlines and veins, and
 from the Pheno4D scans (Schunck et al. 2021) for the bend. Please cite them as well when
 you use the leaflets. The branch Young's modulus (50.64 MPa) is from Gao et al. (2024).
+
+## Licence
+
+- **Code**: [MIT](LICENSE).
+- **Baked leaflets** (`assets/leaves/default/`) and **renders** (`docs/images/`):
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); see
+  [`assets/leaves/default/LICENSE.md`](assets/leaves/default/LICENSE.md) and
+  [`docs/images/LICENSE.md`](docs/images/LICENSE.md). When you reuse them, credit
+  this repository, Chitwood et al. ([Zenodo](https://doi.org/10.5281/zenodo.19656245),
+  CC BY 4.0) and Pheno4D (Schunck et al. 2021).

@@ -4,6 +4,8 @@ version = "0.1.0"
 description = "Turn a tomato plant skeleton into an articulated OpenUSD plant for NVIDIA Isaac Sim"
 readme = "README.md"
 requires-python = ">=3.14"
+license = "MIT"
+license-files = ["LICENSE"]
 dependencies = [
     "numpy>=2.4.0",
     "pandas>=3.0.3",  # only the CSV fixture builder of the joint-optimizer tests
