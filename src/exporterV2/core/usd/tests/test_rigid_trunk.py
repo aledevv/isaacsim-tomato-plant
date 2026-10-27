@@ -17,7 +17,7 @@ if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
 from exporterV2.core.usd import stage as stage_module
-from exporterV2.legacy_csv.parser import parse_csv_to_branches
+from exporterV2.tests.legacy_csv.parser import parse_csv_to_branches
 
 
 def _trunk(joint_type=None):

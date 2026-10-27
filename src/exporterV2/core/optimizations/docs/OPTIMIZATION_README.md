@@ -4,28 +4,7 @@
 
 ## 📚 Available Documentation
 
-### 1. [7_Comprehensive_Optimization_Report.md](./notion_pages/7_Comprehensive_Optimization_Report.md)
-**Contents**: The exhaustive technical report, describing architecture, algorithms, and empirical results.
-
-**When to use it**:
-- Citing the optimizer in a report or paper
-- Deep-dive technical understanding of the entire pipeline
-- Results analysis (Day 100 benchmark)
-- Study of implementation trade-offs
-
----
-
-### 2. [RESEARCH_VALIDATION.md](./RESEARCH_VALIDATION.md)
-**Contents**: Research background and validation context for the joint-budget approach.
-
-**When to use it**:
-- Grounding the optimizer in related LOD and model-reduction literature
-- Explaining why a joint budget is needed for Isaac Sim/PhysX
-- Supporting a report or paper discussion
-
----
-
-### 3. [OPTIMIZATION_QUICK_START.md](./OPTIMIZATION_QUICK_START.md)
+### 1. [OPTIMIZATION_QUICK_START.md](./OPTIMIZATION_QUICK_START.md)
 **Contents**: Quick reference guide to get started, usage examples, configuration, and troubleshooting.
 
 **When to use it**:
@@ -36,7 +15,7 @@
 
 ---
 
-### 4. This File (README)
+### 2. This File (README)
 **Contents**: General overview and documentation index.
 
 ---
@@ -46,8 +25,6 @@
 | Goal... | Go to... |
 |-----------|----------|
 | Get started using the system | [Quick Start](./OPTIMIZATION_QUICK_START.md) |
-| Read Technical Paper / Thesis Report | [Comprehensive Report](./notion_pages/7_Comprehensive_Optimization_Report.md) |
-| Research background | [Research Validation](./RESEARCH_VALIDATION.md) |
 | V2 implementation notes | [Exporter V2 Implementation Notes](../../../docs/07_implementation_notes.md) |
 | Troubleshooting | [Quick Start](./OPTIMIZATION_QUICK_START.md#common-issues--solutions) |
 | Configure budget | [Quick Start](./OPTIMIZATION_QUICK_START.md#configuration-quick-ref) |
@@ -78,7 +55,6 @@ An incremental optimization system that applies 5 LOD-based techniques ordered b
 - ✅ **Extensible**: Plugin architecture for new techniques
 
 ### Validation
-- **Research-backed**: Approach validated by LOD/MOR literature (see `Research_Joint-Budget Optimization for USD Tomato Plant Exporter Approach Validation and SOTA Review.md`)
 - **Industry standard**: Two-stage broad-phase collision detection (Sphere + AABB)
 
 ---
@@ -87,9 +63,8 @@ An incremental optimization system that applies 5 LOD-based techniques ordered b
 
 ### For Developers & Researchers
 
-1. **Read** [Comprehensive Report](./notion_pages/7_Comprehensive_Optimization_Report.md) for technical details and algorithms.
-2. **Consult** [Research Validation](./RESEARCH_VALIDATION.md) and [Exporter V2 Implementation Notes](../../../docs/07_implementation_notes.md) for background and current engineering decisions.
-3. **Use** [Quick Start](./OPTIMIZATION_QUICK_START.md) for quick references on running tests and configuring the environment.
+1. **Consult** [Exporter V2 Implementation Notes](../../../docs/07_implementation_notes.md) for current engineering decisions.
+2. **Use** [Quick Start](./OPTIMIZATION_QUICK_START.md) for quick references on running tests and configuring the environment.
 
 ### For Users
 
@@ -114,7 +89,6 @@ See [Quick Start](./OPTIMIZATION_QUICK_START.md) for full examples.
 ## 📊 Project Status
 
 ✅ **Project Completed**: All phases (Infrastructure, Techniques, Integration, and Visual Validation) have been successfully implemented, tested, and documented.
-See [Comprehensive Report](./notion_pages/7_Comprehensive_Optimization_Report.md) for results.
 
 ---
 
@@ -135,8 +109,6 @@ Optimized Branches Config
 build_stage() → USD Export
 ```
 
-See [Comprehensive Report](./notion_pages/7_Comprehensive_Optimization_Report.md) for architecture details.
-
 ---
 
 ## 📝 Notes
@@ -151,7 +123,6 @@ See [Comprehensive Report](./notion_pages/7_Comprehensive_Optimization_Report.md
 
 ## 🔗 Related Documentation
 
-- **Research Background**: `Research_Joint-Budget Optimization for USD Tomato Plant Exporter Approach Validation and SOTA Review.md`
 - **Collision Recommendation**: `collision_check_recommendation.md`
 - **Tree Config**: `../core/tree_config.py`
 - **USD Stage Builder**: `../core/usd/stage.py`

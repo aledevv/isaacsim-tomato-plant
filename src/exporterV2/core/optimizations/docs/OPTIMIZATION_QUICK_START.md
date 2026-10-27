@@ -6,9 +6,8 @@
 
 ### 1. Key Documents
 
-1. **[7_Comprehensive_Optimization_Report.md](./notion_pages/7_Comprehensive_Optimization_Report.md)** - Exhaustive technical report
-2. **[OPTIMIZATION_README.md](./OPTIMIZATION_README.md)** - Overview and documentation index
-3. **This file** - Quick reference for usage, configuration, and troubleshooting
+1. **[OPTIMIZATION_README.md](./OPTIMIZATION_README.md)** - Overview and documentation index
+2. **This file** - Quick reference for usage, configuration, and troubleshooting
 
 ---
 
@@ -90,9 +89,7 @@ exporterV2/core/optimizations/
 │
 └── docs/
     ├── OPTIMIZATION_README.md  # Main documentation index
-    ├── OPTIMIZATION_QUICK_START.md # Quick reference guide
-    ├── RESEARCH_VALIDATION.md  # Academic & research background
-    └── notion_pages/           # Detailed pages (1-7)
+    └── OPTIMIZATION_QUICK_START.md # Quick reference guide
 ```
 
 ---

@@ -1,10 +1,13 @@
 from __future__ import annotations
 
 import pytest
+import yaml
 
 from exporterV2.config import (
     DEFAULT_PHYSICS,
+    DEFAULT_PHYSICS_PATH,
     DEFAULT_VISUALS,
+    DEFAULT_VISUALS_PATH,
     ConfigError,
     load_physics_config,
     load_visuals_config,
@@ -16,10 +19,22 @@ from plant_skeleton import load_skeleton
 from exporterV2.cli import DEFAULT_INPUT_PATH
 
 
-def test_commented_files_match_the_built_in_defaults():
-    # config/*.yaml document every option; they must not drift from the code.
-    assert load_physics_config().values == DEFAULT_PHYSICS
-    assert load_visuals_config().values == DEFAULT_VISUALS
+def _keys(values, prefix=""):
+    """Every nested key path of a settings dictionary."""
+    keys = set()
+    for key, value in values.items():
+        keys.add(prefix + key)
+        if isinstance(value, dict):
+            keys |= _keys(value, prefix + key + ".")
+    return keys
+
+
+def test_commented_files_have_the_built_in_keys():
+    # config/*.yaml document every option; their keys must not drift from the
+    # code. Values may differ: users edit them.
+    # The raw files are compared: loading fills missing keys from the defaults.
+    assert _keys(yaml.safe_load(DEFAULT_PHYSICS_PATH.read_text())) == _keys(DEFAULT_PHYSICS)
+    assert _keys(yaml.safe_load(DEFAULT_VISUALS_PATH.read_text())) == _keys(DEFAULT_VISUALS)
 
 
 def test_missing_file_means_defaults(tmp_path):

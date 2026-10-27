@@ -3,11 +3,9 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import math
 import os
-import signal
 from pathlib import Path
 import sys
 import time
@@ -18,8 +16,6 @@ def _arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--usd", type=Path, required=True)
     parser.add_argument("--headless", action="store_true")
-    parser.add_argument("--gui-until-close", action="store_true")
-    parser.add_argument("--disable-native-observer", action="store_true")
     parser.add_argument("--duration", type=float, default=5.0)
     parser.add_argument("--physics-preset", choices=("locked", "flexible"), required=True)
     parser.add_argument("--physics-hz", type=int, choices=(60, 120, 240, 480, 960), default=480)
@@ -32,11 +28,7 @@ def _arguments() -> argparse.Namespace:
     )
     parser.add_argument("--report", type=Path)
     parser.add_argument("--diagnostic-monitor", action="store_true")
-    parser.add_argument("--fruit-experiment", type=Path,
-                        help="Opt-in configuration for shared headless/GUI fruit diagnostics")
     args, kit_args = parser.parse_known_args()
-    if args.gui_until_close and (args.headless or not args.fruit_experiment):
-        parser.error("--gui-until-close requires GUI and --fruit-experiment")
     if args.duration <= 0.0:
         parser.error("--duration must be positive")
     # Kit also owns --usd; prevent a bootstrap open followed by a second open.
@@ -796,50 +788,14 @@ def main() -> int:
     if not usd_path.is_file():
         print(f"[ERROR] USD stage does not exist: {usd_path}", file=sys.stderr)
         return 2
-    experiment_config = None
-    if args.fruit_experiment:
-        experiment_config = json.loads(args.fruit_experiment.read_text())
-        if experiment_config.get('experimental_truss_preset') and args.fruit_experiment.name.endswith('.standard.json'):
-            import tempfile
-            evidence_root = usd_path.parent / (usd_path.stem + '-runs')
-            evidence_root.mkdir(parents=True, exist_ok=True)
-            experiment_config['run_dir'] = tempfile.mkdtemp(prefix='run-', dir=evidence_root)
-            experiment_config['duration'] = args.duration
-            Path(experiment_config['run_dir'], 'config.json').write_text(json.dumps(experiment_config, indent=2)+'\n')
-        if hashlib.sha256(usd_path.read_bytes()).hexdigest() != experiment_config["scene_sha256"]:
-            raise ValueError("fruit experiment USD does not match its recorded SHA-256")
-        previous_report = Path(experiment_config["run_dir"]) / ("report.json" if args.headless else "gui-report.json")
-        if previous_report.exists():
-            raise ValueError(f"refusing to overwrite previous fruit experiment: {previous_report}")
-
-    args.gui_watchdog = None
-    if args.gui_until_close:
-        sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-        from exporterV2.gui_watchdog import GuiWatchdog
-        args.gui_watchdog = GuiWatchdog(experiment_config["run_dir"])
-    if args.disable_native_observer and experiment_config:
-        experiment_config["record_native_mouse"] = False
     from isaacsim import SimulationApp
 
-    if args.fruit_experiment:
-        # Small plant scenes suffer from dispatch overhead with the machine-wide
-        # worker count. Apply the same bounded pool to every experimental case.
-        sys.argv.append("--/plugins/carb.tasking.plugin/threadCount=4")
-    app = SimulationApp({"headless": args.headless, "fast_shutdown": not bool(args.fruit_experiment)})
-    if args.gui_until_close:
-        args.gui_interrupt_requested = False
-        def request_interrupt(signum, frame):
-            args.gui_interrupt_requested = True
-        signal.signal(signal.SIGINT, request_interrupt)
+    app = SimulationApp({"headless": args.headless, "fast_shutdown": True})
     try:
         import omni.usd
         from isaacsim.core.api import World
         from isaacsim.core.utils.stage import is_stage_loading
 
-        if args.fruit_experiment:
-            import carb.settings
-            from omni.physx.bindings._physx import SETTING_NUM_THREADS
-            carb.settings.get_settings().set(SETTING_NUM_THREADS, 4)
 
         context = omni.usd.get_context()
         requested_runtime_hz = (
@@ -851,19 +807,12 @@ def main() -> int:
             raise RuntimeError(f"opened {opened_path!s} instead of {usd_path}")
         stage = context.get_stage()
         authored_geometry = _authored_body_geometry(stage)
-        args.fruit_authored_geometry = authored_geometry
         args.authored_physics_hz = _authored_physics_hz(stage)
         world = World(
             stage_units_in_meters=1.0,
             physics_dt=1.0 / requested_runtime_hz,
             rendering_dt=1.0 / 60.0,
         )
-        if args.fruit_experiment:
-            # World/PhysicsContext defaults overwrite an authored PGS scene
-            # with TGS. Restore the requested solver before PhysX is cooked.
-            world.get_physics_context().set_solver_type(experiment_config["solver"])
-            if "diagnostic_gravity_magnitude" in experiment_config:
-                world.get_physics_context().set_gravity(-float(experiment_config["diagnostic_gravity_magnitude"]))
         _register_runtime_physics_scene(stage)
         mouse_interaction = {}
         if not args.headless:
@@ -895,12 +844,7 @@ def main() -> int:
                 f"effective {args.runtime_physics_hz}"
             )
         if not args.headless:
-            mouse_interaction = _configure_mouse_interaction(
-                app, stage,
-                grab_with_force=bool(experiment_config and experiment_config.get("mouse_grab_mode") == "force"),
-                force_coefficient=experiment_config.get("mouse_force_coefficient", 10.0) if experiment_config else 10.0,
-                allow_experimental_coefficient=bool(experiment_config and experiment_config.get("allow_experimental_native_coefficient")),
-            )
+            mouse_interaction = _configure_mouse_interaction(app, stage)
         load_seconds = time.perf_counter() - load_started
         print(f"[OK] Isaac Sim opened canonical V2 stage: {usd_path}", flush=True)
         print(
@@ -910,7 +854,7 @@ def main() -> int:
             flush=True,
         )
         report_path = None
-        if (args.headless or args.diagnostic_monitor) and not args.fruit_experiment:
+        if args.headless or args.diagnostic_monitor:
             report_path = (
                 args.report.expanduser().resolve()
                 if args.report is not None
@@ -936,16 +880,6 @@ def main() -> int:
                     **mouse_interaction,
                 },
             )
-        if args.fruit_experiment:
-            source_root = str(Path(__file__).resolve().parents[1])
-            if source_root not in sys.path:
-                sys.path.insert(0, source_root)
-            from exporterV2.fruit_diagnostics import run as run_fruit_diagnostics
-            config = experiment_config
-            if config["hz"] != args.runtime_physics_hz:
-                raise ValueError("fruit experiment and runtime frequencies differ")
-            report = run_fruit_diagnostics(stage, world, app, args, config)
-            return 1 if report["status"] == "failed" else 0
         if args.headless:
             report = _run_stability(stage, world, args, authored_geometry)
             report["load_seconds"] = load_seconds
@@ -979,11 +913,7 @@ def main() -> int:
         traceback.print_exc()
         return 1
     finally:
-        if args.gui_watchdog:
-            args.gui_watchdog.mark("cleanup.app_close", mode="cleanup")
         app.close()
-        if args.gui_watchdog:
-            args.gui_watchdog.close()
 
 
 if __name__ == "__main__":

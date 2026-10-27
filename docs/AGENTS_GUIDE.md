@@ -46,7 +46,8 @@ any source ─> input/skeleton.json ─┐
 | `src/exporterV2/leaf_shapes/` | `baked.py` (load and pick baked leaflet assets), `seeds.py` (stable per-leaflet seeds). |
 | `assets/leaves/default/` | 131 baked leaflets ([tomato-leaf-gen](https://github.com/aledevv/tomato-leaf-gen)), one per leaflet for plants up to 131 leaflets. |
 | `src/exporterV2/isaac_app.py` | Isaac Sim launcher and drag tools. |
-| `src/exporterV2/legacy_csv/`, `data/simulation_output/` | Old CSV plant builder and its CSVs, kept only as fixtures for the optimizer and skinning tests. Do not extend it. |
+| `src/exporterV2/tests/legacy_csv/` | Old CSV plant builder and its CSVs (`data/simulation_output/`), kept only as fixtures for the optimizer and skinning tests. Do not extend it. |
+| `validation/` | Studies outside the pipeline: complexity profile and performance benchmark (`complexity/`), cantilever bending against Gao et al. 2024 (`cantilever_bending/`). |
 
 ## Setup
 
@@ -74,9 +75,9 @@ uv run pytest -q \
   src/plant_skeleton/tests \
   src/exporterV2/tests \
   src/exporterV2/core/optimizations/tests \
-  src/exporterV2/core/skinning/tests \
-  src/exporterV2/legacy_csv/tests
+  src/exporterV2/core/skinning/tests
 uv run pytest -q src/exporterV2/core/usd/tests
+uv run pytest -q validation
 ./run_main.sh --generate-only
 ```
 
@@ -87,8 +88,9 @@ Tests that guard behaviour:
   drive gains as the reference export (`tests/data/day160_reference.json`,
   made at 30 MPa, which the test pins). A physics change that breaks it needs
   the user's approval before the reference is updated.
-- `test_config.py` checks the commented YAML files equal the built-in
-  defaults. Change both together.
+- `test_config.py` checks that the commented YAML files and the built-in
+  defaults have the same keys (values may differ, so local edits are fine).
+  Add or remove a setting in both together.
 
 ## Rules
 

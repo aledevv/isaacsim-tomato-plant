@@ -89,13 +89,13 @@ exporterV2/
 ├── leaf_shapes/          baked leaflets (baked.py) and per-leaflet seeds (seeds.py)
 ├── core/                 generic builder: tree_config, usd/, skinning/, optimizations/
 ├── isaac_app.py          Isaac Sim launcher and interaction tools
-├── legacy_csv/           old CSV plant builder, kept only as a fixture for core tests
+├── tests/                tests; tests/legacy_csv/ is an old CSV plant builder kept as a fixture
 └── docs/                 technical notes: physics, collisions, visuals, leaflets
 ```
 
-The diagnostic tools next to `isaac_app.py` (`fruit_diagnostics.py`,
-`performance_benchmark.py`, `complexity_profile.py`, `drive_experiments.py`,
-`settling_gate.py`, ...) are optional helpers used by tests and experiments.
+Studies that are not part of the pipeline (complexity profile, performance
+benchmark, cantilever bending validation) are in
+[`validation/`](../../validation/README.md) at the repository root.
 
 ## Tests
 
@@ -106,9 +106,9 @@ uv run pytest -q \
   src/plant_skeleton/tests \
   src/exporterV2/tests \
   src/exporterV2/core/optimizations/tests \
-  src/exporterV2/core/skinning/tests \
-  src/exporterV2/legacy_csv/tests
+  src/exporterV2/core/skinning/tests
 uv run pytest -q src/exporterV2/core/usd/tests
+uv run pytest -q validation
 ```
 
 Key tests:

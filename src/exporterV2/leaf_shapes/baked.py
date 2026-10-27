@@ -59,8 +59,12 @@ def unique_leaf_set(count, seed):
     settings = leaf_set.manifest.get("settings", {})
     if settings.get("seed") == seed and len(leaf_set.leaves) >= count:
         return leaf_set
-    print(f"[WARNING] {count} leaflets but {len(leaf_set.leaves)} baked leaves with seed "
-          f"{settings.get('seed')} in {DEFAULT_SET}: reusing them across leaflets")
+    if settings.get("seed") != seed:
+        print(f"[WARNING] the default leaf set was baked with seed {settings.get('seed')} "
+              f"(leaves.seed is {seed}): leaves are reused across leaflets")
+    else:
+        print(f"[WARNING] {count} leaflets but {len(leaf_set.leaves)} baked leaves with seed "
+              f"{settings.get('seed')} in {DEFAULT_SET}: reusing them across leaflets")
     return None
 
 

@@ -147,7 +147,7 @@ def test_rejects_vegetative_child_of_truss():
 
 
 def test_csv_parser_persists_system_classification():
-    from exporterV2.legacy_csv import parse_csv_to_branches
+    from exporterV2.tests.legacy_csv import parse_csv_to_branches
 
     branches, _, _ = parse_csv_to_branches(
         day=40,
@@ -170,7 +170,7 @@ def test_csv_parser_persists_system_classification():
 
 @pytest.mark.parametrize("day", (1, 40))
 def test_real_csv_vegetative_graph_resolves_without_truss(day):
-    from exporterV2.legacy_csv import parse_csv_to_branches
+    from exporterV2.tests.legacy_csv import parse_csv_to_branches
 
     branches, _, _ = parse_csv_to_branches(
         day=day,

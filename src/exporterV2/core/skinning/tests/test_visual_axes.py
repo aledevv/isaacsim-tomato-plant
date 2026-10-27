@@ -227,7 +227,7 @@ def test_vegetative_visual_meshes_use_tomato_stem_material(tmp_path, visual_mode
 
 @pytest.mark.parametrize("day", (1, 40))
 def test_csv_metadata_groups_leaf_axes_and_excludes_truss(day):
-    from exporterV2.legacy_csv import parse_csv_to_branches
+    from exporterV2.tests.legacy_csv import parse_csv_to_branches
 
     branches, _, _ = parse_csv_to_branches(
         day=day,

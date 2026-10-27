@@ -22,7 +22,7 @@
 - `skinning/builder.py` coordinates vegetative physics, visual axes, leaf blades and the visual mode.
 - `visual_segmented.py` is the production visual; `visual_static.py`, `visual_rigid.py` and the UsdSkel code in `mesh.py` remain in the core but are not reachable from the exporter configuration. `mesh.py` also owns common radius sampling.
 - `mesh_geometry.py` contains topology helpers shared by procedural tube meshes.
-- `legacy_csv/` is the old CSV builder, kept only as a fixture for core tests.
+- `tests/legacy_csv/` is the old CSV builder, kept only as a fixture for core tests.
 
 ## Design Decisions
 

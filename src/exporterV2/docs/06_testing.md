@@ -7,9 +7,9 @@ uv run pytest -q \
   src/plant_skeleton/tests \
   src/exporterV2/tests \
   src/exporterV2/core/optimizations/tests \
-  src/exporterV2/core/skinning/tests \
-  src/exporterV2/legacy_csv/tests
+  src/exporterV2/core/skinning/tests
 uv run pytest -q src/exporterV2/core/usd/tests
+uv run pytest -q validation
 ```
 
 ## What the main tests cover
@@ -18,12 +18,11 @@ uv run pytest -q src/exporterV2/core/usd/tests
 | --- | --- |
 | `src/plant_skeleton/tests/test_skeleton.py` | format, JSON round trip, validation messages |
 | `tests/test_skeleton_branches.py` | chain rules, attachment, physics per kind, visual switches, poses |
-| `tests/test_config.py` | commented YAML files equal the defaults, bad values rejected, `global_scale: auto` |
+| `tests/test_config.py` | commented YAML files have the same keys as the defaults, bad values rejected, `global_scale: auto` |
 | `tests/test_exporter.py` | small plant end to end, fruit modes, scale, joint budget, CLI, baked leaflets and droop, stem colour, branch collisions, day-160 regression |
 | `tests/test_baked_leaf_assets.py` | the committed baked leaflet set |
 | `tests/test_joint_budget*.py` | lock and merge on the day-160 plant |
-| `tests/test_fruit_diagnostics.py` | physical-fruit diagnostics |
-| `legacy_csv/tests`, `core/*/tests` | generic core builder, using the legacy CSV builder as a fixture |
+| `tests/legacy_csv/tests`, `core/*/tests` | generic core builder, using the legacy CSV builder as a fixture |
 
 (`tests/` in the table means `src/exporterV2/tests/`.)
 
@@ -48,10 +47,16 @@ Tests that need `PhysxSchema` run with Isaac Sim's Python:
 ./run_main.sh --headless         # 5 s physics run, prints the stability check
 ```
 
-## Performance comparison
+## Validation studies
+
+`validation/` holds the studies that are not part of the pipeline: the
+complexity profile and performance benchmark (`validation/complexity/`) and the
+cantilever bending validation (`validation/cantilever_bending/`). Their fast
+checks run with `uv run pytest -q validation`. See
+[`validation/README.md`](../../../validation/README.md).
 
 ```bash
-uv run python -m exporterV2.performance_benchmark \
+uv run python validation/complexity/performance_benchmark.py \
   --baseline before=/tmp/before.usda \
   --candidate after=/tmp/after.usda \
   --physics-hz 60,120,240,480 \

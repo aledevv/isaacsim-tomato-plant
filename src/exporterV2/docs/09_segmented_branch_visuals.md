@@ -87,7 +87,6 @@ Realtime generation uses `UsdPreviewSurface`. Optional OmniSurface presets remai
 - `visual_segmented.py`: per-link organic meshes and overlap tongues.
 - `visual_static.py`: static continuous benchmark.
 - `visual_rigid.py`: one-link direct attachment mode.
-- `visual_modes.py`: compatibility re-exports.
 - `terminal_fork.py`: terminal leaf-only dressing.
 - `leaf_blade.py`: procedural double-sided leaf blades.
 - `runtime.py`: PhysX-to-UsdSkel synchronization.

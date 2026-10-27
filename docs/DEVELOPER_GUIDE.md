@@ -72,10 +72,10 @@ any plant source ──> input/skeleton.json ──exporter──> output/plant.
 | `assets/leaves/default/` | 131 baked 3D leaflets, one per leaflet of the default plant. |
 | `output/` | Generated files, not tracked. |
 
-Things you can ignore at first: `src/exporterV2/legacy_csv/` and
-`data/simulation_output/` (an old CSV plant builder kept only as a fixture for
-the joint-optimizer tests) and the diagnostic scripts
-next to `isaac_app.py`.
+Things you can ignore at first: `src/exporterV2/tests/legacy_csv/` (an old
+CSV plant builder and its CSVs, kept only as a fixture for the joint-optimizer
+tests) and `validation/` (complexity profile, performance benchmark and the
+cantilever bending study, outside the pipeline).
 
 ## 5. Common tasks
 
@@ -107,9 +107,9 @@ uv run pytest -q \
   src/plant_skeleton/tests \
   src/exporterV2/tests \
   src/exporterV2/core/optimizations/tests \
-  src/exporterV2/core/skinning/tests \
-  src/exporterV2/legacy_csv/tests
+  src/exporterV2/core/skinning/tests
 uv run pytest -q src/exporterV2/core/usd/tests
+uv run pytest -q validation
 ```
 
 Interaction in Isaac Sim (dragging, bending, fruit detachment) is checked by

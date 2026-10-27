@@ -12,7 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from exporterV2.legacy_csv import parse_csv_to_branches
+from exporterV2.tests.legacy_csv import parse_csv_to_branches
 from exporterV2.core.optimizations import BudgetOptimizer
 from exporterV2.core.optimizations.techniques.base import count_d6_joints
 

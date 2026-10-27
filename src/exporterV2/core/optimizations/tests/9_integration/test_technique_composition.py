@@ -313,13 +313,13 @@ def test_scenario5_real_csv_plant():
     """
     try:
         # Import CSV parser
-        sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent.parent))
-        from legacy_csv.parser import parse_csv_to_branches
+        from exporterV2.tests.legacy_csv import parser as legacy_parser
+        from exporterV2.tests.legacy_csv.parser import parse_csv_to_branches
     except ImportError as e:
         pytest.skip(f"Cannot import CSV parser: {e}")
     
     # Find a CSV file to test with
-    csv_dir = Path(__file__).parent.parent.parent.parent.parent.parent.parent / "data" / "simulation_output" / "dynamic_output" / "graphs"
+    csv_dir = Path(legacy_parser.__file__).parent / "data" / "simulation_output" / "dynamic_output" / "graphs"
     
     if not csv_dir.exists():
         pytest.skip(f"CSV directory not found: {csv_dir}")

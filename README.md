@@ -105,12 +105,12 @@ The full description is in [`src/exporterV2/README.md`](src/exporterV2/README.md
 ├── config/                         # physics.yaml, visuals.yaml (commented defaults)
 ├── output/                         # generated USDA + manifest (not tracked)
 ├── assets/leaves/default/          # 131 baked 3D leaflets
-├── data/simulation_output/         # CSV fixtures for the joint-optimizer tests
 ├── docs/                           # developer, install and coding-agent guides; images/ for this README
 ├── run_main.sh                     # build the plant and open it in Isaac Sim
-└── src/
-    ├── plant_skeleton/             # input format: model, JSON I/O, validation
-    └── exporterV2/                 # exporter, mesh generators, Isaac Sim launcher
+├── src/
+│   ├── plant_skeleton/             # input format: model, JSON I/O, validation
+│   └── exporterV2/                 # exporter, mesh generators, Isaac Sim launcher
+└── validation/                     # studies outside the pipeline: complexity, cantilever bending
 ```
 
 ## Features
@@ -139,9 +139,9 @@ uv run pytest -q \
   src/plant_skeleton/tests \
   src/exporterV2/tests \
   src/exporterV2/core/optimizations/tests \
-  src/exporterV2/core/skinning/tests \
-  src/exporterV2/legacy_csv/tests
+  src/exporterV2/core/skinning/tests
 uv run pytest -q src/exporterV2/core/usd/tests
+uv run pytest -q validation
 ```
 
 `src/exporterV2/tests/test_exporter.py` locks the default plant to a
@@ -158,6 +158,7 @@ Interaction in the Isaac Sim GUI is checked by hand with `./run_main.sh`.
 - [`src/exporterV2/visuals/README.md`](src/exporterV2/visuals/README.md): where every mesh generator lives.
 - `src/exporterV2/docs/`: physics, collisions, segmented visuals, leaflets, troubleshooting.
 - `src/exporterV2/core/optimizations/docs/`: joint-budget optimizer.
+- [`validation/README.md`](validation/README.md): complexity profile, performance benchmark and the cantilever bending validation.
 
 ## Notes for reproducibility
 

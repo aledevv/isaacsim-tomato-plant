@@ -14,7 +14,7 @@ SRC_DIR = Path(__file__).resolve().parents[5]
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
-from exporterV2.legacy_csv.truss_builder import truss_to_complete_config
+from exporterV2.tests.legacy_csv.truss_builder import truss_to_complete_config
 from exporterV2.core.optimizations.techniques.truss_static import TrussStaticTechnique
 from exporterV2.core.tree_config import PhysicsRuntimeConfig, TrussPhysicsConfig
 from exporterV2.core.usd.stage import build_stage

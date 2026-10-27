@@ -331,7 +331,7 @@ if __name__ == "__main__":
 @pytest.fixture
 def branches():
     """Build current day-100 branches for pytest collection."""
-    from exporterV2.legacy_csv import parse_csv_to_branches
+    from exporterV2.tests.legacy_csv import parse_csv_to_branches
 
     parsed_branches, _ = parse_csv_to_branches(day=100)
     return parsed_branches

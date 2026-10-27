@@ -5,7 +5,7 @@
 Run ordinary tests from the project root so `src/` imports resolve:
 
 ```bash
-uv run pytest -q src/exporterV2/legacy_csv/tests src/exporterV2/core/optimizations/tests \
+uv run pytest -q src/exporterV2/core/optimizations/tests \
   src/exporterV2/tests src/exporterV2/core/skinning/tests src/plant_skeleton/tests
 uv run pytest -q src/exporterV2/core/usd/tests
 ```
@@ -41,11 +41,11 @@ rate adds 2, 4 or 8 PhysX substeps to every 60 Hz render update. Do not
 diagnose this cost from joint count alone: compare stages at the same runtime
 timestep.
 
-The benchmark tool reports USD complexity, render updates/s and raw PhysX
-steps/s for two stages:
+The benchmark tool (`validation/complexity/`) reports USD complexity, render
+updates/s and raw PhysX steps/s for two stages:
 
 ```bash
-uv run python -m exporterV2.performance_benchmark \
+uv run python validation/complexity/performance_benchmark.py \
   --baseline before=/tmp/before.usda \
   --candidate after=/tmp/after.usda \
   --physics-hz 60,120,240,480 \
