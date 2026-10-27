@@ -1,0 +1,111 @@
+# Joint-Budget Optimization Configuration
+# =========================================
+# Configuration for joint budget limits, structural minimums, and optimization techniques.
+#
+# Documentation: See docs/OPTIMIZATION_QUICK_START.md for configuration guide
+
+# Budget and thresholds
+# Note: Isaac Sim/PhysX has a strict limitation of ~250 joints per articulation.
+# Exceeding this limit causes solver instability, "melting" behavior, or engine crashes.
+budget:
+  # max_joints: 200                 # (SET it in tree_config.py) Hard D6-joint budget for Isaac Sim/PhysX -RUNTIME VALUE HAS PRIORITY
+  # max_rigid_bodies: 230           # Stage complexity guard: branch links + terminal bodies
+  warning_threshold: 180          # Warn if approaching limit (for monitoring and logging)
+
+# Structural minimum links for each component type
+# These are the absolute minimum required to maintain plant topology
+structural_limits:
+  trunk:
+    min_links: 1
+    description: "Main stem cannot be reduced below 1 link"
+  
+  lateral_branch:
+    min_links: 1
+    description: "Each lateral branch needs at least 1 link for attachment"
+  
+  petiole:
+    min_links: 1
+    description: "Petiole needs at least 1 link for leaf attachment"
+  
+  rachis:
+    min_links: 0
+    description: "Rachis can be merged with petiole (eliminated)"
+  
+  petiolule:
+    min_links: 0
+    description: "Petiolules can be converted to fixed joints or eliminated"
+  
+  truss:
+    min_links: 1
+    description: "Truss needs at least 1 link for fruit attachment"
+
+# Optimization technique configurations
+# The optimizer applies techniques sequentially based on 'priority' (lower number = applied first).
+# It uses a greedy approach: it stops immediately once the total joint count falls below 'max_joints'.
+# Enabled: set to false to completely bypass a technique during the optimization loop.
+techniques:
+  # Priority 1: Thin Link Lock (safety feature to prevent physics instability)
+  - id: "thin_link_lock"
+    priority: 1
+    description: "Convert joints of very thin branches to Fixed joints"
+    enabled: true
+    params: {}
+
+  # Priority 1: Petiole Lock (minimal visual impact, high DOF reduction)
+  - id: "petiole_lock"
+    priority: 1
+    description: "Convert petiolule D6 joints to Fixed joints (no geometry change)"
+    enabled: true
+    params:
+      convert_all_petiolules: true  # Convert all or only selected petiolules
+  
+  # Priority 2: Lateral Branch Reduction (medium visual impact, high joint reduction)
+  - id: "lateral_reduce"
+    priority: 2
+    description: "Reduce number of segments in lateral branches"
+    enabled: true
+    params:
+      min_segments: 1             # Minimum segments per lateral branch
+      reduction_step: 1           # Reduce by N segments per iteration
+  
+  # Priority 3: Stem Collapse (medium-high visual impact, high joint reduction)
+  - id: "stem_collapse"
+    priority: 3
+    description: "Collapse main stem segments with attachment point remapping"
+    enabled: true
+    params:
+      min_segments: 1             # Minimum segments for main stem
+      reduction_step: 1           # Reduce by N segments per iteration
+      collision_check:
+        broad_phase: "sphere"     # Stage 1: sphere overlap check
+        narrow_phase: "aabb"      # Stage 2: AABB precision check
+        safety_margin: 0.01       # Safety margin in meters
+        max_remap_attempts: 3     # Max attempts to resolve collisions
+  
+  # Priority 4: Truss Static (medium visual impact, medium joint reduction)
+  - id: "truss_static"
+    priority: 4
+    description: "Lock pedicels, then convert rachis to a pre-bent rigid block with one root D6"
+    enabled: true
+    params:
+      curve_segments: 5
+      bend_per_segment_deg: 8
+      pedicel_droop_deg: 10
+      root_bend_limit_deg: 18
+      root_drive_stiffness_scale: 0.40
+  
+  # Priority 5: Leaf Branch Reduction (high visual impact, medium-high joint reduction)
+  - id: "leaf_branch_reduce"
+    priority: 5
+    description: "Merge petiole+rachis into single pre-bent segment"
+    enabled: true
+    params:
+      merge_petiole_rachis: true  # Merge petiole and rachis
+      prebend: true               # Apply prebending to merged segment
+      max_prebend_angle: 90       # Maximum prebend angle in degrees
+
+# Logging configuration
+logging:
+  level: "INFO"                   # Options: DEBUG, INFO, WARNING, ERROR
+  show_technique_details: false   # Show detailed info for each technique
+  show_collision_details: false   # Verbose collision detection logging (DEBUG only)

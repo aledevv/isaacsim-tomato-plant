@@ -1,0 +1,108 @@
+# Physics settings for the Isaac Sim plant.
+#
+# Every key is optional: delete a line and the default written here is used.
+# Unknown keys are an error, so typos are caught.
+# Apart from the Young's modulus of stems and leaves (measured, Gao et al.
+# 2024) these values are NOT calibrated against a real plant; they were tuned
+# by eye in Isaac Sim so the example tomato stays stable and bends plausibly.
+
+# Multiplies every length before building the scene. PhysX is unstable with
+# very thin bodies, so small plants need a larger scale.
+#   2.0   tested value for the example tomato (default)
+#   auto  pick the scale so the thinnest segment is at least 2 mm thick
+global_scale: 2.0
+
+simulation:
+  physics_hz: 480               # steps per second in the exported scene: 60 | 120 | 240 | 480 | 960
+  interactive_physics_hz: 60    # steps per second in the Isaac Sim GUI: 60 | 120 | 240 | 480 | 960
+  solver_position_iterations: 32
+  solver_velocity_iterations: 4
+  fruit_solver_position_iterations: 32   # only used when fruits.mode is physical
+  fruit_solver_velocity_iterations: 1
+  gpu_dynamics: true            # false runs PhysX on the CPU
+
+joints:
+  # One articulation in Isaac Sim 4.5 handles about 220 D6 joints well and
+  # at most 255 rigid bodies.
+  joint_target: 220             # warn above this many D6 joints
+  joint_max: 230                # refuse to export above this many
+  # What to do when the plant has too many joints:
+  #   none  export as is (error above joint_max)
+  #   lock  turn the least important D6 joints into fixed joints
+  #   full  lock, and also merge rigid links into one body
+  optimize: none
+  # How merged links keep their flexibility (only with optimize: full):
+  #   blend (default) | load | tip | series | keep
+  merge_stiffness: blend
+
+# One block per segment kind of the skeleton.
+#   joint                 d6 (bends) | fixed (rigid)
+#   young_modulus         Pa, stiffness of the material (vegetative: tomato
+#                         stalk, Gao et al. 2024, Agriculture 14(4):531)
+#   damping_ratio         1.0 = critically damped; higher stops swinging sooner
+#   density               kg/m^3, gives each link its mass
+#   bend_limit_deg        maximum bend of each joint, in degrees
+#   drive_stiffness_scale multiplies the computed joint stiffness
+segments:
+  stem:                         # main stem; fixed keeps the plant standing
+    joint: fixed
+    young_modulus: 50.64e+6
+    damping_ratio: 0.8
+    density: 1000.0
+    bend_limit_deg: 30.0
+    drive_stiffness_scale: 1.0
+  branch:                       # side shoots
+    joint: d6
+    young_modulus: 50.64e+6
+    damping_ratio: 0.8
+    density: 1000.0
+    bend_limit_deg: 30.0
+    drive_stiffness_scale: 1.0
+  petiole:                      # leaf stalk
+    joint: d6
+    young_modulus: 50.64e+6
+    damping_ratio: 0.3
+    density: 1000.0
+    bend_limit_deg: 30.0
+    drive_stiffness_scale: 1.0
+  leaf_rachis:                  # leaf midrib carrying the leaflets
+    joint: d6
+    young_modulus: 50.64e+6
+    damping_ratio: 0.3
+    density: 1000.0
+    bend_limit_deg: 30.0
+    drive_stiffness_scale: 1.0
+  truss_rachis:                 # stalk of a tomato truss
+    joint: d6
+    young_modulus: 20.0e+9
+    damping_ratio: 4.0
+    density: 2000.0
+    bend_limit_deg: 30.0
+    drive_stiffness_scale: 1.0
+  pedicel:                      # small stalk holding one tomato
+    joint: d6
+    young_modulus: 4.0e+9
+    damping_ratio: 4.0
+    density: 2000.0
+    bend_limit_deg: 25.0
+    drive_stiffness_scale: 0.2
+
+fruits:
+  # none      no tomatoes
+  # visual    tomatoes are drawn but have no mass (default, stable)
+  # physical  tomatoes are rigid bodies (experimental: side trusses can be unstable)
+  mode: visual
+  detachable: true              # physical only: a tomato breaks off above break_force_n
+  break_force_n: 6.0
+  density: 1000.0               # kg/m^3
+
+collisions:
+  # Colliders that already touch at rest would push each other apart.
+  #   filter  disable collisions for exactly those pairs (default)
+  #   error   stop the export instead
+  initial_overlaps: filter
+  # Let branches, petioles and leaf rachides touch each other (true, default)
+  # instead of passing through. Only parts that are not jointed or close
+  # neighbours collide; fruits, truss rachides and pedicels never do. Costs
+  # some FPS (about 53 FPS for the default plant on an RTX 4080 Laptop).
+  branches: true

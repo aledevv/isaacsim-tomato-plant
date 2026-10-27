@@ -1,0 +1,43 @@
+{
+  "schema_version": "plant_skeleton/1.0",
+  "metadata": {
+    "plant_id": 1,
+    "source": "hand-written",
+    "description": "Smallest useful example: a stem, a side branch, two leaves and one truss. No frames: the exporter derives them."
+  },
+  "nodes": [
+    {"id": "stem1", "parent": null, "kind": "stem", "start": [0.0, 0.0, 0.0], "end": [0.0, 0.0, 0.1], "radius": 0.006},
+    {"id": "stem2", "parent": "stem1", "kind": "stem", "start": [0.0, 0.0, 0.1], "end": [0.0, 0.0, 0.2], "radius": 0.0055},
+    {"id": "stem3", "parent": "stem2", "kind": "stem", "start": [0.0, 0.0, 0.2], "end": [0.0, 0.0, 0.3], "radius": 0.005},
+    {"id": "stem4", "parent": "stem3", "kind": "stem", "start": [0.0, 0.0, 0.3], "end": [0.0, 0.0, 0.4], "radius": 0.0045},
+
+    {"id": "shoot1", "parent": "stem2", "kind": "branch", "start": [0.0, 0.0, 0.2], "end": [0.08, 0.0, 0.26], "radius": 0.003},
+    {"id": "shoot2", "parent": "shoot1", "kind": "branch", "start": [0.08, 0.0, 0.26], "end": [0.15, 0.0, 0.3], "radius": 0.0025},
+
+    {"id": "leafA_petiole", "parent": "stem3", "kind": "petiole", "start": [0.0, 0.0, 0.3], "end": [0.0, 0.06, 0.33], "radius": 0.002},
+    {"id": "leafA_rachis1", "parent": "leafA_petiole", "kind": "leaf_rachis", "start": [0.0, 0.06, 0.33], "end": [0.0, 0.12, 0.34], "radius": 0.0016},
+    {"id": "leafA_rachis2", "parent": "leafA_rachis1", "kind": "leaf_rachis", "start": [0.0, 0.12, 0.34], "end": [0.0, 0.18, 0.33], "radius": 0.0013},
+
+    {"id": "leafB_petiole", "parent": "stem4", "kind": "petiole", "start": [0.0, 0.0, 0.4], "end": [0.0, -0.05, 0.43], "radius": 0.0018},
+    {"id": "leafB_rachis1", "parent": "leafB_petiole", "kind": "leaf_rachis", "start": [0.0, -0.05, 0.43], "end": [0.0, -0.1, 0.44], "radius": 0.0014},
+
+    {"id": "truss_rachis1", "parent": "shoot1", "kind": "truss_rachis", "start": [0.08, 0.0, 0.26], "end": [0.1, 0.03, 0.24], "radius": 0.0015},
+    {"id": "truss_rachis2", "parent": "truss_rachis1", "kind": "truss_rachis", "start": [0.1, 0.03, 0.24], "end": [0.12, 0.06, 0.23], "radius": 0.0013},
+    {"id": "pedicel1", "parent": "truss_rachis1", "kind": "pedicel", "start": [0.1, 0.03, 0.24], "end": [0.1, 0.03, 0.225], "radius": 0.0008},
+    {"id": "pedicel2", "parent": "truss_rachis2", "kind": "pedicel", "start": [0.12, 0.06, 0.23], "end": [0.12, 0.06, 0.215], "radius": 0.0008},
+    {"id": "pedicel3", "parent": "truss_rachis2", "kind": "pedicel", "start": [0.12, 0.06, 0.23], "end": [0.125, 0.065, 0.217], "radius": 0.0008}
+  ],
+  "leaflets": [
+    {"id": "leafA_left1", "node": "leafA_rachis1", "side": "left", "start": [0.0, 0.12, 0.34], "end": [-0.015, 0.12, 0.34], "radius": 0.0008, "inclination_deg": 60},
+    {"id": "leafA_right1", "node": "leafA_rachis1", "side": "right", "start": [0.0, 0.12, 0.34], "end": [0.015, 0.12, 0.34], "radius": 0.0008, "inclination_deg": 60},
+    {"id": "leafA_tip", "node": "leafA_rachis2", "side": "terminal", "start": [0.0, 0.18, 0.33], "end": [0.0, 0.195, 0.329], "radius": 0.0008, "mass_kg": 0.002},
+    {"id": "leafB_left1", "node": "leafB_rachis1", "side": "left", "start": [0.0, -0.075, 0.435], "end": [0.012, -0.075, 0.435], "radius": 0.0007},
+    {"id": "leafB_right1", "node": "leafB_rachis1", "side": "right", "start": [0.0, -0.075, 0.435], "end": [-0.012, -0.075, 0.435], "radius": 0.0007},
+    {"id": "leafB_tip", "node": "leafB_rachis1", "side": "terminal", "start": [0.0, -0.1, 0.44], "end": [0.0, -0.112, 0.441], "radius": 0.0007}
+  ],
+  "fruits": [
+    {"id": "tomato1", "node": "pedicel1", "radius": 0.012, "ripeness": 0.2},
+    {"id": "tomato2", "node": "pedicel2", "radius": 0.015, "ripeness": 0.8},
+    {"id": "tomato3", "node": "pedicel3", "radius": 0.01, "ripeness": 1.0}
+  ]
+}

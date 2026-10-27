@@ -1,0 +1,5157 @@
+{
+ "schema": 1,
+ "generator": "autotom baked leaflets",
+ "settings": {
+  "count": 131,
+  "seed": 42,
+  "subset": "field",
+  "length_mm": 60.0,
+  "step_mm": 0.8,
+  "texture": 512,
+  "relief_resolution": 2048,
+  "min_flow": 3.0,
+  "veins": "veinflow-repair"
+ },
+ "pipeline": {
+  "shape": {
+   "model": "rae_flow (RAE-64 + flow)",
+   "path": "dataset/shape_2d/derived/sam3_pool_split75_rae64_flow",
+   "subset": "field"
+  },
+  "bend": {
+   "model": "G1-GMM-NORM-12",
+   "resource": "bend_prior_g1.npz",
+   "temperature": 0.9,
+   "training": "train=310 leaves"
+  },
+  "veins": {
+   "method": "VeinFlow drawing inside the outline, bridge_loopcut repair, drainage tree",
+   "model": "dataset/shape_2d/derived/veins256_A",
+   "subset": "field",
+   "relief": "pillow",
+   "lamina_mm": 0.4
+  }
+ },
+ "frame": "metres, Z up, attachment at the origin, tip towards +Y, upper side towards +Z",
+ "length_m": 0.06,
+ "leaves": [
+  {
+   "file": "leaf_000.usda",
+   "index": 0,
+   "seed": 15557787,
+   "shape": {
+    "shape_seed": 2682141213491104547,
+    "attempt": 1,
+    "contour_sha256": "05570519c7f2803f55e652d9deaee8d430e14defa85c5871d9f7e06039577d60"
+   },
+   "bend": {
+    "deformation_seed": 3533760688209068175,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.001417
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3362
+   },
+   "width_m": 0.0342,
+   "vertices": 3609,
+   "triangles": 7214,
+   "bounds_m": [
+    [
+     -0.015798,
+     -0.000563,
+     -0.000707
+    ],
+    [
+     0.018386,
+     0.059854,
+     0.005359
+    ]
+   ],
+   "seconds": 12.12
+  },
+  {
+   "file": "leaf_001.usda",
+   "index": 1,
+   "seed": 3997571865,
+   "shape": {
+    "shape_seed": 3005140203588489749,
+    "attempt": 1,
+    "contour_sha256": "45ce24d31928f4de6e5a554830c02fe5712fff13807c1ff533a46a4acd86698d"
+   },
+   "bend": {
+    "deformation_seed": 11905541867009768216,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.00514
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3417
+   },
+   "width_m": 0.035,
+   "vertices": 4065,
+   "triangles": 8126,
+   "bounds_m": [
+    [
+     -0.014178,
+     -0.000378,
+     -0.00154
+    ],
+    [
+     0.020736,
+     0.059768,
+     0.01101
+    ]
+   ],
+   "seconds": 15.55
+  },
+  {
+   "file": "leaf_002.usda",
+   "index": 2,
+   "seed": 2505568475,
+   "shape": {
+    "shape_seed": 2016544596197851833,
+    "attempt": 1,
+    "contour_sha256": "86c49a235b4d9e7d6cf6c4461555c8303ec1ad3a1b37c166e69452ceff8d041c"
+   },
+   "bend": {
+    "deformation_seed": 1008767055788376045,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     8.2e-05
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3721
+   },
+   "width_m": 0.03279,
+   "vertices": 3779,
+   "triangles": 7554,
+   "bounds_m": [
+    [
+     -0.016709,
+     -0.001904,
+     -0.003046
+    ],
+    [
+     0.015995,
+     0.059817,
+     0.004799
+    ]
+   ],
+   "seconds": 18.32
+  },
+  {
+   "file": "leaf_003.usda",
+   "index": 3,
+   "seed": 2306665793,
+   "shape": {
+    "shape_seed": 8198619108180724036,
+    "attempt": 1,
+    "contour_sha256": "ea7998b43723d8d33345ab0632ed9625aa325d480a5a97100b648e94cacc1c6e"
+   },
+   "bend": {
+    "deformation_seed": 4020192704382248685,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.00733
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 2810
+   },
+   "width_m": 0.0351,
+   "vertices": 4021,
+   "triangles": 8038,
+   "bounds_m": [
+    [
+     -0.015054,
+     0.000137,
+     -0.001516
+    ],
+    [
+     0.019992,
+     0.059818,
+     0.007366
+    ]
+   ],
+   "seconds": 15.42
+  },
+  {
+   "file": "leaf_004.usda",
+   "index": 4,
+   "seed": 2612875144,
+   "shape": {
+    "shape_seed": 2494713111805311569,
+    "attempt": 1,
+    "contour_sha256": "d1ec1b16ea22ce3f7c8473a95eb542ad0af6f7dff7271f52c0805efa568259a4"
+   },
+   "bend": {
+    "deformation_seed": 4467456132220793658,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.002704
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4406
+   },
+   "width_m": 0.03793,
+   "vertices": 4337,
+   "triangles": 8670,
+   "bounds_m": [
+    [
+     -0.016251,
+     -0.000219,
+     -0.000742
+    ],
+    [
+     0.021653,
+     0.059795,
+     0.01006
+    ]
+   ],
+   "seconds": 25.83
+  },
+  {
+   "file": "leaf_005.usda",
+   "index": 5,
+   "seed": 3238279079,
+   "shape": {
+    "shape_seed": 11541333466123192461,
+    "attempt": 1,
+    "contour_sha256": "eea169a1d1ebfefc0634febf43db4fed21c8c7c2aff3880a2c346224d576fab7"
+   },
+   "bend": {
+    "deformation_seed": 7914168683030381477,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.001926
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3882
+   },
+   "width_m": 0.03494,
+   "vertices": 3985,
+   "triangles": 7966,
+   "bounds_m": [
+    [
+     -0.018027,
+     -0.000347,
+     -0.001521
+    ],
+    [
+     0.016896,
+     0.059814,
+     0.008475
+    ]
+   ],
+   "seconds": 13.33
+  },
+  {
+   "file": "leaf_006.usda",
+   "index": 6,
+   "seed": 96828723,
+   "shape": {
+    "shape_seed": 16828238906882352010,
+    "attempt": 1,
+    "contour_sha256": "5f92821421daa4c59399d7b1a1a96123a803dd503611496cce961cb37b1652f2"
+   },
+   "bend": {
+    "deformation_seed": 8197095485619640285,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.002484
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4079
+   },
+   "width_m": 0.03483,
+   "vertices": 4025,
+   "triangles": 8046,
+   "bounds_m": [
+    [
+     -0.018466,
+     -0.001219,
+     -0.002475
+    ],
+    [
+     0.016351,
+     0.059802,
+     0.006936
+    ]
+   ],
+   "seconds": 13.63
+  },
+  {
+   "file": "leaf_007.usda",
+   "index": 7,
+   "seed": 3716988213,
+   "shape": {
+    "shape_seed": 6532083429477256887,
+    "attempt": 1,
+    "contour_sha256": "d5957b6fa694235db32b9ca50c0a99104d55b523d8861c5fd4978a907382bc22"
+   },
+   "bend": {
+    "deformation_seed": 4541577745530995872,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.003921
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3695
+   },
+   "width_m": 0.04072,
+   "vertices": 4810,
+   "triangles": 9616,
+   "bounds_m": [
+    [
+     -0.018336,
+     -0.002621,
+     -0.003878
+    ],
+    [
+     0.022375,
+     0.059742,
+     0.002841
+    ]
+   ],
+   "seconds": 13.29
+  },
+  {
+   "file": "leaf_008.usda",
+   "index": 8,
+   "seed": 3814646579,
+   "shape": {
+    "shape_seed": 14212816159220497389,
+    "attempt": 1,
+    "contour_sha256": "421d039a5989bdf8a6817eec7e2f7d52d6ec2fdcbb84331e601016969acf7756"
+   },
+   "bend": {
+    "deformation_seed": 18114493264563022170,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.004094
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 2579
+   },
+   "width_m": 0.0304,
+   "vertices": 3170,
+   "triangles": 6336,
+   "bounds_m": [
+    [
+     -0.013027,
+     -0.000124,
+     -0.001014
+    ],
+    [
+     0.017321,
+     0.059762,
+     0.006132
+    ]
+   ],
+   "seconds": 14.13
+  },
+  {
+   "file": "leaf_009.usda",
+   "index": 9,
+   "seed": 1405729041,
+   "shape": {
+    "shape_seed": 11519898686757474268,
+    "attempt": 1,
+    "contour_sha256": "cde0dd5d0b68aa6176808d65f4e774e40c1ff9284150d56e5abe83081b8df51b"
+   },
+   "bend": {
+    "deformation_seed": 17096568098613769564,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.003771
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3594
+   },
+   "width_m": 0.03456,
+   "vertices": 3934,
+   "triangles": 7864,
+   "bounds_m": [
+    [
+     -0.014965,
+     -0.0028,
+     -0.012274
+    ],
+    [
+     0.019577,
+     0.059888,
+     0.001001
+    ]
+   ],
+   "seconds": 14.8
+  },
+  {
+   "file": "leaf_010.usda",
+   "index": 10,
+   "seed": 4222434615,
+   "shape": {
+    "shape_seed": 17599856098913507545,
+    "attempt": 1,
+    "contour_sha256": "efca85f7222eea29860b0949d679b6f4fd14ca217ef8f4912d09fec98dd88b36"
+   },
+   "bend": {
+    "deformation_seed": 1234436555644599713,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.001402
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3250
+   },
+   "width_m": 0.03315,
+   "vertices": 4066,
+   "triangles": 8128,
+   "bounds_m": [
+    [
+     -0.017803,
+     -0.000105,
+     -0.001472
+    ],
+    [
+     0.015324,
+     0.059873,
+     0.004554
+    ]
+   ],
+   "seconds": 11.75
+  },
+  {
+   "file": "leaf_011.usda",
+   "index": 11,
+   "seed": 36657384,
+   "shape": {
+    "shape_seed": 14626159127662942951,
+    "attempt": 1,
+    "contour_sha256": "9d9f77836777d089e12eb15b382aaa98e585b266ab5e1285c84056a90360e0c2"
+   },
+   "bend": {
+    "deformation_seed": 5970622539936827844,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.00594
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4138
+   },
+   "width_m": 0.03157,
+   "vertices": 4080,
+   "triangles": 8156,
+   "bounds_m": [
+    [
+     -0.015067,
+     -0.000117,
+     -0.005188
+    ],
+    [
+     0.016489,
+     0.059839,
+     0.005896
+    ]
+   ],
+   "seconds": 11.69
+  },
+  {
+   "file": "leaf_012.usda",
+   "index": 12,
+   "seed": 2245829369,
+   "shape": {
+    "shape_seed": 8087855458152492109,
+    "attempt": 1,
+    "contour_sha256": "22e02adfbf401b766dad1fcbb3e895e51f73c410ecc1cc5d5e84ba34f7107d46"
+   },
+   "bend": {
+    "deformation_seed": 6808823738862948303,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.002081
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3835
+   },
+   "width_m": 0.03352,
+   "vertices": 4151,
+   "triangles": 8298,
+   "bounds_m": [
+    [
+     -0.017977,
+     -0.001957,
+     -0.01095
+    ],
+    [
+     0.015504,
+     0.059848,
+     0.002067
+    ]
+   ],
+   "seconds": 13.7
+  },
+  {
+   "file": "leaf_013.usda",
+   "index": 13,
+   "seed": 3846450058,
+   "shape": {
+    "shape_seed": 4682704929850322116,
+    "attempt": 1,
+    "contour_sha256": "aaf465994b631a29dc7935a0bfd07e6b60e1d9a487528f4fa31ee4d1183978e1"
+   },
+   "bend": {
+    "deformation_seed": 17430407831457798548,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.002886
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4337
+   },
+   "width_m": 0.03645,
+   "vertices": 4853,
+   "triangles": 9702,
+   "bounds_m": [
+    [
+     -0.018663,
+     1.5e-05,
+     -0.004005
+    ],
+    [
+     0.017784,
+     0.059906,
+     0.003987
+    ]
+   ],
+   "seconds": 11.9
+  },
+  {
+   "file": "leaf_014.usda",
+   "index": 14,
+   "seed": 1594698492,
+   "shape": {
+    "shape_seed": 4827147947251378046,
+    "attempt": 1,
+    "contour_sha256": "4a82fe4ddc79c2e7c7ba63af3e6415b3221ca713b450f8438ebefa01a5930926"
+   },
+   "bend": {
+    "deformation_seed": 17996781748756774372,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000571
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3937
+   },
+   "width_m": 0.03152,
+   "vertices": 3555,
+   "triangles": 7106,
+   "bounds_m": [
+    [
+     -0.018533,
+     -0.000634,
+     -0.001626
+    ],
+    [
+     0.012947,
+     0.059844,
+     0.004074
+    ]
+   ],
+   "seconds": 10.79
+  },
+  {
+   "file": "leaf_015.usda",
+   "index": 15,
+   "seed": 1033241361,
+   "shape": {
+    "shape_seed": 16096973818314120755,
+    "attempt": 1,
+    "contour_sha256": "59b66c976183b039b2706a5549fa14c1e514ba0301ee28094bf82417da90624c"
+   },
+   "bend": {
+    "deformation_seed": 12201654920480151696,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.000999
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3106
+   },
+   "width_m": 0.0323,
+   "vertices": 4050,
+   "triangles": 8096,
+   "bounds_m": [
+    [
+     -0.017411,
+     -0.001699,
+     -0.00045
+    ],
+    [
+     0.014838,
+     0.059935,
+     0.005639
+    ]
+   ],
+   "seconds": 14.0
+  },
+  {
+   "file": "leaf_016.usda",
+   "index": 16,
+   "seed": 3372763484,
+   "shape": {
+    "shape_seed": 14669701970809535159,
+    "attempt": 1,
+    "contour_sha256": "32ba5dbb79a5fc98a7ad9a3027986a712ca928b2238d9c0a9bc5ae90ebab626c"
+   },
+   "bend": {
+    "deformation_seed": 13238775463820530584,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.002482
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4316
+   },
+   "width_m": 0.03461,
+   "vertices": 4316,
+   "triangles": 8628,
+   "bounds_m": [
+    [
+     -0.016393,
+     -0.000372,
+     -0.000658
+    ],
+    [
+     0.018191,
+     0.059776,
+     0.009288
+    ]
+   ],
+   "seconds": 24.1
+  },
+  {
+   "file": "leaf_017.usda",
+   "index": 17,
+   "seed": 2945143878,
+   "shape": {
+    "shape_seed": 11149295117737283703,
+    "attempt": 1,
+    "contour_sha256": "638dc4c50052afd5d8d9d320095d2f4b3d8fd18a243b1dea180da2ad2bd88935"
+   },
+   "bend": {
+    "deformation_seed": 5547746503266675536,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000142
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4058
+   },
+   "width_m": 0.03492,
+   "vertices": 4270,
+   "triangles": 8536,
+   "bounds_m": [
+    [
+     -0.017727,
+     -0.000615,
+     -0.001524
+    ],
+    [
+     0.017188,
+     0.059931,
+     0.006053
+    ]
+   ],
+   "seconds": 10.39
+  },
+  {
+   "file": "leaf_018.usda",
+   "index": 18,
+   "seed": 2911340162,
+   "shape": {
+    "shape_seed": 6165840004463985976,
+    "attempt": 1,
+    "contour_sha256": "3dc9b2771e23fd398459c8828f139db99ee4a0f2926edaaaec7497ae5f0b08d1"
+   },
+   "bend": {
+    "deformation_seed": 10756512655905818667,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     2.9e-05
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3432
+   },
+   "width_m": 0.03136,
+   "vertices": 3509,
+   "triangles": 7014,
+   "bounds_m": [
+    [
+     -0.015198,
+     -3.2e-05,
+     -0.002637
+    ],
+    [
+     0.016138,
+     0.05989,
+     0.009197
+    ]
+   ],
+   "seconds": 12.02
+  },
+  {
+   "file": "leaf_019.usda",
+   "index": 19,
+   "seed": 615107538,
+   "shape": {
+    "shape_seed": 3961139170083251946,
+    "attempt": 1,
+    "contour_sha256": "a33a7c32f6fbaecf07d92dac89963e266ea9c653ff9724498b0ad9db04bd631f"
+   },
+   "bend": {
+    "deformation_seed": 5685683244677932743,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.005399
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4351
+   },
+   "width_m": 0.03833,
+   "vertices": 3639,
+   "triangles": 7274,
+   "bounds_m": [
+    [
+     -0.014926,
+     -0.002453,
+     -0.001093
+    ],
+    [
+     0.023353,
+     0.059615,
+     0.013031
+    ]
+   ],
+   "seconds": 10.76
+  },
+  {
+   "file": "leaf_020.usda",
+   "index": 20,
+   "seed": 3586272312,
+   "shape": {
+    "shape_seed": 15309069003983042092,
+    "attempt": 1,
+    "contour_sha256": "ea7a0e027d957e9d137e0114bc0309523c4d17fa1894596fd079fc632ed83cdd"
+   },
+   "bend": {
+    "deformation_seed": 3676792983362277651,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.003831
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4224
+   },
+   "width_m": 0.03854,
+   "vertices": 4391,
+   "triangles": 8778,
+   "bounds_m": [
+    [
+     -0.017736,
+     -0.000809,
+     -0.000716
+    ],
+    [
+     0.020784,
+     0.059962,
+     0.00765
+    ]
+   ],
+   "seconds": 13.89
+  },
+  {
+   "file": "leaf_021.usda",
+   "index": 21,
+   "seed": 840496591,
+   "shape": {
+    "shape_seed": 6538683376094303714,
+    "attempt": 1,
+    "contour_sha256": "a5b79f0399816662b40ac4a842f378175d95fc64b01ef27c9cfc411360ab829f"
+   },
+   "bend": {
+    "deformation_seed": 14873801272625920836,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.001742
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3760
+   },
+   "width_m": 0.03586,
+   "vertices": 4180,
+   "triangles": 8356,
+   "bounds_m": [
+    [
+     -0.016298,
+     -0.00068,
+     -0.002389
+    ],
+    [
+     0.019551,
+     0.059841,
+     0.007838
+    ]
+   ],
+   "seconds": 11.73
+  },
+  {
+   "file": "leaf_022.usda",
+   "index": 22,
+   "seed": 2912737658,
+   "shape": {
+    "shape_seed": 5342011878117204976,
+    "attempt": 1,
+    "contour_sha256": "243dbb268d47495f50631c2992713d30e7ad2ec95216c5ddfcb929f3270635c6"
+   },
+   "bend": {
+    "deformation_seed": 3717343387702468877,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.006746
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3651
+   },
+   "width_m": 0.03717,
+   "vertices": 3937,
+   "triangles": 7870,
+   "bounds_m": [
+    [
+     -0.018831,
+     -0.000165,
+     -0.000395
+    ],
+    [
+     0.018337,
+     0.059748,
+     0.00662
+    ]
+   ],
+   "seconds": 11.52
+  },
+  {
+   "file": "leaf_023.usda",
+   "index": 23,
+   "seed": 2765158231,
+   "shape": {
+    "shape_seed": 3324270355539276185,
+    "attempt": 1,
+    "contour_sha256": "8203709b8a59569f1e63ff3bd2f4e7abb49f5ce8d079f3f63b644e66980244ed"
+   },
+   "bend": {
+    "deformation_seed": 9723418203249120606,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.005583
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3152
+   },
+   "width_m": 0.03028,
+   "vertices": 3526,
+   "triangles": 7048,
+   "bounds_m": [
+    [
+     -0.011886,
+     -0.000456,
+     -0.000874
+    ],
+    [
+     0.018358,
+     0.059896,
+     0.007657
+    ]
+   ],
+   "seconds": 11.71
+  },
+  {
+   "file": "leaf_024.usda",
+   "index": 24,
+   "seed": 3823371202,
+   "shape": {
+    "shape_seed": 14340211711094099013,
+    "attempt": 1,
+    "contour_sha256": "a45b59d9099d46a18c97cc6df2520778de5b571f4b1cd5add256757f41b22009"
+   },
+   "bend": {
+    "deformation_seed": 4533381374850153204,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.006758
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3957
+   },
+   "width_m": 0.03337,
+   "vertices": 3941,
+   "triangles": 7878,
+   "bounds_m": [
+    [
+     -0.016171,
+     -0.000145,
+     -0.002751
+    ],
+    [
+     0.017198,
+     0.059949,
+     0.006744
+    ]
+   ],
+   "seconds": 24.08
+  },
+  {
+   "file": "leaf_025.usda",
+   "index": 25,
+   "seed": 268551073,
+   "shape": {
+    "shape_seed": 123363555257736834,
+    "attempt": 1,
+    "contour_sha256": "c6fbaad6d6f3e428c50b09345ed0167fba2d76c56e394b42a968b42cb9c8d18f"
+   },
+   "bend": {
+    "deformation_seed": 9722102622234188430,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.003445
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3680
+   },
+   "width_m": 0.03196,
+   "vertices": 3549,
+   "triangles": 7094,
+   "bounds_m": [
+    [
+     -0.018124,
+     -1.7e-05,
+     -0.000152
+    ],
+    [
+     0.01381,
+     0.059871,
+     0.007086
+    ]
+   ],
+   "seconds": 14.94
+  },
+  {
+   "file": "leaf_026.usda",
+   "index": 26,
+   "seed": 3440622963,
+   "shape": {
+    "shape_seed": 9021287676287130342,
+    "attempt": 1,
+    "contour_sha256": "0304c94c3348857f500adfb155e4582567888c378a05cf9e6839215870da1494"
+   },
+   "bend": {
+    "deformation_seed": 18230358455599811916,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.004793
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4189
+   },
+   "width_m": 0.03415,
+   "vertices": 4659,
+   "triangles": 9314,
+   "bounds_m": [
+    [
+     -0.018539,
+     -0.003946,
+     -0.002039
+    ],
+    [
+     0.015605,
+     0.059846,
+     0.004943
+    ]
+   ],
+   "seconds": 10.69
+  },
+  {
+   "file": "leaf_027.usda",
+   "index": 27,
+   "seed": 2145779419,
+   "shape": {
+    "shape_seed": 4428748583794317251,
+    "attempt": 1,
+    "contour_sha256": "daf0f1ae472a0e39467573b0409c840087d2905952300f735698130831b16886"
+   },
+   "bend": {
+    "deformation_seed": 9184013069906239869,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -1.5e-05
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3333
+   },
+   "width_m": 0.03235,
+   "vertices": 3966,
+   "triangles": 7928,
+   "bounds_m": [
+    [
+     -0.015533,
+     -0.001079,
+     -0.000784
+    ],
+    [
+     0.016776,
+     0.059891,
+     0.009934
+    ]
+   ],
+   "seconds": 11.05
+  },
+  {
+   "file": "leaf_028.usda",
+   "index": 28,
+   "seed": 2794688815,
+   "shape": {
+    "shape_seed": 10574754757273759413,
+    "attempt": 1,
+    "contour_sha256": "2133dda4fae55ddac24eec96e28b0576ed55bf4815fe23a0e281794ce568bf4a"
+   },
+   "bend": {
+    "deformation_seed": 6188066623160113471,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.006068
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 5168
+   },
+   "width_m": 0.04265,
+   "vertices": 4609,
+   "triangles": 9214,
+   "bounds_m": [
+    [
+     -0.017909,
+     -0.002313,
+     -0.002754
+    ],
+    [
+     0.024695,
+     0.059763,
+     0.007598
+    ]
+   ],
+   "seconds": 12.95
+  },
+  {
+   "file": "leaf_029.usda",
+   "index": 29,
+   "seed": 323430776,
+   "shape": {
+    "shape_seed": 14196516640710763250,
+    "attempt": 1,
+    "contour_sha256": "889eda6d0fec382fa14b45561958f66a0667dd527bb198dd7c759b6682052ca7"
+   },
+   "bend": {
+    "deformation_seed": 11328298728583482508,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.002234
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3279
+   },
+   "width_m": 0.03798,
+   "vertices": 4669,
+   "triangles": 9334,
+   "bounds_m": [
+    [
+     -0.017805,
+     -0.003582,
+     -0.00323
+    ],
+    [
+     0.020121,
+     0.059903,
+     0.004225
+    ]
+   ],
+   "seconds": 14.4
+  },
+  {
+   "file": "leaf_030.usda",
+   "index": 30,
+   "seed": 3707810298,
+   "shape": {
+    "shape_seed": 5395957875714973367,
+    "attempt": 1,
+    "contour_sha256": "2b515881e02c9c8aaae5a8cb46ae6fbbe93ef3800deb6b7f63e136c15be19c1f"
+   },
+   "bend": {
+    "deformation_seed": 13834532086971776137,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.001911
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4585
+   },
+   "width_m": 0.03963,
+   "vertices": 4716,
+   "triangles": 9428,
+   "bounds_m": [
+    [
+     -0.020701,
+     -0.003072,
+     -0.006418
+    ],
+    [
+     0.018863,
+     0.059747,
+     0.007199
+    ]
+   ],
+   "seconds": 13.07
+  },
+  {
+   "file": "leaf_031.usda",
+   "index": 31,
+   "seed": 3608926621,
+   "shape": {
+    "shape_seed": 17924701927760186252,
+    "attempt": 1,
+    "contour_sha256": "9658cddf9e6fe0186592001db4dda8006b7f7b3b71aca2177613bfcfbda38290"
+   },
+   "bend": {
+    "deformation_seed": 11391943125876896505,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.003188
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4079
+   },
+   "width_m": 0.03578,
+   "vertices": 4052,
+   "triangles": 8100,
+   "bounds_m": [
+    [
+     -0.016735,
+     -0.000368,
+     -0.00572
+    ],
+    [
+     0.01901,
+     0.05982,
+     0.001406
+    ]
+   ],
+   "seconds": 18.24
+  },
+  {
+   "file": "leaf_032.usda",
+   "index": 32,
+   "seed": 4186103075,
+   "shape": {
+    "shape_seed": 7725763568110857343,
+    "attempt": 1,
+    "contour_sha256": "b9606f533fd9af9ab834b2c49c321a4a7742384ffb542e780e281917fb20747e"
+   },
+   "bend": {
+    "deformation_seed": 1100338477955826635,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.00309
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3520
+   },
+   "width_m": 0.03349,
+   "vertices": 3690,
+   "triangles": 7376,
+   "bounds_m": [
+    [
+     -0.016354,
+     8.9e-05,
+     -0.004185
+    ],
+    [
+     0.017125,
+     0.05999,
+     0.003161
+    ]
+   ],
+   "seconds": 10.25
+  },
+  {
+   "file": "leaf_033.usda",
+   "index": 33,
+   "seed": 3808479420,
+   "shape": {
+    "shape_seed": 11177017536103728969,
+    "attempt": 1,
+    "contour_sha256": "fd2f04e0dce0ea49a13c96cd443b03790b58829f130052f84c44815d6db86fa0"
+   },
+   "bend": {
+    "deformation_seed": 14721340143686745859,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.0043
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3712
+   },
+   "width_m": 0.03354,
+   "vertices": 4145,
+   "triangles": 8286,
+   "bounds_m": [
+    [
+     -0.016212,
+     -2.4e-05,
+     9.1e-05
+    ],
+    [
+     0.017309,
+     0.059853,
+     0.007629
+    ]
+   ],
+   "seconds": 10.39
+  },
+  {
+   "file": "leaf_034.usda",
+   "index": 34,
+   "seed": 1406866734,
+   "shape": {
+    "shape_seed": 11935427636811151584,
+    "attempt": 1,
+    "contour_sha256": "f0c3fe7685a074ee3479e9137530f3842fdeaa3dc6f9c4387e9cf8dbea772b0b"
+   },
+   "bend": {
+    "deformation_seed": 1542753261772215078,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.000541
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3312
+   },
+   "width_m": 0.03133,
+   "vertices": 3444,
+   "triangles": 6884,
+   "bounds_m": [
+    [
+     -0.014572,
+     -0.001042,
+     -0.001416
+    ],
+    [
+     0.016701,
+     0.059628,
+     0.008064
+    ]
+   ],
+   "seconds": 9.89
+  },
+  {
+   "file": "leaf_035.usda",
+   "index": 35,
+   "seed": 4145762789,
+   "shape": {
+    "shape_seed": 15550371385297652663,
+    "attempt": 1,
+    "contour_sha256": "50a6fe48d8e5eb6c8b42f4c27bfa957dfd1547d4ed67774e595f04fa432a4954"
+   },
+   "bend": {
+    "deformation_seed": 9695502649225529934,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.00348
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4242
+   },
+   "width_m": 0.0362,
+   "vertices": 4228,
+   "triangles": 8452,
+   "bounds_m": [
+    [
+     -0.019491,
+     -0.000165,
+     -0.005427
+    ],
+    [
+     0.016632,
+     0.059831,
+     0.004263
+    ]
+   ],
+   "seconds": 11.34
+  },
+  {
+   "file": "leaf_036.usda",
+   "index": 36,
+   "seed": 1019725898,
+   "shape": {
+    "shape_seed": 6354534950607233797,
+    "attempt": 1,
+    "contour_sha256": "0d9abcc6f57dbe8754c288a1e3507882d18a4728213674210e0bfaf47d269dbd"
+   },
+   "bend": {
+    "deformation_seed": 16178197600541721337,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.002431
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 2856
+   },
+   "width_m": 0.02388,
+   "vertices": 2756,
+   "triangles": 5508,
+   "bounds_m": [
+    [
+     -0.011105,
+     1e-05,
+     -0.000608
+    ],
+    [
+     0.012749,
+     0.059891,
+     0.008962
+    ]
+   ],
+   "seconds": 12.09
+  },
+  {
+   "file": "leaf_037.usda",
+   "index": 37,
+   "seed": 2384894470,
+   "shape": {
+    "shape_seed": 10580575756404490047,
+    "attempt": 1,
+    "contour_sha256": "d4706ac15b57d1eaffd47e339ad90aa27e4e3035416bd1c6d526ef18aea4e9eb"
+   },
+   "bend": {
+    "deformation_seed": 14720451683840084584,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.012938
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 5112
+   },
+   "width_m": 0.03745,
+   "vertices": 4726,
+   "triangles": 9448,
+   "bounds_m": [
+    [
+     -0.020693,
+     -0.000242,
+     -0.000765
+    ],
+    [
+     0.016743,
+     0.059888,
+     0.012895
+    ]
+   ],
+   "seconds": 11.72
+  },
+  {
+   "file": "leaf_038.usda",
+   "index": 38,
+   "seed": 3205755300,
+   "shape": {
+    "shape_seed": 9262176944671550049,
+    "attempt": 1,
+    "contour_sha256": "bfa0f28761783a47c0cac16eccb44c67e66256cd5a47d40fc1585a26630b3d42"
+   },
+   "bend": {
+    "deformation_seed": 11762513560673882692,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.003735
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4191
+   },
+   "width_m": 0.03773,
+   "vertices": 4727,
+   "triangles": 9450,
+   "bounds_m": [
+    [
+     -0.020171,
+     -0.000544,
+     -0.006686
+    ],
+    [
+     0.017532,
+     0.059787,
+     0.000857
+    ]
+   ],
+   "seconds": 10.65
+  },
+  {
+   "file": "leaf_039.usda",
+   "index": 39,
+   "seed": 1620019375,
+   "shape": {
+    "shape_seed": 1379742185095763339,
+    "attempt": 1,
+    "contour_sha256": "425c41fe6cb475c31fb6d41a95a1ac20dc93f8ca6b7d8bd252d7e0eb0c7e6db8"
+   },
+   "bend": {
+    "deformation_seed": 596315339990371537,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.00424
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4350
+   },
+   "width_m": 0.03694,
+   "vertices": 4869,
+   "triangles": 9734,
+   "bounds_m": [
+    [
+     -0.017664,
+     -0.003395,
+     -0.00121
+    ],
+    [
+     0.019267,
+     0.059756,
+     0.010565
+    ]
+   ],
+   "seconds": 9.99
+  },
+  {
+   "file": "leaf_040.usda",
+   "index": 40,
+   "seed": 1865231838,
+   "shape": {
+    "shape_seed": 6867953050716748271,
+    "attempt": 1,
+    "contour_sha256": "741b6bba35c50f536b61fef482fb4148f36c8dee0ee2490e66db01a4d23e68ea"
+   },
+   "bend": {
+    "deformation_seed": 12717368818396956058,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000959
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3747
+   },
+   "width_m": 0.03955,
+   "vertices": 3730,
+   "triangles": 7456,
+   "bounds_m": [
+    [
+     -0.015604,
+     1.9e-05,
+     -0.002615
+    ],
+    [
+     0.023924,
+     0.05976,
+     0.002172
+    ]
+   ],
+   "seconds": 11.0
+  },
+  {
+   "file": "leaf_041.usda",
+   "index": 41,
+   "seed": 529389279,
+   "shape": {
+    "shape_seed": 7276934250235056235,
+    "attempt": 1,
+    "contour_sha256": "6af9a87f91d25780fecee8d1cde5a5228f88da9cbc0d2408edfdb1cb684f72ab"
+   },
+   "bend": {
+    "deformation_seed": 3991172457178621874,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.001858
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3858
+   },
+   "width_m": 0.03327,
+   "vertices": 3852,
+   "triangles": 7700,
+   "bounds_m": [
+    [
+     -0.015692,
+     -0.000285,
+     -0.005114
+    ],
+    [
+     0.017573,
+     0.059986,
+     0.005304
+    ]
+   ],
+   "seconds": 24.04
+  },
+  {
+   "file": "leaf_042.usda",
+   "index": 42,
+   "seed": 1421587343,
+   "shape": {
+    "shape_seed": 16541155029248224114,
+    "attempt": 1,
+    "contour_sha256": "0a4f10d0ba5eb39c76a17fb6b9825a85056b6e69cec0ed0583242b61d4e0c716"
+   },
+   "bend": {
+    "deformation_seed": 1186222192198680392,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.002611
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3292
+   },
+   "width_m": 0.03356,
+   "vertices": 3845,
+   "triangles": 7686,
+   "bounds_m": [
+    [
+     -0.017533,
+     -1.6e-05,
+     -0.00416
+    ],
+    [
+     0.016003,
+     0.059874,
+     0.001817
+    ]
+   ],
+   "seconds": 23.86
+  },
+  {
+   "file": "leaf_043.usda",
+   "index": 43,
+   "seed": 2678242435,
+   "shape": {
+    "shape_seed": 11749235015484034361,
+    "attempt": 1,
+    "contour_sha256": "a48f2290025308198a42914635fa7ac84df4a908072e9223ecf4b94c2bc80d7f"
+   },
+   "bend": {
+    "deformation_seed": 4438591826534852001,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.011665
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4193
+   },
+   "width_m": 0.03034,
+   "vertices": 3770,
+   "triangles": 7536,
+   "bounds_m": [
+    [
+     -0.012902,
+     -0.002291,
+     -0.000799
+    ],
+    [
+     0.017382,
+     0.059831,
+     0.011481
+    ]
+   ],
+   "seconds": 14.02
+  },
+  {
+   "file": "leaf_044.usda",
+   "index": 44,
+   "seed": 1498991206,
+   "shape": {
+    "shape_seed": 15354148638054471903,
+    "attempt": 1,
+    "contour_sha256": "65c923f55a207d8f8ff54549fbe1c5657d3a76761c11027e4f86a090a5230cae"
+   },
+   "bend": {
+    "deformation_seed": 12427254222141571426,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000153
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4122
+   },
+   "width_m": 0.03674,
+   "vertices": 4332,
+   "triangles": 8660,
+   "bounds_m": [
+    [
+     -0.016482,
+     -0.000652,
+     -0.001584
+    ],
+    [
+     0.020213,
+     0.059869,
+     0.006794
+    ]
+   ],
+   "seconds": 12.14
+  },
+  {
+   "file": "leaf_045.usda",
+   "index": 45,
+   "seed": 518723887,
+   "shape": {
+    "shape_seed": 9667221332470841774,
+    "attempt": 1,
+    "contour_sha256": "08c3b2147e9500ee327d526cb8326e61fea597ea798e6e45238770b44a53a701"
+   },
+   "bend": {
+    "deformation_seed": 13732234542931172682,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.003076
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3821
+   },
+   "width_m": 0.03097,
+   "vertices": 3609,
+   "triangles": 7214,
+   "bounds_m": [
+    [
+     -0.012288,
+     -0.000658,
+     -0.004297
+    ],
+    [
+     0.018662,
+     0.059848,
+     0.005702
+    ]
+   ],
+   "seconds": 11.25
+  },
+  {
+   "file": "leaf_046.usda",
+   "index": 46,
+   "seed": 2289866588,
+   "shape": {
+    "shape_seed": 2502192252642528418,
+    "attempt": 1,
+    "contour_sha256": "11754afac090ba235f696a51f67410122971225a3de8666a3316452beb94e856"
+   },
+   "bend": {
+    "deformation_seed": 6719260114506090972,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.002813
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3847
+   },
+   "width_m": 0.03622,
+   "vertices": 4022,
+   "triangles": 8040,
+   "bounds_m": [
+    [
+     -0.017246,
+     -0.000135,
+     -0.002321
+    ],
+    [
+     0.018968,
+     0.059925,
+     0.008768
+    ]
+   ],
+   "seconds": 15.18
+  },
+  {
+   "file": "leaf_047.usda",
+   "index": 47,
+   "seed": 917308425,
+   "shape": {
+    "shape_seed": 2997303380242176028,
+    "attempt": 1,
+    "contour_sha256": "352429ce46f09cf02038203df206534fbb487c0bf7be5b88e1cd8f8e9a63fd63"
+   },
+   "bend": {
+    "deformation_seed": 15586244412587012405,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.000157
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3321
+   },
+   "width_m": 0.03192,
+   "vertices": 3658,
+   "triangles": 7312,
+   "bounds_m": [
+    [
+     -0.016211,
+     -7.9e-05,
+     -0.000385
+    ],
+    [
+     0.015691,
+     0.059882,
+     0.006506
+    ]
+   ],
+   "seconds": 12.01
+  },
+  {
+   "file": "leaf_048.usda",
+   "index": 48,
+   "seed": 1926103305,
+   "shape": {
+    "shape_seed": 15423079085224445515,
+    "attempt": 1,
+    "contour_sha256": "646e59cff8c2921fb5ccd796a7b0b003b6186ed610eabf3ab02f0134992c3134"
+   },
+   "bend": {
+    "deformation_seed": 4948991958962553840,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.002298
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 2883
+   },
+   "width_m": 0.02905,
+   "vertices": 3232,
+   "triangles": 6460,
+   "bounds_m": [
+    [
+     -0.015487,
+     -0.00021,
+     -0.000584
+    ],
+    [
+     0.013555,
+     0.059854,
+     0.008009
+    ]
+   ],
+   "seconds": 10.06
+  },
+  {
+   "file": "leaf_049.usda",
+   "index": 49,
+   "seed": 2857190543,
+   "shape": {
+    "shape_seed": 16260769776374959848,
+    "attempt": 1,
+    "contour_sha256": "61955a1be19939c0b7df7c7307934988817b165e6d504b26f23a5349c30019ae"
+   },
+   "bend": {
+    "deformation_seed": 8206879707271747384,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000257
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3077
+   },
+   "width_m": 0.03064,
+   "vertices": 3364,
+   "triangles": 6724,
+   "bounds_m": [
+    [
+     -0.017656,
+     -0.000302,
+     -0.001411
+    ],
+    [
+     0.012947,
+     0.059782,
+     0.006694
+    ]
+   ],
+   "seconds": 10.15
+  },
+  {
+   "file": "leaf_050.usda",
+   "index": 50,
+   "seed": 226050939,
+   "shape": {
+    "shape_seed": 687271011141962016,
+    "attempt": 1,
+    "contour_sha256": "d938d446d85546b24a715eaafc6a48b571357da09a230ca9cab2e385709582e5"
+   },
+   "bend": {
+    "deformation_seed": 5415186086884457477,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.005758
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4066
+   },
+   "width_m": 0.0341,
+   "vertices": 4128,
+   "triangles": 8252,
+   "bounds_m": [
+    [
+     -0.015818,
+     -0.00132,
+     -0.00058
+    ],
+    [
+     0.018252,
+     0.059887,
+     0.010722
+    ]
+   ],
+   "seconds": 10.77
+  },
+  {
+   "file": "leaf_051.usda",
+   "index": 51,
+   "seed": 3150200765,
+   "shape": {
+    "shape_seed": 2463157188601549052,
+    "attempt": 1,
+    "contour_sha256": "e4dd028ca795ec580ba11eb552ba34500f6b364147298bc18f1dffe1b75cfee9"
+   },
+   "bend": {
+    "deformation_seed": 3612846010225941053,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.003039
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4561
+   },
+   "width_m": 0.03502,
+   "vertices": 4366,
+   "triangles": 8728,
+   "bounds_m": [
+    [
+     -0.018255,
+     -0.000236,
+     -0.003381
+    ],
+    [
+     0.01672,
+     0.059785,
+     0.003048
+    ]
+   ],
+   "seconds": 12.79
+  },
+  {
+   "file": "leaf_052.usda",
+   "index": 52,
+   "seed": 3807183305,
+   "shape": {
+    "shape_seed": 15427295923739433099,
+    "attempt": 1,
+    "contour_sha256": "b38d32b70cb976efe1f406d251874310d6cd649958a7a61dfaa1fcddb3964922"
+   },
+   "bend": {
+    "deformation_seed": 2644436026679438970,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.002164
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4351
+   },
+   "width_m": 0.03383,
+   "vertices": 4480,
+   "triangles": 8956,
+   "bounds_m": [
+    [
+     -0.017354,
+     7.2e-05,
+     -0.001138
+    ],
+    [
+     0.01645,
+     0.059907,
+     0.011744
+    ]
+   ],
+   "seconds": 11.71
+  },
+  {
+   "file": "leaf_053.usda",
+   "index": 53,
+   "seed": 595395813,
+   "shape": {
+    "shape_seed": 2876889873642104265,
+    "attempt": 1,
+    "contour_sha256": "0503955ec2ae895c788aaaf97b11f48b3369437b07eecfcc47401e503e8eefa9"
+   },
+   "bend": {
+    "deformation_seed": 3366941451556734567,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.000555
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4678
+   },
+   "width_m": 0.03869,
+   "vertices": 4344,
+   "triangles": 8684,
+   "bounds_m": [
+    [
+     -0.018249,
+     -0.001944,
+     -0.004488
+    ],
+    [
+     0.020415,
+     0.059827,
+     0.003308
+    ]
+   ],
+   "seconds": 13.67
+  },
+  {
+   "file": "leaf_054.usda",
+   "index": 54,
+   "seed": 2286258307,
+   "shape": {
+    "shape_seed": 8594764032236368540,
+    "attempt": 1,
+    "contour_sha256": "630facaf9bf65e466e6140a4d1fb8eb6b5c6f3ef8c86b1e2ddf4dc00709b0bd9"
+   },
+   "bend": {
+    "deformation_seed": 5154523121650860825,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.003904
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3518
+   },
+   "width_m": 0.03129,
+   "vertices": 3853,
+   "triangles": 7702,
+   "bounds_m": [
+    [
+     -0.016426,
+     -8.5e-05,
+     -0.000534
+    ],
+    [
+     0.014835,
+     0.059769,
+     0.008149
+    ]
+   ],
+   "seconds": 11.96
+  },
+  {
+   "file": "leaf_055.usda",
+   "index": 55,
+   "seed": 1683887022,
+   "shape": {
+    "shape_seed": 6226458962989808735,
+    "attempt": 1,
+    "contour_sha256": "d0478cb23d01c1d2d91afa9dbf732d03c0c2f552581bb4ce1c5c5b093b628630"
+   },
+   "bend": {
+    "deformation_seed": 15923955011649098510,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.003201
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3973
+   },
+   "width_m": 0.03451,
+   "vertices": 4282,
+   "triangles": 8560,
+   "bounds_m": [
+    [
+     -0.01813,
+     -0.001928,
+     -0.009765
+    ],
+    [
+     0.016341,
+     0.059798,
+     0.000655
+    ]
+   ],
+   "seconds": 10.31
+  },
+  {
+   "file": "leaf_056.usda",
+   "index": 56,
+   "seed": 2984695792,
+   "shape": {
+    "shape_seed": 15453633541673027824,
+    "attempt": 1,
+    "contour_sha256": "6d4d327870996de3f32275b970dcfc8edbc63f867e63f399d22393f2e1755866"
+   },
+   "bend": {
+    "deformation_seed": 11132998084373810220,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.002527
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4015
+   },
+   "width_m": 0.03466,
+   "vertices": 4215,
+   "triangles": 8426,
+   "bounds_m": [
+    [
+     -0.018162,
+     -0.001349,
+     -0.006258
+    ],
+    [
+     0.016486,
+     0.059805,
+     0.002696
+    ]
+   ],
+   "seconds": 10.04
+  },
+  {
+   "file": "leaf_057.usda",
+   "index": 57,
+   "seed": 4054573045,
+   "shape": {
+    "shape_seed": 933746153428475649,
+    "attempt": 1,
+    "contour_sha256": "c0b09247980cde077e98d7890ffdb308d4ed417fc7d501555aa2d50d8598f5b7"
+   },
+   "bend": {
+    "deformation_seed": 2584300227028893272,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.005607
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4047
+   },
+   "width_m": 0.039,
+   "vertices": 4508,
+   "triangles": 9012,
+   "bounds_m": [
+    [
+     -0.020873,
+     -0.003879,
+     -0.000642
+    ],
+    [
+     0.018121,
+     0.059752,
+     0.010308
+    ]
+   ],
+   "seconds": 15.7
+  },
+  {
+   "file": "leaf_058.usda",
+   "index": 58,
+   "seed": 850241117,
+   "shape": {
+    "shape_seed": 8176294644633615357,
+    "attempt": 1,
+    "contour_sha256": "0a47df01afd53980bf817c4118aba25a0b4e3071c8fc083b0d2c3dbdc665c2d6"
+   },
+   "bend": {
+    "deformation_seed": 15139916775352344698,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.005449
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4724
+   },
+   "width_m": 0.04032,
+   "vertices": 5251,
+   "triangles": 10498,
+   "bounds_m": [
+    [
+     -0.020899,
+     -0.002514,
+     -0.000893
+    ],
+    [
+     0.019411,
+     0.059867,
+     0.008524
+    ]
+   ],
+   "seconds": 10.59
+  },
+  {
+   "file": "leaf_059.usda",
+   "index": 59,
+   "seed": 307788632,
+   "shape": {
+    "shape_seed": 13058423263783283605,
+    "attempt": 1,
+    "contour_sha256": "d3e6268bbe17fafaae816ae23ac28cb2042df8ef175f38d818fd5bcdf20dc7bf"
+   },
+   "bend": {
+    "deformation_seed": 7811427565971894056,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.004824
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3703
+   },
+   "width_m": 0.03328,
+   "vertices": 3995,
+   "triangles": 7986,
+   "bounds_m": [
+    [
+     -0.016549,
+     -0.000345,
+     -0.002573
+    ],
+    [
+     0.016725,
+     0.05974,
+     0.005451
+    ]
+   ],
+   "seconds": 12.85
+  },
+  {
+   "file": "leaf_060.usda",
+   "index": 60,
+   "seed": 184068795,
+   "shape": {
+    "shape_seed": 4137077174127306339,
+    "attempt": 1,
+    "contour_sha256": "72bcbbb35603992b015fbb15caf267e3d7d6b5022c398f11058a202a59acaf69"
+   },
+   "bend": {
+    "deformation_seed": 2941402584076068209,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.000852
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3638
+   },
+   "width_m": 0.0351,
+   "vertices": 3824,
+   "triangles": 7644,
+   "bounds_m": [
+    [
+     -0.011956,
+     -0.000775,
+     -0.002446
+    ],
+    [
+     0.023139,
+     0.059669,
+     0.006039
+    ]
+   ],
+   "seconds": 23.56
+  },
+  {
+   "file": "leaf_061.usda",
+   "index": 61,
+   "seed": 1389482331,
+   "shape": {
+    "shape_seed": 11188418705446761846,
+    "attempt": 1,
+    "contour_sha256": "0746f9e7b437d2a32ea123dac0bbb43d12955a22a4530899e812de47c3fc9139"
+   },
+   "bend": {
+    "deformation_seed": 3787769642894038543,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -8.3e-05
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4178
+   },
+   "width_m": 0.0343,
+   "vertices": 3572,
+   "triangles": 7140,
+   "bounds_m": [
+    [
+     -0.017388,
+     -0.000107,
+     -0.003677
+    ],
+    [
+     0.016838,
+     0.059837,
+     0.001146
+    ]
+   ],
+   "seconds": 23.57
+  },
+  {
+   "file": "leaf_062.usda",
+   "index": 62,
+   "seed": 2414079670,
+   "shape": {
+    "shape_seed": 12363734508811349817,
+    "attempt": 1,
+    "contour_sha256": "7f0e58983b4a59a8a18e477f770cc88c21d3fa1753be88ed95cd4b37e3eaefa2"
+   },
+   "bend": {
+    "deformation_seed": 9096810447297166136,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -2.9e-05
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4027
+   },
+   "width_m": 0.03502,
+   "vertices": 3955,
+   "triangles": 7906,
+   "bounds_m": [
+    [
+     -0.016117,
+     -0.00208,
+     -0.002303
+    ],
+    [
+     0.01885,
+     0.059899,
+     0.006595
+    ]
+   ],
+   "seconds": 10.84
+  },
+  {
+   "file": "leaf_063.usda",
+   "index": 63,
+   "seed": 233068772,
+   "shape": {
+    "shape_seed": 4351799793426247867,
+    "attempt": 1,
+    "contour_sha256": "1752a2438207f5c2fa158ff18bfb23cc0bc0d1d4a4a653022796b9f989b57896"
+   },
+   "bend": {
+    "deformation_seed": 14707965098610601596,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.005879
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4689
+   },
+   "width_m": 0.03474,
+   "vertices": 4082,
+   "triangles": 8160,
+   "bounds_m": [
+    [
+     -0.016755,
+     -0.002189,
+     -0.003208
+    ],
+    [
+     0.017947,
+     0.059923,
+     0.009559
+    ]
+   ],
+   "seconds": 11.01
+  },
+  {
+   "file": "leaf_064.usda",
+   "index": 64,
+   "seed": 3363612609,
+   "shape": {
+    "shape_seed": 10510326812742586408,
+    "attempt": 1,
+    "contour_sha256": "401fcbf88a3a5dbe10ff0a29e6a8a8636c027d583487679d054f64f4c0508712"
+   },
+   "bend": {
+    "deformation_seed": 5446953615016567921,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.002361
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3896
+   },
+   "width_m": 0.03934,
+   "vertices": 4843,
+   "triangles": 9682,
+   "bounds_m": [
+    [
+     -0.018106,
+     -0.000761,
+     -0.002318
+    ],
+    [
+     0.021175,
+     0.059811,
+     0.007911
+    ]
+   ],
+   "seconds": 16.23
+  },
+  {
+   "file": "leaf_065.usda",
+   "index": 65,
+   "seed": 93809731,
+   "shape": {
+    "shape_seed": 15601760691878065033,
+    "attempt": 1,
+    "contour_sha256": "25ea5c7b5d2bcc014afdfcbe31442b168b3b47dd105aecd6e99e7e6d75f81078"
+   },
+   "bend": {
+    "deformation_seed": 17393340573644517874,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000166
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4215
+   },
+   "width_m": 0.03683,
+   "vertices": 4783,
+   "triangles": 9562,
+   "bounds_m": [
+    [
+     -0.02,
+     -0.001152,
+     -0.00094
+    ],
+    [
+     0.016816,
+     0.059823,
+     0.010713
+    ]
+   ],
+   "seconds": 10.36
+  },
+  {
+   "file": "leaf_066.usda",
+   "index": 66,
+   "seed": 2505041055,
+   "shape": {
+    "shape_seed": 5362800763960914031,
+    "attempt": 1,
+    "contour_sha256": "562e51a081b7b4130e102f0ea0a566fd6df928bd4f21f2d8f047f6111322cd4b"
+   },
+   "bend": {
+    "deformation_seed": 13115861080031729113,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.004752
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4372
+   },
+   "width_m": 0.03441,
+   "vertices": 3827,
+   "triangles": 7650,
+   "bounds_m": [
+    [
+     -0.01929,
+     -6.8e-05,
+     -0.001979
+    ],
+    [
+     0.015074,
+     0.059692,
+     0.006343
+    ]
+   ],
+   "seconds": 11.62
+  },
+  {
+   "file": "leaf_067.usda",
+   "index": 67,
+   "seed": 2598947610,
+   "shape": {
+    "shape_seed": 15878605871305237306,
+    "attempt": 1,
+    "contour_sha256": "b455b33de3be0ddfbd242aed1b3f7695c1392239b9d85f84d7172a043a05a9a7"
+   },
+   "bend": {
+    "deformation_seed": 4831534208520016108,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.003199
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4116
+   },
+   "width_m": 0.03659,
+   "vertices": 4105,
+   "triangles": 8206,
+   "bounds_m": [
+    [
+     -0.017808,
+     -0.002117,
+     -0.00093
+    ],
+    [
+     0.018776,
+     0.059882,
+     0.0083
+    ]
+   ],
+   "seconds": 10.01
+  },
+  {
+   "file": "leaf_068.usda",
+   "index": 68,
+   "seed": 3777256084,
+   "shape": {
+    "shape_seed": 5507570967956696937,
+    "attempt": 1,
+    "contour_sha256": "5fa2dcde143e1edc9657d0195fc02ec82abc0e4fcf3fcc7904d036b6e531bce0"
+   },
+   "bend": {
+    "deformation_seed": 6739672927103547218,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000227
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3801
+   },
+   "width_m": 0.03178,
+   "vertices": 3781,
+   "triangles": 7558,
+   "bounds_m": [
+    [
+     -0.013973,
+     -0.00256,
+     -0.002151
+    ],
+    [
+     0.017692,
+     0.059777,
+     0.004041
+    ]
+   ],
+   "seconds": 9.46
+  },
+  {
+   "file": "leaf_069.usda",
+   "index": 69,
+   "seed": 1433570735,
+   "shape": {
+    "shape_seed": 6019470352415489887,
+    "attempt": 1,
+    "contour_sha256": "e6b5971b1eb7c0a5d2b6e35c5208871b959948724c8cd4e51fe64c0c345d0d54"
+   },
+   "bend": {
+    "deformation_seed": 12134595132866763019,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.002567
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3595
+   },
+   "width_m": 0.03172,
+   "vertices": 3864,
+   "triangles": 7724,
+   "bounds_m": [
+    [
+     -0.014932,
+     -6.1e-05,
+     -0.00213
+    ],
+    [
+     0.01678,
+     0.059763,
+     0.006809
+    ]
+   ],
+   "seconds": 11.8
+  },
+  {
+   "file": "leaf_070.usda",
+   "index": 70,
+   "seed": 2707340779,
+   "shape": {
+    "shape_seed": 10133633333783516938,
+    "attempt": 1,
+    "contour_sha256": "8226032856aa54966d1d0ef1d4b89c3874829a029d6ca5435ba2d6bf18a20bbc"
+   },
+   "bend": {
+    "deformation_seed": 2354191354973469586,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.001937
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3589
+   },
+   "width_m": 0.03667,
+   "vertices": 4026,
+   "triangles": 8048,
+   "bounds_m": [
+    [
+     -0.015289,
+     -0.00134,
+     -0.00258
+    ],
+    [
+     0.021332,
+     0.05978,
+     0.007486
+    ]
+   ],
+   "seconds": 9.9
+  },
+  {
+   "file": "leaf_071.usda",
+   "index": 71,
+   "seed": 1926891063,
+   "shape": {
+    "shape_seed": 5334520470403366360,
+    "attempt": 1,
+    "contour_sha256": "0c0fe65444f6e41aa8e604794b8267b8c12c9585f4a35d3e125f55b6168fb342"
+   },
+   "bend": {
+    "deformation_seed": 11956038422750373962,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.00452
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4377
+   },
+   "width_m": 0.03479,
+   "vertices": 4428,
+   "triangles": 8852,
+   "bounds_m": [
+    [
+     -0.016799,
+     -0.000274,
+     -0.000996
+    ],
+    [
+     0.017966,
+     0.059963,
+     0.007127
+    ]
+   ],
+   "seconds": 14.92
+  },
+  {
+   "file": "leaf_072.usda",
+   "index": 72,
+   "seed": 2618922614,
+   "shape": {
+    "shape_seed": 12002315700740773594,
+    "attempt": 1,
+    "contour_sha256": "9043611dbf2f3e887ad8c1363677ced4267cfc255d41b327bc23050b9c53b243"
+   },
+   "bend": {
+    "deformation_seed": 18082859122412066250,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.003082
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3894
+   },
+   "width_m": 0.03136,
+   "vertices": 3910,
+   "triangles": 7816,
+   "bounds_m": [
+    [
+     -0.015901,
+     -4.3e-05,
+     -0.006738
+    ],
+    [
+     0.015422,
+     0.059911,
+     0.002622
+    ]
+   ],
+   "seconds": 11.89
+  },
+  {
+   "file": "leaf_073.usda",
+   "index": 73,
+   "seed": 941108731,
+   "shape": {
+    "shape_seed": 14964032779850594753,
+    "attempt": 1,
+    "contour_sha256": "deda655c168910d75c4dc22ff24dfb7e728521738aea1c5f64aaf3aa17be2ba6"
+   },
+   "bend": {
+    "deformation_seed": 4212706675240958762,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.012019
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3527
+   },
+   "width_m": 0.03517,
+   "vertices": 4706,
+   "triangles": 9408,
+   "bounds_m": [
+    [
+     -0.020661,
+     -0.003187,
+     -0.003079
+    ],
+    [
+     0.014503,
+     0.059856,
+     0.012062
+    ]
+   ],
+   "seconds": 11.01
+  },
+  {
+   "file": "leaf_074.usda",
+   "index": 74,
+   "seed": 250527232,
+   "shape": {
+    "shape_seed": 5369624267747669849,
+    "attempt": 1,
+    "contour_sha256": "43458b8e1c6b624af74d19a931b970876c236dea727e102f13d53983420eeb62"
+   },
+   "bend": {
+    "deformation_seed": 5177734739066313512,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.00294
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3805
+   },
+   "width_m": 0.02922,
+   "vertices": 3491,
+   "triangles": 6978,
+   "bounds_m": [
+    [
+     -0.014399,
+     -0.002362,
+     -0.006921
+    ],
+    [
+     0.0148,
+     0.059885,
+     0.004457
+    ]
+   ],
+   "seconds": 11.68
+  },
+  {
+   "file": "leaf_075.usda",
+   "index": 75,
+   "seed": 1456693852,
+   "shape": {
+    "shape_seed": 11400778091939870944,
+    "attempt": 1,
+    "contour_sha256": "2e95f221c60324310fec5c99d2169764b1a7557bcf90ab7522a7f6726f285d01"
+   },
+   "bend": {
+    "deformation_seed": 14277626874506624893,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.000532
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4182
+   },
+   "width_m": 0.03768,
+   "vertices": 4750,
+   "triangles": 9496,
+   "bounds_m": [
+    [
+     -0.019822,
+     -0.002045,
+     -0.001787
+    ],
+    [
+     0.017809,
+     0.0599,
+     0.005797
+    ]
+   ],
+   "seconds": 10.62
+  },
+  {
+   "file": "leaf_076.usda",
+   "index": 76,
+   "seed": 3362083439,
+   "shape": {
+    "shape_seed": 9401876595001617638,
+    "attempt": 1,
+    "contour_sha256": "c9bb586da5418dcc60cc19550a86eae236d31f1a16394d1aca78147a0404c951"
+   },
+   "bend": {
+    "deformation_seed": 1217203572420801598,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000205
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4424
+   },
+   "width_m": 0.03798,
+   "vertices": 4347,
+   "triangles": 8690,
+   "bounds_m": [
+    [
+     -0.023069,
+     -0.002701,
+     -0.001253
+    ],
+    [
+     0.014866,
+     0.059776,
+     0.007106
+    ]
+   ],
+   "seconds": 22.09
+  },
+  {
+   "file": "leaf_077.usda",
+   "index": 77,
+   "seed": 2677609864,
+   "shape": {
+    "shape_seed": 10526445284646110769,
+    "attempt": 1,
+    "contour_sha256": "0a81d02f90d7932a228f328a1c735199617caf948fbd90227085b4323f47a3e8"
+   },
+   "bend": {
+    "deformation_seed": 1705751515617599850,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.001977
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3608
+   },
+   "width_m": 0.03451,
+   "vertices": 4395,
+   "triangles": 8786,
+   "bounds_m": [
+    [
+     -0.019171,
+     -0.000508,
+     -0.000314
+    ],
+    [
+     0.015318,
+     0.059947,
+     0.008464
+    ]
+   ],
+   "seconds": 10.88
+  },
+  {
+   "file": "leaf_078.usda",
+   "index": 78,
+   "seed": 1263074297,
+   "shape": {
+    "shape_seed": 14977009395741362930,
+    "attempt": 1,
+    "contour_sha256": "9a45576162da6774760d0ebdaecf295201cf04df77fe4160cb51c5891846d37c"
+   },
+   "bend": {
+    "deformation_seed": 6531564394487212599,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.001122
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3934
+   },
+   "width_m": 0.03392,
+   "vertices": 3709,
+   "triangles": 7414,
+   "bounds_m": [
+    [
+     -0.015771,
+     -0.00024,
+     -0.001323
+    ],
+    [
+     0.018137,
+     0.059772,
+     0.007755
+    ]
+   ],
+   "seconds": 11.95
+  },
+  {
+   "file": "leaf_079.usda",
+   "index": 79,
+   "seed": 3159887810,
+   "shape": {
+    "shape_seed": 17886741711856921644,
+    "attempt": 1,
+    "contour_sha256": "e196f4bc1215ddfc9356c08a172ceddb2d8f61f537f39cfccec9a3c02c5bca13"
+   },
+   "bend": {
+    "deformation_seed": 7807106038458872475,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000577
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3467
+   },
+   "width_m": 0.0332,
+   "vertices": 3640,
+   "triangles": 7276,
+   "bounds_m": [
+    [
+     -0.015594,
+     -0.000792,
+     -0.001594
+    ],
+    [
+     0.017607,
+     0.059839,
+     0.005369
+    ]
+   ],
+   "seconds": 10.03
+  },
+  {
+   "file": "leaf_080.usda",
+   "index": 80,
+   "seed": 808245472,
+   "shape": {
+    "shape_seed": 12836802441973130866,
+    "attempt": 1,
+    "contour_sha256": "8d44078f1f0508d569e6aeedd3d8bc79af24eb6e30c6e9ec543f7227d0ec3b8f"
+   },
+   "bend": {
+    "deformation_seed": 9345812934631527420,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.005704
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3806
+   },
+   "width_m": 0.03216,
+   "vertices": 3869,
+   "triangles": 7734,
+   "bounds_m": [
+    [
+     -0.015492,
+     -2.4e-05,
+     -0.00828
+    ],
+    [
+     0.016631,
+     0.059807,
+     0.00262
+    ]
+   ],
+   "seconds": 23.39
+  },
+  {
+   "file": "leaf_081.usda",
+   "index": 81,
+   "seed": 2856830951,
+   "shape": {
+    "shape_seed": 10361395277778807039,
+    "attempt": 1,
+    "contour_sha256": "2ab29085c83694760cfd982fc7a3d1f08628f11ebec491f99a466c53f6ae1363"
+   },
+   "bend": {
+    "deformation_seed": 9527368318892861309,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.003015
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3480
+   },
+   "width_m": 0.03567,
+   "vertices": 3752,
+   "triangles": 7500,
+   "bounds_m": [
+    [
+     -0.017612,
+     -2.4e-05,
+     -0.000641
+    ],
+    [
+     0.018037,
+     0.059802,
+     0.006142
+    ]
+   ],
+   "seconds": 12.04
+  },
+  {
+   "file": "leaf_082.usda",
+   "index": 82,
+   "seed": 3262620451,
+   "shape": {
+    "shape_seed": 9483717554774540150,
+    "attempt": 1,
+    "contour_sha256": "902ed92843703ee13713da12d5151665ab12e0a339dd4e3764b6a142d89d3968"
+   },
+   "bend": {
+    "deformation_seed": 17078891472063586583,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.000186
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4031
+   },
+   "width_m": 0.03798,
+   "vertices": 4955,
+   "triangles": 9904,
+   "bounds_m": [
+    [
+     -0.022937,
+     -0.004806,
+     -0.001789
+    ],
+    [
+     0.015041,
+     0.059875,
+     0.007074
+    ]
+   ],
+   "seconds": 9.79
+  },
+  {
+   "file": "leaf_083.usda",
+   "index": 83,
+   "seed": 213950574,
+   "shape": {
+    "shape_seed": 12678445244366166575,
+    "attempt": 1,
+    "contour_sha256": "5ffb03b18117ca82f725cd3b1751015e2e98444e9d2b0a2c82e2009bc216257e"
+   },
+   "bend": {
+    "deformation_seed": 14549179296042554174,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.002532
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3267
+   },
+   "width_m": 0.03265,
+   "vertices": 3869,
+   "triangles": 7734,
+   "bounds_m": [
+    [
+     -0.017716,
+     -0.001492,
+     -0.001357
+    ],
+    [
+     0.014915,
+     0.059674,
+     0.009746
+    ]
+   ],
+   "seconds": 10.92
+  },
+  {
+   "file": "leaf_084.usda",
+   "index": 84,
+   "seed": 2434144567,
+   "shape": {
+    "shape_seed": 4660399528712595574,
+    "attempt": 1,
+    "contour_sha256": "cedf6b5f3f691048d4cccde1027944955c8056a74cbded5e209930401cadfed8"
+   },
+   "bend": {
+    "deformation_seed": 13267019847328195829,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.001784
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3657
+   },
+   "width_m": 0.03331,
+   "vertices": 3685,
+   "triangles": 7366,
+   "bounds_m": [
+    [
+     -0.014559,
+     0.000111,
+     -0.003564
+    ],
+    [
+     0.018725,
+     0.059838,
+     0.00338
+    ]
+   ],
+   "seconds": 12.06
+  },
+  {
+   "file": "leaf_085.usda",
+   "index": 85,
+   "seed": 630071107,
+   "shape": {
+    "shape_seed": 2718426947849911735,
+    "attempt": 1,
+    "contour_sha256": "c94b873aad16696a103bf84c6d65d4a84f455b36cb64e4d02aa095141519b7b2"
+   },
+   "bend": {
+    "deformation_seed": 2663664608797026339,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.002262
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4212
+   },
+   "width_m": 0.03726,
+   "vertices": 4401,
+   "triangles": 8798,
+   "bounds_m": [
+    [
+     -0.018522,
+     -0.000396,
+     -0.002231
+    ],
+    [
+     0.018709,
+     0.059778,
+     0.005064
+    ]
+   ],
+   "seconds": 11.07
+  },
+  {
+   "file": "leaf_086.usda",
+   "index": 86,
+   "seed": 4122756998,
+   "shape": {
+    "shape_seed": 6245625620921760247,
+    "attempt": 1,
+    "contour_sha256": "309ad83ce475abce29213dc58169313c121a0aa2371fa0688ae2d1233902f7b7"
+   },
+   "bend": {
+    "deformation_seed": 17228807548593709046,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.002118
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4582
+   },
+   "width_m": 0.03997,
+   "vertices": 5137,
+   "triangles": 10270,
+   "bounds_m": [
+    [
+     -0.018655,
+     -0.001172,
+     -0.002788
+    ],
+    [
+     0.021308,
+     0.059964,
+     0.003518
+    ]
+   ],
+   "seconds": 13.68
+  },
+  {
+   "file": "leaf_087.usda",
+   "index": 87,
+   "seed": 1429709786,
+   "shape": {
+    "shape_seed": 9314213829713088907,
+    "attempt": 1,
+    "contour_sha256": "daffeda22ca559457f34c69fd27fd7989d0c6e0744347d992016ae78c9c8e20d"
+   },
+   "bend": {
+    "deformation_seed": 3895790582086251239,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.001512
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4970
+   },
+   "width_m": 0.03734,
+   "vertices": 4647,
+   "triangles": 9290,
+   "bounds_m": [
+    [
+     -0.019464,
+     -0.000637,
+     -0.002269
+    ],
+    [
+     0.017859,
+     0.059826,
+     0.005617
+    ]
+   ],
+   "seconds": 11.56
+  },
+  {
+   "file": "leaf_088.usda",
+   "index": 88,
+   "seed": 2836013504,
+   "shape": {
+    "shape_seed": 6214886471952511161,
+    "attempt": 1,
+    "contour_sha256": "4ad384ece7e5d8a57a2e80a51f3c222af0dd24ed1cc7807791b12116c9c4144a"
+   },
+   "bend": {
+    "deformation_seed": 10129731343504860523,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.002129
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3405
+   },
+   "width_m": 0.03274,
+   "vertices": 3479,
+   "triangles": 6954,
+   "bounds_m": [
+    [
+     -0.01629,
+     -9.3e-05,
+     -0.002432
+    ],
+    [
+     0.016446,
+     0.059746,
+     0.008792
+    ]
+   ],
+   "seconds": 13.02
+  },
+  {
+   "file": "leaf_089.usda",
+   "index": 89,
+   "seed": 2435769039,
+   "shape": {
+    "shape_seed": 4151730995256858885,
+    "attempt": 1,
+    "contour_sha256": "893eba67ff34a32ff98b54276013177b3746b994226b73934e2963fc2d713df6"
+   },
+   "bend": {
+    "deformation_seed": 5579872834720757973,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.002225
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3152
+   },
+   "width_m": 0.0332,
+   "vertices": 3250,
+   "triangles": 6496,
+   "bounds_m": [
+    [
+     -0.013579,
+     9.8e-05,
+     -0.006181
+    ],
+    [
+     0.019579,
+     0.059703,
+     0.003851
+    ]
+   ],
+   "seconds": 9.82
+  },
+  {
+   "file": "leaf_090.usda",
+   "index": 90,
+   "seed": 871410448,
+   "shape": {
+    "shape_seed": 568197963281786338,
+    "attempt": 1,
+    "contour_sha256": "aa0f87f5b20737a5d86d875648649e135200c6286e3e016cdf4e128101cdb22c"
+   },
+   "bend": {
+    "deformation_seed": 5709423772453661527,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.004908
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4069
+   },
+   "width_m": 0.04026,
+   "vertices": 4565,
+   "triangles": 9126,
+   "bounds_m": [
+    [
+     -0.022238,
+     -0.003137,
+     -0.000379
+    ],
+    [
+     0.018004,
+     0.059848,
+     0.011645
+    ]
+   ],
+   "seconds": 12.84
+  },
+  {
+   "file": "leaf_091.usda",
+   "index": 91,
+   "seed": 3030820875,
+   "shape": {
+    "shape_seed": 6422016695716142973,
+    "attempt": 1,
+    "contour_sha256": "4bd3dd1e7ba46caad419f76aadb436e5568f4f086f67a5aadc8de94fda556ad5"
+   },
+   "bend": {
+    "deformation_seed": 10807748117249775656,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.001944
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4186
+   },
+   "width_m": 0.03396,
+   "vertices": 4102,
+   "triangles": 8200,
+   "bounds_m": [
+    [
+     -0.015605,
+     -9.5e-05,
+     -0.002183
+    ],
+    [
+     0.018338,
+     0.059846,
+     0.008884
+    ]
+   ],
+   "seconds": 9.9
+  },
+  {
+   "file": "leaf_092.usda",
+   "index": 92,
+   "seed": 2115167770,
+   "shape": {
+    "shape_seed": 11054816591742028902,
+    "attempt": 1,
+    "contour_sha256": "1c5c56697058c22c525fb95b9dc94a9fd97df716bd042d57c6ed3e6a13249743"
+   },
+   "bend": {
+    "deformation_seed": 15934329445090536617,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.005994
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4499
+   },
+   "width_m": 0.03392,
+   "vertices": 3828,
+   "triangles": 7652,
+   "bounds_m": [
+    [
+     -0.016481,
+     -0.00032,
+     -0.000466
+    ],
+    [
+     0.017425,
+     0.059743,
+     0.0063
+    ]
+   ],
+   "seconds": 9.34
+  },
+  {
+   "file": "leaf_093.usda",
+   "index": 93,
+   "seed": 2021077771,
+   "shape": {
+    "shape_seed": 17464472996478192345,
+    "attempt": 1,
+    "contour_sha256": "7daa75ddec63c79279ecdd44b9bc4e02ca42d1e0644376c594e75a0bdf87685c"
+   },
+   "bend": {
+    "deformation_seed": 14018827868973119169,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000538
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4032
+   },
+   "width_m": 0.03864,
+   "vertices": 3930,
+   "triangles": 7856,
+   "bounds_m": [
+    [
+     -0.01875,
+     -0.000269,
+     -0.002928
+    ],
+    [
+     0.019853,
+     0.059788,
+     0.005918
+    ]
+   ],
+   "seconds": 15.41
+  },
+  {
+   "file": "leaf_094.usda",
+   "index": 94,
+   "seed": 255551624,
+   "shape": {
+    "shape_seed": 13309535998920801788,
+    "attempt": 1,
+    "contour_sha256": "bf417aef39bc4f2a3a16ea941c5fe5b494fb8d237da0d8f7a328d4c9293954af"
+   },
+   "bend": {
+    "deformation_seed": 16700641593553224111,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.001469
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4349
+   },
+   "width_m": 0.03758,
+   "vertices": 4207,
+   "triangles": 8410,
+   "bounds_m": [
+    [
+     -0.016606,
+     -2e-06,
+     -0.000799
+    ],
+    [
+     0.020947,
+     0.059937,
+     0.008771
+    ]
+   ],
+   "seconds": 11.41
+  },
+  {
+   "file": "leaf_095.usda",
+   "index": 95,
+   "seed": 2113149589,
+   "shape": {
+    "shape_seed": 16794763791391922965,
+    "attempt": 1,
+    "contour_sha256": "3d5d75701cbe1ae890e867e6c45fb96c7ee8ba409f36761e3781d9de47301112"
+   },
+   "bend": {
+    "deformation_seed": 8808845430881610438,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.006552
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 2678
+   },
+   "width_m": 0.02926,
+   "vertices": 3511,
+   "triangles": 7018,
+   "bounds_m": [
+    [
+     -0.016536,
+     -0.000158,
+     -0.006534
+    ],
+    [
+     0.012688,
+     0.059835,
+     0.008131
+    ]
+   ],
+   "seconds": 11.61
+  },
+  {
+   "file": "leaf_096.usda",
+   "index": 96,
+   "seed": 1137189512,
+   "shape": {
+    "shape_seed": 5623092212618891091,
+    "attempt": 1,
+    "contour_sha256": "3794447a21ad2eb64753c022cbbaa8d99a5dee4196f83d893086bf4ba67a0f72"
+   },
+   "bend": {
+    "deformation_seed": 2405079052723928731,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.001831
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4426
+   },
+   "width_m": 0.03763,
+   "vertices": 4885,
+   "triangles": 9766,
+   "bounds_m": [
+    [
+     -0.018645,
+     -0.001013,
+     -0.000972
+    ],
+    [
+     0.018962,
+     0.0599,
+     0.007957
+    ]
+   ],
+   "seconds": 12.31
+  },
+  {
+   "file": "leaf_097.usda",
+   "index": 97,
+   "seed": 3030796,
+   "shape": {
+    "shape_seed": 3960224924188544563,
+    "attempt": 1,
+    "contour_sha256": "deed136e7fad491e19455f5e49d82fe0741f53140f35dcaa911ccd6a68de9afc"
+   },
+   "bend": {
+    "deformation_seed": 5367307012035297890,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.008381
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4367
+   },
+   "width_m": 0.03559,
+   "vertices": 4007,
+   "triangles": 8010,
+   "bounds_m": [
+    [
+     -0.016197,
+     0.00012,
+     5.5e-05
+    ],
+    [
+     0.019285,
+     0.059953,
+     0.010758
+    ]
+   ],
+   "seconds": 10.77
+  },
+  {
+   "file": "leaf_098.usda",
+   "index": 98,
+   "seed": 2527577151,
+   "shape": {
+    "shape_seed": 6391955821523526569,
+    "attempt": 1,
+    "contour_sha256": "bb1b865c3b6c492af3c42576c68cf47452037181d0d82f02f687c37ee1984af5"
+   },
+   "bend": {
+    "deformation_seed": 8608770192082854091,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.002562
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4569
+   },
+   "width_m": 0.04405,
+   "vertices": 4561,
+   "triangles": 9118,
+   "bounds_m": [
+    [
+     -0.020004,
+     4.4e-05,
+     -0.001051
+    ],
+    [
+     0.023998,
+     0.059937,
+     0.009642
+    ]
+   ],
+   "seconds": 22.95
+  },
+  {
+   "file": "leaf_099.usda",
+   "index": 99,
+   "seed": 1351640265,
+   "shape": {
+    "shape_seed": 16014392868637711325,
+    "attempt": 1,
+    "contour_sha256": "f4d3257b4f27b1a6cd07e557c68886ccce4073bade764498aee7ed364413fc29"
+   },
+   "bend": {
+    "deformation_seed": 9985184960474381409,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000553
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3549
+   },
+   "width_m": 0.0306,
+   "vertices": 3449,
+   "triangles": 6894,
+   "bounds_m": [
+    [
+     -0.014913,
+     -8e-05,
+     -0.002843
+    ],
+    [
+     0.015684,
+     0.059844,
+     0.007697
+    ]
+   ],
+   "seconds": 23.11
+  },
+  {
+   "file": "leaf_100.usda",
+   "index": 100,
+   "seed": 3585078095,
+   "shape": {
+    "shape_seed": 17454921859397506384,
+    "attempt": 1,
+    "contour_sha256": "9775b2fb410ab1b4ead57c2400f24913b233cc777fde695278b01cba50dee0db"
+   },
+   "bend": {
+    "deformation_seed": 6977639634802626768,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.001898
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3355
+   },
+   "width_m": 0.03743,
+   "vertices": 4288,
+   "triangles": 8572,
+   "bounds_m": [
+    [
+     -0.02064,
+     -0.000264,
+     -0.0019
+    ],
+    [
+     0.01678,
+     0.059826,
+     0.006383
+    ]
+   ],
+   "seconds": 12.85
+  },
+  {
+   "file": "leaf_101.usda",
+   "index": 101,
+   "seed": 3468346049,
+   "shape": {
+    "shape_seed": 2283814736266322245,
+    "attempt": 1,
+    "contour_sha256": "289413126b607df7d497658825848a07d131f6c33b9955a185e7998e21c0814b"
+   },
+   "bend": {
+    "deformation_seed": 1645310171407860439,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.001331
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3488
+   },
+   "width_m": 0.03364,
+   "vertices": 4139,
+   "triangles": 8274,
+   "bounds_m": [
+    [
+     -0.01644,
+     -0.0002,
+     -0.003035
+    ],
+    [
+     0.017149,
+     0.05976,
+     0.005394
+    ]
+   ],
+   "seconds": 10.93
+  },
+  {
+   "file": "leaf_102.usda",
+   "index": 102,
+   "seed": 875364864,
+   "shape": {
+    "shape_seed": 1411550010849141386,
+    "attempt": 1,
+    "contour_sha256": "e9929d1510c2faef7db24c38c664443db55a807b6ca0c64557d037c01567929d"
+   },
+   "bend": {
+    "deformation_seed": 18171790933527264453,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     9.8e-05
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3982
+   },
+   "width_m": 0.03914,
+   "vertices": 5333,
+   "triangles": 10662,
+   "bounds_m": [
+    [
+     -0.021528,
+     -0.00424,
+     -0.001587
+    ],
+    [
+     0.017597,
+     0.059863,
+     0.009114
+    ]
+   ],
+   "seconds": 14.53
+  },
+  {
+   "file": "leaf_103.usda",
+   "index": 103,
+   "seed": 3561000492,
+   "shape": {
+    "shape_seed": 11268701778870320298,
+    "attempt": 1,
+    "contour_sha256": "7bb09060158b2831e52a08790fee3b4169f023f48fd69fb2de5186dacfde037b"
+   },
+   "bend": {
+    "deformation_seed": 3614582194232002433,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.004291
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3761
+   },
+   "width_m": 0.03456,
+   "vertices": 4623,
+   "triangles": 9242,
+   "bounds_m": [
+    [
+     -0.014228,
+     -0.005038,
+     -0.001248
+    ],
+    [
+     0.020315,
+     0.059906,
+     0.005795
+    ]
+   ],
+   "seconds": 12.73
+  },
+  {
+   "file": "leaf_104.usda",
+   "index": 104,
+   "seed": 244143543,
+   "shape": {
+    "shape_seed": 8942493904826247781,
+    "attempt": 1,
+    "contour_sha256": "120d8612b80c450fd941a4e40c5337b6d85f4f92586cfae62741eb485e878ed2"
+   },
+   "bend": {
+    "deformation_seed": 18347293356922373530,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.00073
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3144
+   },
+   "width_m": 0.03108,
+   "vertices": 3796,
+   "triangles": 7588,
+   "bounds_m": [
+    [
+     -0.017212,
+     -0.000453,
+     -0.001481
+    ],
+    [
+     0.013839,
+     0.05971,
+     0.006607
+    ]
+   ],
+   "seconds": 9.51
+  },
+  {
+   "file": "leaf_105.usda",
+   "index": 105,
+   "seed": 542980316,
+   "shape": {
+    "shape_seed": 7968262694295962569,
+    "attempt": 1,
+    "contour_sha256": "1ad01105679f1ff8ef1c149453deb6b05e8e335d0764228b5858cc118f2ebbd1"
+   },
+   "bend": {
+    "deformation_seed": 4010056181456921412,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.00175
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4361
+   },
+   "width_m": 0.03613,
+   "vertices": 4208,
+   "triangles": 8412,
+   "bounds_m": [
+    [
+     -0.015717,
+     -0.000195,
+     -0.002745
+    ],
+    [
+     0.020384,
+     0.059788,
+     0.003868
+    ]
+   ],
+   "seconds": 10.24
+  },
+  {
+   "file": "leaf_106.usda",
+   "index": 106,
+   "seed": 3561529684,
+   "shape": {
+    "shape_seed": 9205542740048696847,
+    "attempt": 1,
+    "contour_sha256": "d3f34f2641914fad7cd81e0e8c9f26f796a798092451780ac64f242884059a0d"
+   },
+   "bend": {
+    "deformation_seed": 15931478385259864360,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.00981
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3954
+   },
+   "width_m": 0.03254,
+   "vertices": 3830,
+   "triangles": 7656,
+   "bounds_m": [
+    [
+     -0.016007,
+     -0.000308,
+     -1.2e-05
+    ],
+    [
+     0.016511,
+     0.059883,
+     0.009986
+    ]
+   ],
+   "seconds": 9.87
+  },
+  {
+   "file": "leaf_107.usda",
+   "index": 107,
+   "seed": 2266519978,
+   "shape": {
+    "shape_seed": 7881564265764502723,
+    "attempt": 1,
+    "contour_sha256": "79324481c7438cdad8b93f4897245aa8518e63080efaccdfdc38a2b788ec30e2"
+   },
+   "bend": {
+    "deformation_seed": 4228137852656852941,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.001487
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4615
+   },
+   "width_m": 0.03448,
+   "vertices": 4693,
+   "triangles": 9382,
+   "bounds_m": [
+    [
+     -0.018129,
+     -0.001805,
+     -0.003333
+    ],
+    [
+     0.016347,
+     0.059995,
+     0.004712
+    ]
+   ],
+   "seconds": 10.87
+  },
+  {
+   "file": "leaf_108.usda",
+   "index": 108,
+   "seed": 1759566052,
+   "shape": {
+    "shape_seed": 7707822033881438421,
+    "attempt": 1,
+    "contour_sha256": "7714cfc453b60d660b7a192454e56cc2dc6b3971b95308936a6b8387cc4e309a"
+   },
+   "bend": {
+    "deformation_seed": 7935300921600386476,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.006049
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3897
+   },
+   "width_m": 0.02928,
+   "vertices": 3597,
+   "triangles": 7190,
+   "bounds_m": [
+    [
+     -0.015728,
+     -0.000298,
+     -0.001017
+    ],
+    [
+     0.013546,
+     0.059914,
+     0.009468
+    ]
+   ],
+   "seconds": 11.21
+  },
+  {
+   "file": "leaf_109.usda",
+   "index": 109,
+   "seed": 2851860913,
+   "shape": {
+    "shape_seed": 14055733976642591722,
+    "attempt": 1,
+    "contour_sha256": "4abc933e44c182323310b5545846435239edc92d58c07ca8d485fa796123948b"
+   },
+   "bend": {
+    "deformation_seed": 16981717688468129799,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.002613
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4003
+   },
+   "width_m": 0.03225,
+   "vertices": 3814,
+   "triangles": 7624,
+   "bounds_m": [
+    [
+     -0.016175,
+     -0.00027,
+     -0.001426
+    ],
+    [
+     0.016056,
+     0.059846,
+     0.008514
+    ]
+   ],
+   "seconds": 21.67
+  },
+  {
+   "file": "leaf_110.usda",
+   "index": 110,
+   "seed": 2274657210,
+   "shape": {
+    "shape_seed": 5830794084755627004,
+    "attempt": 1,
+    "contour_sha256": "98ded461da7a04b4b4ddf43baddfc38e4cc972df6eca9d9c7c31db0c257da1c5"
+   },
+   "bend": {
+    "deformation_seed": 9646646722928801087,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.00142
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3051
+   },
+   "width_m": 0.03033,
+   "vertices": 3258,
+   "triangles": 6512,
+   "bounds_m": [
+    [
+     -0.014734,
+     -0.000227,
+     -0.002015
+    ],
+    [
+     0.015571,
+     0.059704,
+     0.011946
+    ]
+   ],
+   "seconds": 13.76
+  },
+  {
+   "file": "leaf_111.usda",
+   "index": 111,
+   "seed": 4205218076,
+   "shape": {
+    "shape_seed": 1954729900699465596,
+    "attempt": 1,
+    "contour_sha256": "cd145247f8da87cd465c1f0df283323170cedf9bf8788dc1115a187dade4a804"
+   },
+   "bend": {
+    "deformation_seed": 6384387743968480695,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.001101
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4236
+   },
+   "width_m": 0.03527,
+   "vertices": 3723,
+   "triangles": 7442,
+   "bounds_m": [
+    [
+     -0.015305,
+     -1.1e-05,
+     -0.001952
+    ],
+    [
+     0.01993,
+     0.059761,
+     0.005298
+    ]
+   ],
+   "seconds": 9.7
+  },
+  {
+   "file": "leaf_112.usda",
+   "index": 112,
+   "seed": 1462605117,
+   "shape": {
+    "shape_seed": 5456883625386883118,
+    "attempt": 1,
+    "contour_sha256": "5c75449b344a1d4a112b68405f4016df93d0b5867e01337b96a88954fbbb2c62"
+   },
+   "bend": {
+    "deformation_seed": 3434609251419760622,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.004648
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4169
+   },
+   "width_m": 0.03441,
+   "vertices": 4092,
+   "triangles": 8180,
+   "bounds_m": [
+    [
+     -0.018752,
+     -0.000508,
+     -0.000457
+    ],
+    [
+     0.01566,
+     0.05976,
+     0.015283
+    ]
+   ],
+   "seconds": 15.58
+  },
+  {
+   "file": "leaf_113.usda",
+   "index": 113,
+   "seed": 3648373235,
+   "shape": {
+    "shape_seed": 4662980087208518682,
+    "attempt": 1,
+    "contour_sha256": "197b89d304e51efd558636bd42d12b384f02099f14c5c83dcb7bf14e5f3ad6ec"
+   },
+   "bend": {
+    "deformation_seed": 12034562149905285206,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.004092
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3359
+   },
+   "width_m": 0.02978,
+   "vertices": 3381,
+   "triangles": 6758,
+   "bounds_m": [
+    [
+     -0.015928,
+     -0.000209,
+     -0.001157
+    ],
+    [
+     0.013847,
+     0.059803,
+     0.005218
+    ]
+   ],
+   "seconds": 9.44
+  },
+  {
+   "file": "leaf_114.usda",
+   "index": 114,
+   "seed": 679994831,
+   "shape": {
+    "shape_seed": 4278746455691871919,
+    "attempt": 1,
+    "contour_sha256": "77b782c159428e3101ff2ee53edc1d6c530cebf775f2331df32f0dd99d3fe23e"
+   },
+   "bend": {
+    "deformation_seed": 13624294375083523055,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.005027
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4671
+   },
+   "width_m": 0.0385,
+   "vertices": 4628,
+   "triangles": 9252,
+   "bounds_m": [
+    [
+     -0.018285,
+     -0.000314,
+     -0.000363
+    ],
+    [
+     0.020215,
+     0.059907,
+     0.009241
+    ]
+   ],
+   "seconds": 9.43
+  },
+  {
+   "file": "leaf_115.usda",
+   "index": 115,
+   "seed": 1655442295,
+   "shape": {
+    "shape_seed": 15984026841507181721,
+    "attempt": 1,
+    "contour_sha256": "6dc70ddcc9a0ec9bd3cdd18a7ee2fb5a06c247c57e5e28de702bf3397d82c834"
+   },
+   "bend": {
+    "deformation_seed": 15072710716872823278,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.004111
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3732
+   },
+   "width_m": 0.03364,
+   "vertices": 3557,
+   "triangles": 7110,
+   "bounds_m": [
+    [
+     -0.014379,
+     3.3e-05,
+     -0.001088
+    ],
+    [
+     0.019234,
+     0.05977,
+     0.01016
+    ]
+   ],
+   "seconds": 9.59
+  },
+  {
+   "file": "leaf_116.usda",
+   "index": 116,
+   "seed": 1930494058,
+   "shape": {
+    "shape_seed": 7215387479500887895,
+    "attempt": 1,
+    "contour_sha256": "99f0f076fe1031abf576a9658fcb99cb61351a31768b6788c68bb9273b5d2af7"
+   },
+   "bend": {
+    "deformation_seed": 11634138918492731123,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.001047
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4622
+   },
+   "width_m": 0.03693,
+   "vertices": 4567,
+   "triangles": 9130,
+   "bounds_m": [
+    [
+     -0.01678,
+     -0.002245,
+     -0.00479
+    ],
+    [
+     0.020136,
+     0.059806,
+     0.002474
+    ]
+   ],
+   "seconds": 11.91
+  },
+  {
+   "file": "leaf_117.usda",
+   "index": 117,
+   "seed": 4109926094,
+   "shape": {
+    "shape_seed": 10167843576502599815,
+    "attempt": 1,
+    "contour_sha256": "5954a0f85c16e42157c9c9debc7092f8862b3135d9a0787d9e612ac6977ae777"
+   },
+   "bend": {
+    "deformation_seed": 13987154058905178591,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.006562
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4418
+   },
+   "width_m": 0.0376,
+   "vertices": 4602,
+   "triangles": 9200,
+   "bounds_m": [
+    [
+     -0.015885,
+     -0.001343,
+     -0.000781
+    ],
+    [
+     0.021616,
+     0.059832,
+     0.008038
+    ]
+   ],
+   "seconds": 13.34
+  },
+  {
+   "file": "leaf_118.usda",
+   "index": 118,
+   "seed": 1690544053,
+   "shape": {
+    "shape_seed": 9358935653488508549,
+    "attempt": 1,
+    "contour_sha256": "7f2bacab6ce0862c493230d72563ed36d3d8862f8647f4bcc38f406a0c968520"
+   },
+   "bend": {
+    "deformation_seed": 509545440592688536,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.001854
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3378
+   },
+   "width_m": 0.03398,
+   "vertices": 3547,
+   "triangles": 7090,
+   "bounds_m": [
+    [
+     -0.020828,
+     -0.00243,
+     -0.007458
+    ],
+    [
+     0.013132,
+     0.059826,
+     0.005801
+    ]
+   ],
+   "seconds": 22.08
+  },
+  {
+   "file": "leaf_119.usda",
+   "index": 119,
+   "seed": 2516250466,
+   "shape": {
+    "shape_seed": 7234814946996115444,
+    "attempt": 1,
+    "contour_sha256": "10ab240464eb5546dd013a6054afd6fc405af342873585431937d63c3c305931"
+   },
+   "bend": {
+    "deformation_seed": 16650333714285220562,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.000254
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3435
+   },
+   "width_m": 0.03161,
+   "vertices": 3764,
+   "triangles": 7524,
+   "bounds_m": [
+    [
+     -0.016075,
+     -9.5e-05,
+     -0.005598
+    ],
+    [
+     0.015484,
+     0.059913,
+     0.007626
+    ]
+   ],
+   "seconds": 11.29
+  },
+  {
+   "file": "leaf_120.usda",
+   "index": 120,
+   "seed": 667494796,
+   "shape": {
+    "shape_seed": 14982366543731008713,
+    "attempt": 1,
+    "contour_sha256": "4034863f09a2c3d70512553dfba6bd348bb15bd0e147fb96911179d769af1194"
+   },
+   "bend": {
+    "deformation_seed": 6043202975066293313,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.003086
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4479
+   },
+   "width_m": 0.03633,
+   "vertices": 4836,
+   "triangles": 9668,
+   "bounds_m": [
+    [
+     -0.017367,
+     -0.000149,
+     -0.003121
+    ],
+    [
+     0.018959,
+     0.059934,
+     0.001173
+    ]
+   ],
+   "seconds": 13.87
+  },
+  {
+   "file": "leaf_121.usda",
+   "index": 121,
+   "seed": 1720931561,
+   "shape": {
+    "shape_seed": 9107829996039037845,
+    "attempt": 1,
+    "contour_sha256": "fa711b26e20add37ccce6f3dd705f2efa73633ffbcb65114aaa2df3ce3454eeb"
+   },
+   "bend": {
+    "deformation_seed": 13334105071376479180,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000216
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3468
+   },
+   "width_m": 0.02871,
+   "vertices": 3472,
+   "triangles": 6940,
+   "bounds_m": [
+    [
+     -0.014199,
+     2.8e-05,
+     -0.001616
+    ],
+    [
+     0.014503,
+     0.059732,
+     0.006247
+    ]
+   ],
+   "seconds": 13.08
+  },
+  {
+   "file": "leaf_122.usda",
+   "index": 122,
+   "seed": 2847052369,
+   "shape": {
+    "shape_seed": 4724494639283361266,
+    "attempt": 1,
+    "contour_sha256": "adaf0c79f7ea2491cc9f1d4d9bc83e615956fd4f0bcb42521966c3be820bdfb8"
+   },
+   "bend": {
+    "deformation_seed": 12032921460232812104,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.004289
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4352
+   },
+   "width_m": 0.03734,
+   "vertices": 4032,
+   "triangles": 8060,
+   "bounds_m": [
+    [
+     -0.015763,
+     -0.001234,
+     -0.004441
+    ],
+    [
+     0.021561,
+     0.059838,
+     0.002973
+    ]
+   ],
+   "seconds": 9.73
+  },
+  {
+   "file": "leaf_123.usda",
+   "index": 123,
+   "seed": 1772271774,
+   "shape": {
+    "shape_seed": 9202564393676593683,
+    "attempt": 1,
+    "contour_sha256": "eff9a5ee208e26dfb20ce760c87c786ac4ca4d4bde9213b1b0d8a12e9cd8e1f0"
+   },
+   "bend": {
+    "deformation_seed": 14013234483710267818,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.001575
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4461
+   },
+   "width_m": 0.03831,
+   "vertices": 4723,
+   "triangles": 9442,
+   "bounds_m": [
+    [
+     -0.021888,
+     -0.005029,
+     -0.006501
+    ],
+    [
+     0.016409,
+     0.059825,
+     0.001535
+    ]
+   ],
+   "seconds": 10.7
+  },
+  {
+   "file": "leaf_124.usda",
+   "index": 124,
+   "seed": 1780871151,
+   "shape": {
+    "shape_seed": 3130198911481675128,
+    "attempt": 1,
+    "contour_sha256": "ac2985b165579f0c0b60faaef2b7c308720c4bb075e19a3907e00c7c1681aae4"
+   },
+   "bend": {
+    "deformation_seed": 12040223086645233743,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.004681
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4292
+   },
+   "width_m": 0.03903,
+   "vertices": 4800,
+   "triangles": 9596,
+   "bounds_m": [
+    [
+     -0.02061,
+     -0.000499,
+     -0.000569
+    ],
+    [
+     0.018404,
+     0.060007,
+     0.007035
+    ]
+   ],
+   "seconds": 10.36
+  },
+  {
+   "file": "leaf_125.usda",
+   "index": 125,
+   "seed": 3872191507,
+   "shape": {
+    "shape_seed": 7400886753663089136,
+    "attempt": 1,
+    "contour_sha256": "b0326e77890e407861c19145a52e4818c96503411d3927498a9f9e6705d65dce"
+   },
+   "bend": {
+    "deformation_seed": 17826150235838992920,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.003116
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3061
+   },
+   "width_m": 0.03051,
+   "vertices": 3491,
+   "triangles": 6978,
+   "bounds_m": [
+    [
+     -0.016751,
+     -0.000346,
+     -0.000617
+    ],
+    [
+     0.01375,
+     0.059865,
+     0.011852
+    ]
+   ],
+   "seconds": 12.31
+  },
+  {
+   "file": "leaf_126.usda",
+   "index": 126,
+   "seed": 450345728,
+   "shape": {
+    "shape_seed": 13632737249397136294,
+    "attempt": 1,
+    "contour_sha256": "17d330af5930ba75b98e5c825ca90e3ac6342053c5af65cc65ddf828fd32154b"
+   },
+   "bend": {
+    "deformation_seed": 9882668377708019937,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.000127
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4309
+   },
+   "width_m": 0.03345,
+   "vertices": 3828,
+   "triangles": 7652,
+   "bounds_m": [
+    [
+     -0.017726,
+     -9.8e-05,
+     -0.002575
+    ],
+    [
+     0.015673,
+     0.059856,
+     0.007272
+    ]
+   ],
+   "seconds": 13.33
+  },
+  {
+   "file": "leaf_127.usda",
+   "index": 127,
+   "seed": 3170256313,
+   "shape": {
+    "shape_seed": 15519118054879814169,
+    "attempt": 1,
+    "contour_sha256": "f1ee29278b128fdc6c703c58587bcd65b0503a4c5bce7625dc98632acd82839a"
+   },
+   "bend": {
+    "deformation_seed": 2717339980535848342,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.002318
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4372
+   },
+   "width_m": 0.03624,
+   "vertices": 4885,
+   "triangles": 9766,
+   "bounds_m": [
+    [
+     -0.01822,
+     -0.00037,
+     -0.001814
+    ],
+    [
+     0.017979,
+     0.059801,
+     0.011959
+    ]
+   ],
+   "seconds": 10.63
+  },
+  {
+   "file": "leaf_128.usda",
+   "index": 128,
+   "seed": 3270816332,
+   "shape": {
+    "shape_seed": 6858278370709797744,
+    "attempt": 1,
+    "contour_sha256": "d7b53ce9926e4915cc5c6f5c7a628e0af1f55a10b7ec80c369125ca8a08b968c"
+   },
+   "bend": {
+    "deformation_seed": 174588334872422180,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.000553
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3449
+   },
+   "width_m": 0.03206,
+   "vertices": 3588,
+   "triangles": 7172,
+   "bounds_m": [
+    [
+     -0.017677,
+     -0.000182,
+     -0.003042
+    ],
+    [
+     0.014339,
+     0.059802,
+     0.007349
+    ]
+   ],
+   "seconds": 9.05
+  },
+  {
+   "file": "leaf_129.usda",
+   "index": 129,
+   "seed": 3840473583,
+   "shape": {
+    "shape_seed": 10467721906191250182,
+    "attempt": 1,
+    "contour_sha256": "d91475f24881a344f7d0bd77abf6a87250129c3201d1565ae2e675679fb3a103"
+   },
+   "bend": {
+    "deformation_seed": 2033865220841431928,
+    "mixture_component": 0,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     -0.0046
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 4007
+   },
+   "width_m": 0.03537,
+   "vertices": 4381,
+   "triangles": 8758,
+   "bounds_m": [
+    [
+     -0.017326,
+     -0.001517,
+     -0.008405
+    ],
+    [
+     0.018014,
+     0.059933,
+     0.000777
+    ]
+   ],
+   "seconds": 9.12
+  },
+  {
+   "file": "leaf_130.usda",
+   "index": 130,
+   "seed": 1001010352,
+   "shape": {
+    "shape_seed": 2976461894033007789,
+    "attempt": 1,
+    "contour_sha256": "897cea7abd468321823f4779547ba57e6d7137923e40fe86dd90133fa1f4ce61"
+   },
+   "bend": {
+    "deformation_seed": 3546927526546615520,
+    "mixture_component": 1,
+    "tip_xyz_m": [
+     0.0,
+     0.06,
+     0.004064
+    ]
+   },
+   "veins": {
+    "method": "veinflow-repair",
+    "edges": 3750
+   },
+   "width_m": 0.0289,
+   "vertices": 3411,
+   "triangles": 6818,
+   "bounds_m": [
+    [
+     -0.015437,
+     -6.6e-05,
+     -0.000716
+    ],
+    [
+     0.013403,
+     0.059796,
+     0.008317
+    ]
+   ],
+   "seconds": 9.2
+  }
+ ],
+ "timing": {
+  "setup_seconds": 0.08,
+  "bake_seconds": 319.13,
+  "seconds_per_leaf": 2.44
+ },
+ "runtime": {
+  "python": "3.12.13",
+  "submodule": "300ed70c83097b5ee6b3733d2d012485a0e69067"
+ }
+}

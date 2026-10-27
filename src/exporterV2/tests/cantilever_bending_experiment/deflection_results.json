@@ -1,0 +1,74 @@
+{
+  "analytical": {
+    "E_Pa": 100000000.0,
+    "r_m": 0.01,
+    "L_m": 0.4,
+    "I_m4": 7.854e-09,
+    "w_Npm": 3.081902,
+    "delta_tip_mm": 12.5568,
+    "T_nat_s": 0.1809
+  },
+  "settle_secs": 10,
+  "measurements": [
+    {
+      "n_links": 3,
+      "label": "baseline_legacy",
+      "initial_z_m": 0.092397,
+      "final_z_m": 0.09562,
+      "deflection_m": -0.003223,
+      "deflection_mm": -3.2226,
+      "analytical_mm": 12.5568,
+      "error_pct": 125.66
+    },
+    {
+      "n_links": 3,
+      "label": "new_physics",
+      "initial_z_m": 0.091197,
+      "final_z_m": 0.092062,
+      "deflection_m": -0.000865,
+      "deflection_mm": -0.8647,
+      "analytical_mm": 12.5568,
+      "error_pct": 106.89
+    },
+    {
+      "n_links": 10,
+      "label": "baseline_legacy",
+      "initial_z_m": 0.084807,
+      "final_z_m": 0.091539,
+      "deflection_m": -0.006732,
+      "deflection_mm": -6.7317,
+      "analytical_mm": 12.5568,
+      "error_pct": 153.61
+    },
+    {
+      "n_links": 10,
+      "label": "new_physics",
+      "initial_z_m": 0.083397,
+      "final_z_m": 0.085304,
+      "deflection_m": -0.001907,
+      "deflection_mm": -1.907,
+      "analytical_mm": 12.5568,
+      "error_pct": 115.19
+    },
+    {
+      "n_links": 20,
+      "label": "baseline_legacy",
+      "initial_z_m": 0.081778,
+      "final_z_m": 0.091485,
+      "deflection_m": -0.009707,
+      "deflection_mm": -9.707,
+      "analytical_mm": 12.5568,
+      "error_pct": 177.3
+    },
+    {
+      "n_links": 20,
+      "label": "new_physics",
+      "initial_z_m": 0.079687,
+      "final_z_m": 0.060948,
+      "deflection_m": 0.018739,
+      "deflection_mm": 18.7388,
+      "analytical_mm": 12.5568,
+      "error_pct": 49.23
+    }
+  ]
+}

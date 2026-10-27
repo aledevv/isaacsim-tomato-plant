@@ -1,0 +1,67 @@
+# How the plant looks. Every key is optional; the values here are the defaults.
+# The mesh generators themselves live in src/exporterV2/visuals/ (see its README).
+
+# Mesh density of stems, petioles and stalks:
+#   realistic    dense rings, smooth organic look (default)
+#   performance  lighter meshes for big scenes or slow GPUs
+quality: realistic
+
+# Where leaflets and pedicels point:
+#   v2-aesthetic  leaflets spread left/right at their inclination, pedicels
+#                 alternate around the truss (default, looks natural)
+#   canonical     use the frames written in the skeleton as they are
+pose: v2-aesthetic
+
+stems:
+  generator: organic_segmented  # only option: the procedural organic mesh
+  junction_bulge: true          # slight swelling where internodes meet; false = plain tubes
+  terminal_forks: true          # small decorative twig + leaf where a leaf ends a branch tip
+  # Linear RGB (0..1) of every stem, side shoot, petiole, rachis and pedicel.
+  # null keeps the lighter green of the shared materials.
+  color: [0.075, 0.16, 0.035]
+
+leaves:
+  # baked   realistic 3D leaflets (outline, bend, veins) loaded as USD
+  #         assets from assets/leaves/default (default)
+  # simple  procedural blade
+  generator: baked
+  seed: 42                      # change it for different leaflet shapes
+  # baked only. true: every leaflet gets its own leaf from the 131 in
+  # assets/leaves/default; a plant with more leaflets (or false) reuses them
+  # across leaflets.
+  one_per_leaflet: true
+  baked_set: null               # baked only: a folder of baked leaves to use instead
+  # baked only. Leaflets hang below their stalk instead of pointing straight
+  # out, and are not all level (degrees; the jitter is per leaflet, +/-).
+  droop_deg: 22.0
+  droop_jitter_deg: 10.0
+  roll_jitter_deg: 12.0
+
+pedicels:
+  gravity_curve: true           # pedicels bend down like real ones; false = straight
+
+trusses:
+  # VISUAL ONLY: fraction of the skeleton radius (x global_scale) used to draw
+  # truss stalks. Colliders and masses keep the full radius. Values in (0, 1];
+  # set all three to 1.0 for the exact skeleton geometry.
+  #   rachis_thickness   main truss stalk (0.5 = slim, like a real truss)
+  #   pedicel_thickness  stalk of each tomato (0.4 = slim)
+  rachis_thickness: 0.5
+  pedicel_thickness: 0.4
+  # Pedicels this many times longer than in the skeleton, so tomatoes hang
+  # below the rachis like on a real truss. Unlike the two keys above this
+  # moves the tomato and its collider. 1.0 = exact skeleton length.
+  pedicel_length_scale: 1.75
+
+fruits:
+  generator: sphere             # only option for now: a sphere coloured by ripeness
+  # VISUAL ONLY. These two keys change how tomatoes look, never their mass
+  # (mass always uses the skeleton radius and fruits.density in physics.yaml).
+  # With fruits.mode: physical the collision sphere follows the drawn size.
+  #   size_scale  multiplies the skeleton radius when drawing the tomato.
+  #               1.0  true skeleton size (radius x global_scale, looks large)
+  #               0.5  half size, closer to a real truss photo (default)
+  size_scale: 0.5
+  #   calyx       five small green sepals where the pedicel meets the fruit
+  #               (decoration, no collider); false = plain sphere
+  calyx: true
