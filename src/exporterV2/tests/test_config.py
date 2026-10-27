@@ -29,12 +29,12 @@ def _keys(values, prefix=""):
     return keys
 
 
-def test_commented_files_have_the_built_in_keys():
-    # config/*.yaml document every option; their keys must not drift from the
-    # code. Values may differ: users edit them.
-    # The raw files are compared: loading fills missing keys from the defaults.
-    assert _keys(yaml.safe_load(DEFAULT_PHYSICS_PATH.read_text())) == _keys(DEFAULT_PHYSICS)
-    assert _keys(yaml.safe_load(DEFAULT_VISUALS_PATH.read_text())) == _keys(DEFAULT_VISUALS)
+def test_config_files_only_use_known_keys():
+    # Users edit values and may delete lines (a missing key means its default),
+    # so only settings the code does not know fail. The raw files are read:
+    # loading would fill missing keys from the defaults.
+    assert _keys(yaml.safe_load(DEFAULT_PHYSICS_PATH.read_text())) <= _keys(DEFAULT_PHYSICS)
+    assert _keys(yaml.safe_load(DEFAULT_VISUALS_PATH.read_text())) <= _keys(DEFAULT_VISUALS)
 
 
 def test_missing_file_means_defaults(tmp_path):

@@ -88,9 +88,9 @@ Tests that guard behaviour:
   drive gains as the reference export (`tests/data/day160_reference.json`,
   made at 30 MPa, which the test pins). A physics change that breaks it needs
   the user's approval before the reference is updated.
-- `test_config.py` checks that the commented YAML files and the built-in
-  defaults have the same keys (values may differ, so local edits are fine).
-  Add or remove a setting in both together.
+- `test_config.py` checks that the YAML files only use keys the built-in
+  defaults know (users may change values and delete lines). When you add a
+  setting, document it in the YAML file too.
 
 ## Rules
 

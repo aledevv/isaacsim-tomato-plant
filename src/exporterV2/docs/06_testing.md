@@ -18,7 +18,7 @@ uv run pytest -q validation
 | --- | --- |
 | `src/plant_skeleton/tests/test_skeleton.py` | format, JSON round trip, validation messages |
 | `tests/test_skeleton_branches.py` | chain rules, attachment, physics per kind, visual switches, poses |
-| `tests/test_config.py` | commented YAML files have the same keys as the defaults, bad values rejected, `global_scale: auto` |
+| `tests/test_config.py` | YAML files only use known keys, bad values rejected, `global_scale: auto` |
 | `tests/test_exporter.py` | small plant end to end, fruit modes, scale, joint budget, CLI, baked leaflets and droop, stem colour, branch collisions, day-160 regression |
 | `tests/test_baked_leaf_assets.py` | the committed baked leaflet set |
 | `tests/test_joint_budget*.py` | lock and merge on the day-160 plant |

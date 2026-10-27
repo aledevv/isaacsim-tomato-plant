@@ -9,7 +9,7 @@ uv run pytest -q src/exporterV2/tests
 | File | What it checks |
 | --- | --- |
 | `test_exporter.py` | End-to-end exports: the hand-written small plant, fruit modes, scale, joint budget, CLI, baked leaflets and droop, stem colour, branch collisions, and the day-160 regression against `data/day160_reference.json` |
-| `test_config.py` | The commented YAML files have the same keys as the built-in defaults; bad settings are rejected |
+| `test_config.py` | The YAML files only use keys the code knows; bad settings are rejected |
 | `test_skeleton_branches.py` | Chain rules, attachment, pose, config switches |
 | `test_baked_leaf_assets.py` | The committed leaflet set is complete and references at scale |
 | `test_joint_budget*.py`, `test_body_merge.py` | Joint locking and link merging |
