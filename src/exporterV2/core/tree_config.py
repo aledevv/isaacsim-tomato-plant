@@ -140,7 +140,10 @@ class BioConfig:
     """Biological parameters for plant tissue."""
     YOUNG_MODULUS = 50.64e6  # [Pa] tomato stalk, Gao et al. 2024 (Agriculture 14(4):531)
     DAMPING_RATIO = 0.8     # Critically damped (zeta=1.0) to prevent 30s oscillations
-    PLANT_DENSITY = 1000.0   # [kg/m^3] plant tissue density
+    # Stem, branches, petioles and leaf rachises; trusses use TrussPhysicsConfig.
+    # Tomato stalk tissue (Gao et al. 2024, Agriculture 14(4):531). Raise to 1000 if unstable.
+    PLANT_DENSITY = 800.0    # [kg/m^3]
+    FRUIT_DENSITY = 1090.0   # [kg/m^3] cherry tomato fruit
 
 
 class TrussPhysicsConfig:
@@ -180,7 +183,7 @@ class TrussPhysicsConfig:
     TOMATO_DETACHMENT_ENABLED = True
     # This is comfortably above the static weight of the generated tomatoes,
     # so gravity alone should not break the joint when detachment is enabled.
-    TOMATO_DETACHMENT_BREAK_FORCE_N = 6.0
+    TOMATO_DETACHMENT_BREAK_FORCE_N = 3.0  # cherry tomato pull-off 0.6-2.5 N (Agriculture 2021, 11(9):815)
     # Keep tomato bodies outside the articulation while detachment is active.
     TOMATO_DETACHMENT_EXCLUDE_FROM_ARTICULATION = True
     # When the fixed joint is excluded, keep tomatoes outside the articulation

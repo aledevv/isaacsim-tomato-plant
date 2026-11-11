@@ -48,28 +48,28 @@ segments:
     joint: fixed
     young_modulus: 50.64e+6
     damping_ratio: 0.8
-    density: 1000.0
+    density: 800.0             # tomato stalk tissue (Gao et al. 2024); raise to 1000 if unstable
     bend_limit_deg: 30.0
     drive_stiffness_scale: 1.0
   branch:                       # side shoots
     joint: d6
     young_modulus: 50.64e+6
     damping_ratio: 0.8
-    density: 1000.0
+    density: 800.0             # tomato stalk tissue (Gao et al. 2024); raise to 1000 if unstable
     bend_limit_deg: 30.0
     drive_stiffness_scale: 1.0
   petiole:                      # leaf stalk
     joint: d6
     young_modulus: 50.64e+6
     damping_ratio: 0.3
-    density: 1000.0
+    density: 800.0             # tomato stalk tissue (Gao et al. 2024); raise to 1000 if unstable
     bend_limit_deg: 30.0
     drive_stiffness_scale: 1.0
   leaf_rachis:                  # leaf midrib carrying the leaflets
     joint: d6
     young_modulus: 50.64e+6
     damping_ratio: 0.3
-    density: 1000.0
+    density: 800.0             # tomato stalk tissue (Gao et al. 2024); raise to 1000 if unstable
     bend_limit_deg: 30.0
     drive_stiffness_scale: 1.0
   truss_rachis:                 # stalk of a tomato truss
@@ -93,8 +93,8 @@ fruits:
   # physical  tomatoes are rigid bodies (experimental: side trusses can be unstable)
   mode: visual
   detachable: true              # physical only: a tomato breaks off above break_force_n
-  break_force_n: 6.0
-  density: 1000.0               # kg/m^3
+  break_force_n: 3.0           # cherry tomato pull-off 0.6-2.5 N (Agriculture 2021, 11(9):815)
+  density: 1090.0               # kg/m^3, cherry tomato fruit
 
 collisions:
   # Colliders that already touch at rest would push each other apart.

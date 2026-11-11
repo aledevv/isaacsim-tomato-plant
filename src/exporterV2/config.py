@@ -26,7 +26,7 @@ _VEGETATIVE = {
     "joint": "d6",
     "young_modulus": 50.64e6,
     "damping_ratio": 0.8,
-    "density": 1000.0,
+    "density": 800.0,  # tomato stalk tissue (Gao et al. 2024); raise to 1000 if unstable
     "bend_limit_deg": 30.0,
     "drive_stiffness_scale": 1.0,
 }
@@ -66,8 +66,8 @@ DEFAULT_PHYSICS: dict[str, Any] = {
     "fruits": {
         "mode": "visual",
         "detachable": True,
-        "break_force_n": 6.0,
-        "density": 1000.0,
+        "break_force_n": 3.0,
+        "density": 1090.0,
     },
     "collisions": {
         "initial_overlaps": "filter",

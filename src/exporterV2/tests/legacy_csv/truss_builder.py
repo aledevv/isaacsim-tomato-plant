@@ -9,7 +9,7 @@ from typing import List, Dict
 from pathlib import Path
 from functools import lru_cache
 
-TOMATO_DENSITY = 1000.0  # kg/m^3, close to water
+TOMATO_DENSITY = 1090.0  # kg/m^3, cherry tomato fruit
 
 
 def _fruit_layout(n_fruits: int) -> tuple[int, bool]:

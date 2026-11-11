@@ -105,9 +105,10 @@ def test_cli_defaults_and_errors(tmp_path, capsys):
 @pytest.fixture(scope="module")
 def day160(tmp_path_factory):
     tmp = tmp_path_factory.mktemp("day160")
-    # The reference was exported at the old 30 MPa vegetative modulus; pin it
-    # so this stays a parity check of the exporter, not of the defaults.
-    vegetative = {"young_modulus": 30.0e6}
+    # The reference was exported at the old 30 MPa vegetative modulus and
+    # 1000 kg/m^3 density; pin them so this stays a parity check of the
+    # exporter, not of the defaults.
+    vegetative = {"young_modulus": 30.0e6, "density": 1000.0}
     segments = {kind: vegetative for kind in ("stem", "branch", "petiole", "leaf_rachis")}
     # The reference also keeps the skeleton's pedicel lengths.
     return _export(

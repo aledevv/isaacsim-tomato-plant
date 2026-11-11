@@ -110,7 +110,7 @@ terminal joint.
 
 With `physical`, tomatoes are external bodies with
 `excludeFromArticulation=true` and an immediate break force
-(`fruits.break_force_n`, default `6 N`). There is no soft-start, gravity ramp
+(`fruits.break_force_n`, default `3 N`). There is no soft-start, gravity ramp
 or automatic equilibrium capture.
 
 Do not infer stability from finite coordinates. The headless monitor fails an

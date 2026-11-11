@@ -367,7 +367,7 @@ def build_terminal_bodies(stage, stem_path, terminal_bodies, branch_registry, br
                     # FixedJoint frames must coincide in world space at the
                     # canonical rest pose.  A GroIMP sphere frame is generally
                     # not aligned with its pedicel, so identity/identity would
-                    # inject a large angular correction and can break the 6 N
+                    # inject a large angular correction and can break the 3 N
                     # historical attachment on mature plants.
                     local_rot1 = Gf.Quatf(
                         physical_orientation.GetInverse() * parent_orientation
