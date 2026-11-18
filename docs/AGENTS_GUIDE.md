@@ -83,9 +83,9 @@ uv run pytest -q validation
 
 Tests that guard behaviour:
 
-- `src/exporterV2/tests/test_exporter.py` holds the **day-160 regression**:
+- `src/exporterV2/tests/test_exporter.py` holds the **day-120 regression**:
   the default skeleton must give the same bodies, joints, poses, masses and
-  drive gains as the reference export (`tests/data/day160_reference.json`,
+  drive gains as the reference export (`tests/data/day120_reference.json`,
   made at 30 MPa, which the test pins). A physics change that breaks it needs
   the user's approval before the reference is updated.
 - `test_config.py` checks that the YAML files only use keys the built-in

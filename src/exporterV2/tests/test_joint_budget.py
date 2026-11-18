@@ -124,23 +124,23 @@ def test_pedicel_lock_never_builds_static_rachis_curves():
     assert not PedicelLockTechnique().can_apply(branches)
 
 
-def _export_day_160(tmp_path, joints):
+def _export_day_120(tmp_path, joints):
     from exporterV2.config import physics_config_from_dict, visuals_config_from_dict
     from exporterV2.exporter import export_plant
     from plant_skeleton import load_skeleton
 
     return export_plant(
         load_skeleton(PROJECT_ROOT / "input" / "skeleton.json"),
-        tmp_path / "day160.usda",
+        tmp_path / "day120.usda",
         physics_config_from_dict({"joints": joints, "fruits": {"mode": "none"}}),
         visuals_config_from_dict({"leaves": {"generator": "simple"}}),
     )
 
 
-def test_day_160_lock_export_fits_the_joint_target(tmp_path):
+def test_day_120_lock_export_fits_the_joint_target(tmp_path):
     from pxr import Usd
 
-    result = _export_day_160(tmp_path, {"joint_target": 150, "optimize": "lock"})
+    result = _export_day_120(tmp_path, {"joint_target": 150, "optimize": "lock"})
     optimization = result.manifest["metadata"]["joint_budget_optimization"]
     assert optimization["original_d6"] == 206
     assert optimization["final_d6"] <= 150
@@ -148,10 +148,10 @@ def test_day_160_lock_export_fits_the_joint_target(tmp_path):
     assert sum(prim.GetTypeName() == "PhysicsJoint" for prim in stage.Traverse()) == optimization["final_d6"]
 
 
-def test_day_160_full_export_merges_bodies(tmp_path):
+def test_day_120_full_export_merges_bodies(tmp_path):
     from pxr import Usd, UsdPhysics
 
-    result = _export_day_160(tmp_path, {"joint_target": 60, "optimize": "full"})
+    result = _export_day_120(tmp_path, {"joint_target": 60, "optimize": "full"})
     optimization = result.manifest["metadata"]["joint_budget_optimization"]
     merge = optimization["body_merge"]
     assert optimization["final_d6"] == merge["after"]["d6_joints"] == result.d6_joints <= 60

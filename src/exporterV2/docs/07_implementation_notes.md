@@ -2,7 +2,7 @@
 
 ## Compatibility Rules
 
-- Treat branch identifiers, prim paths, topology, transforms, joint frames, material bindings and collision relationships as stable output. The default day-160 plant (216 bodies, 206 D6, 10 fixed) is covered by a regression test.
+- Treat branch identifiers, prim paths, topology, transforms, joint frames, material bindings and collision relationships as stable output. The default day-120 plant (216 bodies, 206 D6, 10 fixed) is covered by a regression test.
 - Keep generated USD/JSON artifacts out of source-only refactors.
 - User-facing values belong in `config/physics.yaml` and `config/visuals.yaml` (defaults in `config.py`). `core/tree_config.py` holds the core's internal constants and receives the physics values at export time.
 
@@ -33,4 +33,4 @@
 
 ## Verification
 
-Source refactors should compare the day-160 USDA and manifest before and after, then run the test suite listed in [06_testing.md](06_testing.md). Isaac-dependent checks must use `~/isaacsim/python.sh`.
+Source refactors should compare the day-120 USDA and manifest before and after, then run the test suite listed in [06_testing.md](06_testing.md). Isaac-dependent checks must use `~/isaacsim/python.sh`.

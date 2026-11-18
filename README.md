@@ -51,7 +51,7 @@ versions from `uv.lock`; details and the Isaac Sim setup are in
 
 | File | Role |
 | --- | --- |
-| `input/skeleton.json` | The plant (a 160-day dwarf tomato by default). Format: [`src/plant_skeleton/README.md`](src/plant_skeleton/README.md) |
+| `input/skeleton.json` | The plant (a 120-day dwarf tomato by default). Format: [`src/plant_skeleton/README.md`](src/plant_skeleton/README.md) |
 | `input/examples/` | `small_plant.json` (smallest hand-written example) and the same tomato at days 10, 25 and 50 |
 | `config/physics.yaml` | Stiffness, damping, masses, joints, fruits, collisions, scale; every option commented |
 | `config/visuals.yaml` | Mesh density, leaflets, stem colour, decorations, pose; every option commented |

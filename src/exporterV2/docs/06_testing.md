@@ -19,15 +19,15 @@ uv run pytest -q validation
 | `src/plant_skeleton/tests/test_skeleton.py` | format, JSON round trip, validation messages |
 | `tests/test_skeleton_branches.py` | chain rules, attachment, physics per kind, visual switches, poses |
 | `tests/test_config.py` | YAML files only use known keys, bad values rejected, `global_scale: auto` |
-| `tests/test_exporter.py` | small plant end to end, fruit modes, scale, joint budget, CLI, baked leaflets and droop, stem colour, branch collisions, day-160 regression |
+| `tests/test_exporter.py` | small plant end to end, fruit modes, scale, joint budget, CLI, baked leaflets and droop, stem colour, branch collisions, day-120 regression |
 | `tests/test_baked_leaf_assets.py` | the committed baked leaflet set |
-| `tests/test_joint_budget*.py` | lock and merge on the day-160 plant |
+| `tests/test_joint_budget*.py` | lock and merge on the day-120 plant |
 | `tests/legacy_csv/tests`, `core/*/tests` | generic core builder, using the legacy CSV builder as a fixture |
 
 (`tests/` in the table means `src/exporterV2/tests/`.)
 
-The day-160 regression compares against
-`src/exporterV2/tests/data/day160_reference.json`, recorded from the earlier
+The day-120 regression compares against
+`src/exporterV2/tests/data/day120_reference.json`, recorded from the earlier
 exporter at 30 MPa (the test pins that modulus): same bodies (216), D6 (206) and fixed (10)
 joints, capsules, meshes, link poses, masses and drive gains. If a deliberate
 change alters them, regenerate the reference and say why in the commit.

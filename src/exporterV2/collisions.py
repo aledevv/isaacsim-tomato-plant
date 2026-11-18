@@ -269,7 +269,7 @@ def auto_filter_initial_overlaps(stage) -> list[dict[str, Any]]:
 
 
 
-# PhysX contact offset measured for every body of the day-160 plant in the
+# PhysX contact offset measured for every body of the day-120 plant in the
 # 2026-09-16 branch collision experiment; pairs closer than twice this at rest
 # (or 1 mm) stay filtered so they do not start in contact.
 CONTACT_OFFSET_M = 0.0005555556

@@ -4,7 +4,7 @@
     "plant_id": 1,
     "source": "groimp",
     "description": "Dwarf tomato from a GroIMP growth simulation",
-    "time": 160.0
+    "time": 120.0
   },
   "nodes": [
     {

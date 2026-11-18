@@ -19,8 +19,8 @@ from plant_skeleton import load_skeleton
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 SMALL_PLANT = PROJECT_ROOT / "input" / "examples" / "small_plant.json"
-DAY_160 = PROJECT_ROOT / "input" / "skeleton.json"
-REFERENCE = Path(__file__).parent / "data" / "day160_reference.json"
+DAY_120 = PROJECT_ROOT / "input" / "skeleton.json"
+REFERENCE = Path(__file__).parent / "data" / "day120_reference.json"
 SIMPLE_LEAVES = {"leaves": {"generator": "simple"}}
 
 
@@ -103,8 +103,8 @@ def test_cli_defaults_and_errors(tmp_path, capsys):
 
 
 @pytest.fixture(scope="module")
-def day160(tmp_path_factory):
-    tmp = tmp_path_factory.mktemp("day160")
+def day120(tmp_path_factory):
+    tmp = tmp_path_factory.mktemp("day120")
     # The reference was exported at the old 30 MPa vegetative modulus and
     # 1000 kg/m^3 density; pin them so this stays a parity check of the
     # exporter, not of the defaults.
@@ -113,25 +113,25 @@ def day160(tmp_path_factory):
     # The reference also keeps the skeleton's pedicel lengths.
     return _export(
         tmp,
-        DAY_160,
+        DAY_120,
         physics={"fruits": {"mode": "none"}, "segments": segments},
         visuals={"trusses": {"pedicel_length_scale": 1.0}},
     )
 
 
-def test_day_160_matches_the_reference_export(day160):
+def test_day_120_matches_the_reference_export(day120):
     """Same rigid links, poses, masses and joint gains as the reference export of
     the default plant (made with the earlier exporter, before the skeleton format)."""
 
     reference = json.loads(REFERENCE.read_text())
-    authored = day160.manifest["authored"]
+    authored = day120.manifest["authored"]
     expected_counts = reference["counts"]
     assert authored["rigid_bodies"] == expected_counts["rigid_bodies"]
     assert authored["fixed_joints"] == expected_counts["fixed_joints"]
     assert authored["d6_joints"] == expected_counts["d6_joints"]
     assert authored["capsule_colliders"] == expected_counts["capsule_colliders"]
     # The welded stem is now one continuous mesh instead of one per link.
-    stem_links = sum("/trunk/" in pose["body_path"] for pose in day160.manifest["poses"])
+    stem_links = sum("/trunk/" in pose["body_path"] for pose in day120.manifest["poses"])
     merged = stem_links - 1
     assert authored["organic_meshes"] == expected_counts["organic_meshes"] - merged
     assert authored["leaf_blades"] == expected_counts["leaf_blades"]
@@ -140,23 +140,23 @@ def test_day_160_matches_the_reference_export(day160):
     assert authored["total_meshes"] == expected_counts["total_meshes"] - merged
     assert authored["truss_visuals"] == reference["truss_visuals"]
 
-    poses = sorted(pose["start"] + pose["direction"] for pose in day160.manifest["poses"])
+    poses = sorted(pose["start"] + pose["direction"] for pose in day120.manifest["poses"])
     for ours, theirs in zip(poses, reference["links_start_direction"]):
         assert ours == pytest.approx(theirs, abs=1e-8)
 
-    masses = sorted(body["mass_kg"] for body in day160.manifest["physics"]["body_masses"])
+    masses = sorted(body["mass_kg"] for body in day120.manifest["physics"]["body_masses"])
     # USD stores masses as 32-bit floats.
     assert masses == pytest.approx(reference["body_masses_kg"], rel=1e-6)
 
-    usda = day160.usd_path.read_text()
+    usda = day120.usd_path.read_text()
     stiffness = sorted(float(x) for x in re.findall(r"drive:rot[XY]:physics:stiffness = ([0-9.e+-]+)", usda))
     damping = sorted(float(x) for x in re.findall(r"drive:rot[XY]:physics:damping = ([0-9.e+-]+)", usda))
     assert stiffness == pytest.approx(reference["drive_stiffness"], rel=1e-6)
     assert damping == pytest.approx(reference["drive_damping"], rel=1e-6)
 
 
-def test_leaflets_hang_from_their_rachis(day160):
-    stage = Usd.Stage.Open(str(day160.usd_path))
+def test_leaflets_hang_from_their_rachis(day120):
+    stage = Usd.Stage.Open(str(day120.usd_path))
     for prim in stage.Traverse():
         if prim.GetAttribute("autotom:entityKind").Get() != "rigid_leaf_visual":
             continue
@@ -255,11 +255,11 @@ def test_stem_colour(tmp_path):
     assert list(UsdGeom.Mesh(first).GetDisplayColorAttr().Get()[0]) != pytest.approx(color)
 
 
-def test_branch_collisions(day160, tmp_path):
-    stage = Usd.Stage.Open(str(day160.usd_path))
+def test_branch_collisions(day120, tmp_path):
+    stage = Usd.Stage.Open(str(day120.usd_path))
     assert stage.GetPrimAtPath("/World/Stem").GetAttribute("physxArticulation:enabledSelfCollisions").Get() is True
-    assert day160.manifest["collisions"]["branch_contacts"] > 10000
-    assert day160.manifest["collisions"]["active_at_rest"] == []
+    assert day120.manifest["collisions"]["branch_contacts"] > 10000
+    assert day120.manifest["collisions"]["active_at_rest"] == []
     off = _export(tmp_path, physics={"collisions": {"branches": False}})
     stage = Usd.Stage.Open(str(off.usd_path))
     assert stage.GetPrimAtPath("/World/Stem").GetAttribute("physxArticulation:enabledSelfCollisions").Get() is False
@@ -270,7 +270,7 @@ def test_pedicel_length_scale_moves_fruit_along_pedicel():
     from plant_skeleton import load_skeleton
     from exporterV2.skeleton_branches import lengthen_pedicels
 
-    skeleton = load_skeleton(DAY_160)
+    skeleton = load_skeleton(DAY_120)
     longer = lengthen_pedicels(skeleton, 1.75)
     for old, new in zip(skeleton.nodes, longer.nodes):
         assert old.start == new.start

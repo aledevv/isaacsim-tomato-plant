@@ -83,7 +83,7 @@ bodies to get more bending; that quickly exhausts the joint budget.
 ## Truss Stiffness and Damping
 
 Truss values are the `truss_rachis` and `pedicel` blocks under `segments:` in
-`config/physics.yaml`. The defaults, chosen by eye on day 160, are rachis
+`config/physics.yaml`. The defaults, chosen by eye on day 120, are rachis
 `20 GPa`, pedicel `4 GPa`, damping ratio `4` for both and pedicel
 `drive_stiffness_scale: 0.2`.
 
@@ -115,7 +115,7 @@ or automatic equilibrium capture.
 
 Do not infer stability from finite coordinates. The headless monitor fails an
 unforced terminal body that travels more than `0.25 m` and reports its path
-and joint ancestry. In the 2026-08-25 checkpoint, day 160 still failed to
+and joint ancestry. In the 2026-08-25 checkpoint, day 120 still failed to
 settle with all colliders disabled and the break force raised to `1e9 N`, so
 residual contacts are not the primary cause; the 72 external terminal bodies
 and FixedJoints are the unsupported boundary.

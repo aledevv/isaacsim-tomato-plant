@@ -158,7 +158,7 @@ class TrussPhysicsConfig:
     # Manual tuning surface for PlantState trusses.  The exporter deliberately
     # does not auto-select these values: adjust rachis and pedicel stiffness or
     # damping independently here, then regenerate the USDA for comparison.
-    # Day-160 fruit-free calibration approved in GUI (2026-08-25).
+    # Day-120 fruit-free calibration approved in GUI (2026-08-25).
     RACHIS_YOUNG_MODULUS = 20.0e9  # [Pa]
     PEDICEL_YOUNG_MODULUS = 4.0e9  # [Pa]
     RACHIS_DAMPING_RATIO = 4.0
@@ -166,10 +166,10 @@ class TrussPhysicsConfig:
     # Compatibility aliases for legacy BRANCHES without component-specific data.
     YOUNG_MODULUS = RACHIS_YOUNG_MODULUS
     DAMPING_RATIO = RACHIS_DAMPING_RATIO
-    # Moderate solver adaptation selected against the final day-160 plant.
+    # Moderate solver adaptation selected against the final day-120 plant.
     # This intentionally accepts a harder terminal-body mass ratio instead of
     # hiding it behind the former extremely dense vegetative supports.
-    # Do not raise this to repair detachable-fruit instability: at day 160 the
+    # Do not raise this to repair detachable-fruit instability: at day 120 the
     # added self-weight is transferred to the lateral support branches.
     PLANT_DENSITY = 2000.0  # [kg/m^3]
     MIN_K = 0.001             # [N·m/rad] Minimum stiffness for thin pedicels

@@ -115,9 +115,9 @@ Key tests:
 
 - `tests/test_exporter.py`: the hand-written small plant, fruit modes,
   scale, joint budget, CLI, baked leaflets and droop, stem colour, branch
-  collisions, and the **day-160 regression**: the default skeleton must give
+  collisions, and the **day-120 regression**: the default skeleton must give
   the same bodies, joints, poses, masses and drive gains as the reference
-  export (`tests/data/day160_reference.json`).
+  export (`tests/data/day120_reference.json`).
 - `tests/test_skeleton_branches.py`: chain rules, attachment, pose, config switches.
 - `tests/test_config.py`: the commented YAML files equal the built-in defaults.
 

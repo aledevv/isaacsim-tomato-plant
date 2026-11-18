@@ -65,7 +65,7 @@ any plant source ──> input/skeleton.json ──exporter──> output/plant.
 | Path | What it is |
 | --- | --- |
 | `run_main.sh` | The one launcher: build, then open in Isaac Sim. |
-| `input/skeleton.json` | Default plant (a 160-day dwarf tomato). `input/examples/` has a 16-segment hand-written plant and the same tomato at days 10, 25 and 50. |
+| `input/skeleton.json` | Default plant (a 120-day dwarf tomato). `input/examples/` has a 16-segment hand-written plant and the same tomato at days 10, 25 and 50. |
 | `config/physics.yaml`, `config/visuals.yaml` | All settings, each option commented with its default. |
 | `src/plant_skeleton/` | The input format: data model, JSON I/O, validation. |
 | `src/exporterV2/` | The exporter: pipeline, mesh generators, Isaac Sim launcher. |
