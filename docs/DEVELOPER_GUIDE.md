@@ -128,7 +128,7 @@ hand with `./run_main.sh`.
 - Visible stem meshes are a few millimetres thicker than their colliders, and
   leaflet stalks have no colliders, so touching parts can overlap slightly.
 - Physical tomatoes (`fruits.mode: physical`) are stable only on trusses of the
-  main stem. The default is `visual`: tomatoes are drawn but have no mass.
+  main stem. This is the default; use `visual` for tomatoes drawn without mass.
 - Fruits are spheres only.
 - Only one plant per scene has been tested.
 

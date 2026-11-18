@@ -30,7 +30,7 @@ joints:
   #   none  export as is (error above joint_max)
   #   lock  turn the least important D6 joints into fixed joints
   #   full  lock, and also merge rigid links into one body
-  optimize: none
+  optimize: full
   # How merged links keep their flexibility (only with optimize: full):
   #   blend (default) | load | tip | series | keep
   merge_stiffness: blend
@@ -89,9 +89,9 @@ segments:
 
 fruits:
   # none      no tomatoes
-  # visual    tomatoes are drawn but have no mass (default, stable)
-  # physical  tomatoes are rigid bodies (experimental: side trusses can be unstable)
-  mode: visual
+  # visual    tomatoes are drawn but have no mass (stable)
+  # physical  tomatoes are rigid bodies and can be picked off (default; side trusses can be unstable)
+  mode: physical
   detachable: true              # physical only: a tomato breaks off above break_force_n
   break_force_n: 3.0           # cherry tomato pull-off 0.6-2.5 N (Agriculture 2021, 11(9):815)
   density: 1090.0               # kg/m^3, cherry tomato fruit

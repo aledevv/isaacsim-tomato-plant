@@ -94,7 +94,7 @@ def test_cli_defaults_and_errors(tmp_path, capsys):
     visuals.write_text("leaves:\n  generator: simple\n")
     assert cli.main(["--input", str(SMALL_PLANT), "--visuals", str(visuals), "--output", str(output)]) == 0
     assert output.is_file() and output.with_suffix(".manifest.json").is_file()
-    assert "16 segments -> 16 rigid bodies" in capsys.readouterr().out
+    assert "16 segments -> 19 rigid bodies" in capsys.readouterr().out
     assert cli.build_argument_parser().parse_args([]).input == PROJECT_ROOT / "input" / "skeleton.json"
     broken = tmp_path / "broken.json"
     broken.write_text('{"schema_version": "plant_skeleton/1.0", "nodes": []}')
