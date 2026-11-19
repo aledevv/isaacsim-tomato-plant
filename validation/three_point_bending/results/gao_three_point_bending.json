@@ -1,0 +1,796 @@
+{
+ "hz480": {
+  "specimen": {
+   "length_mm": 80,
+   "outer_d_mm": 11.1,
+   "bast_mm": 3.64,
+   "density": 769.96,
+   "span_mm": 57.0,
+   "I_mm4": 734.7284935566337
+  },
+  "hz": 480,
+  "density_scale": 100.0,
+  "cases": [
+   {
+    "n_links": 8,
+    "link_mm": 10.0,
+    "joint_stiffness_Nm_per_deg": 0.064937856208436,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.004427916079426571,
+      "jitter_mm": 4.36701839134912e-05
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.06224406548959083,
+      "jitter_mm": 0.000593772543951756
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.1274221740420402,
+      "jitter_mm": 0.0006040493065500229
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.2543681822035236,
+      "jitter_mm": 0.0003253189263847261
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.39847807691058934,
+      "jitter_mm": 0.0003307436823663857
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.513168601259144,
+      "jitter_mm": 0.0002817485089757002
+     }
+    ],
+    "slope_N_per_mm": 7.672438819392138,
+    "young_backed_out_MPa": 40.28931477013934,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   },
+   {
+    "n_links": 16,
+    "link_mm": 5.0,
+    "joint_stiffness_Nm_per_deg": 0.129875712416872,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.006568262405674356,
+      "jitter_mm": 0.00016004918279577396
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.07435768293230953,
+      "jitter_mm": 4.3329929504424755e-05
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.1487427490641936,
+      "jitter_mm": 0.00048555476482378007
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.29744165737908823,
+      "jitter_mm": 0.00046070514384688325
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.4546962667984584,
+      "jitter_mm": 0.00016350785435196094
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.6178451438177256,
+      "jitter_mm": 0.00013862750842402478
+     }
+    ],
+    "slope_N_per_mm": 6.48485224762183,
+    "young_backed_out_MPa": 34.053090496064854,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   },
+   {
+    "n_links": 32,
+    "link_mm": 2.5,
+    "joint_stiffness_Nm_per_deg": 0.259751424833744,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.011343455208627043,
+      "jitter_mm": 0.0003318469339319563
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.11362185878947612,
+      "jitter_mm": 0.00010337110970715547
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.22612699792952576,
+      "jitter_mm": 0.00087964880132922
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.44913498123095924,
+      "jitter_mm": 0.00022160271506157202
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.6567171079806154,
+      "jitter_mm": 0.00027229487866114836
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.8924449326039942,
+      "jitter_mm": 0.00010237790981453259
+     }
+    ],
+    "slope_N_per_mm": 4.515838066239758,
+    "young_backed_out_MPa": 23.71345351648245,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   }
+  ]
+ },
+ "hz1920": {
+  "specimen": {
+   "length_mm": 80,
+   "outer_d_mm": 11.1,
+   "bast_mm": 3.64,
+   "density": 769.96,
+   "span_mm": 57.0,
+   "I_mm4": 734.7284935566337
+  },
+  "hz": 1920,
+  "density_scale": 100.0,
+  "cases": [
+   {
+    "n_links": 2,
+    "link_mm": 40.0,
+    "joint_stiffness_Nm_per_deg": 0.016234464052109,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.00016354700290340438,
+      "jitter_mm": 1.2876625987701118e-05
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.10778527393234949,
+      "jitter_mm": 0.0001001517583595435
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.21590108371356598,
+      "jitter_mm": 0.0015893287204702517
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.432654996285383,
+      "jitter_mm": 0.0011266434885661455
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.6491139507074956,
+      "jitter_mm": 0.0006968539532560981
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.8643650220700348,
+      "jitter_mm": 0.00043138635814963903
+     }
+    ],
+    "slope_N_per_mm": 4.591171324140196,
+    "young_backed_out_MPa": 24.109041596316928,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   },
+   {
+    "n_links": 4,
+    "link_mm": 20.0,
+    "joint_stiffness_Nm_per_deg": 0.032468928104218,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.008736266252048116,
+      "jitter_mm": 2.1331061361706816e-05
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.06433178659314308,
+      "jitter_mm": 0.004171129651148064
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.12318571991939171,
+      "jitter_mm": 0.0015049753338463928
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.2525995213555929,
+      "jitter_mm": 0.0007597800614046551
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.3771485076683993,
+      "jitter_mm": 0.0008493486993964836
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.5006787044044181,
+      "jitter_mm": 0.0009601544365137526
+     }
+    ],
+    "slope_N_per_mm": 8.001344416655956,
+    "young_backed_out_MPa": 42.01645544206359,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   },
+   {
+    "n_links": 8,
+    "link_mm": 10.0,
+    "joint_stiffness_Nm_per_deg": 0.064937856208436,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.005255414784244294,
+      "jitter_mm": 7.688640835112892e-07
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.05418085022550848,
+      "jitter_mm": 0.000978947816493764
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.10990199369353414,
+      "jitter_mm": 0.001156675991261015
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.2265435737821726,
+      "jitter_mm": 0.0006506197887215276
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.3471001643338992,
+      "jitter_mm": 0.0005009695386277795
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.4625654686597204,
+      "jitter_mm": 0.00022645577888678057
+     }
+    ],
+    "slope_N_per_mm": 8.589411017817097,
+    "young_backed_out_MPa": 45.10449575854074,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   },
+   {
+    "n_links": 16,
+    "link_mm": 5.0,
+    "joint_stiffness_Nm_per_deg": 0.129875712416872,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.00608672993518411,
+      "jitter_mm": 1.2946031802130165e-05
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.06013565284013533,
+      "jitter_mm": 0.00039033729113523575
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.12183040673979739,
+      "jitter_mm": 0.0031962768652514296
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.22450596836662853,
+      "jitter_mm": 0.0005689199870272587
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.34452157240915393,
+      "jitter_mm": 0.0003998553910642354
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.4735391018034724,
+      "jitter_mm": 0.00032051381370506744
+     }
+    ],
+    "slope_N_per_mm": 8.562394603288709,
+    "young_backed_out_MPa": 44.962627852583154,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   },
+   {
+    "n_links": 32,
+    "link_mm": 2.5,
+    "joint_stiffness_Nm_per_deg": 0.259751424833744,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.0070607933488157455,
+      "jitter_mm": 3.065321152462275e-05
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.0637586726619724,
+      "jitter_mm": 0.0006502713276140246
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.12701283894196,
+      "jitter_mm": 0.001247423467078037
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.25545860074584975,
+      "jitter_mm": 0.0004730133738117359
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.3768853694652283,
+      "jitter_mm": 0.0006130205020753545
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.517947946603689,
+      "jitter_mm": 0.00018972085666531507
+     }
+    ],
+    "slope_N_per_mm": 7.786733103685423,
+    "young_backed_out_MPa": 40.88949399668218,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   }
+  ]
+ },
+ "hz3840": {
+  "specimen": {
+   "length_mm": 80,
+   "outer_d_mm": 11.1,
+   "bast_mm": 3.64,
+   "density": 769.96,
+   "span_mm": 57.0,
+   "I_mm4": 734.7284935566337
+  },
+  "hz": 3840,
+  "density_scale": 100.0,
+  "cases": [
+   {
+    "n_links": 8,
+    "link_mm": 10.0,
+    "joint_stiffness_Nm_per_deg": 0.064937856208436,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.004566550703207402,
+      "jitter_mm": 3.070681486860849e-07
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.0565582778709541,
+      "jitter_mm": 0.00018351190295051094
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.11579820442768875,
+      "jitter_mm": 0.0013521778225120016
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.22945245826384428,
+      "jitter_mm": 0.0003917987437995936
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.3546050842627604,
+      "jitter_mm": 0.00031037842373771466
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.4563278775815954,
+      "jitter_mm": 0.001380531758664544
+     }
+    ],
+    "slope_N_per_mm": 8.650302659651109,
+    "young_backed_out_MPa": 45.424248392933904,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   },
+   {
+    "n_links": 16,
+    "link_mm": 5.0,
+    "joint_stiffness_Nm_per_deg": 0.129875712416872,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.0056064567545514405,
+      "jitter_mm": 8.526512829121202e-10
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.05772462359819722,
+      "jitter_mm": 0.00017493714858564396
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.11739785329495561,
+      "jitter_mm": 0.0003306005825889154
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.22707739928004,
+      "jitter_mm": 0.0007844451095326852
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.33749085389742156,
+      "jitter_mm": 0.0010834335287191387
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.44464429146066053,
+      "jitter_mm": 0.0012686216926520726
+     }
+    ],
+    "slope_N_per_mm": 9.003499303035163,
+    "young_backed_out_MPa": 47.27894558583824,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   },
+   {
+    "n_links": 32,
+    "link_mm": 2.5,
+    "joint_stiffness_Nm_per_deg": 0.259751424833744,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.0058574355861207295,
+      "jitter_mm": 8.253209671238437e-05
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.05490424617012745,
+      "jitter_mm": 0.000949302054610186
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.11064382600980632,
+      "jitter_mm": 0.001875874532580174
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.22846985244685122,
+      "jitter_mm": 0.0009404935613444921
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.34215374277357324,
+      "jitter_mm": 0.0015655586605686279
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.45846822928527237,
+      "jitter_mm": 0.0016253045929300871
+     }
+    ],
+    "slope_N_per_mm": 8.701165991015634,
+    "young_backed_out_MPa": 45.69134061951821,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   }
+  ]
+ },
+ "hz7680": {
+  "specimen": {
+   "length_mm": 80,
+   "outer_d_mm": 11.1,
+   "bast_mm": 3.64,
+   "density": 769.96,
+   "span_mm": 57.0,
+   "I_mm4": 734.7284935566337
+  },
+  "hz": 7680,
+  "density_scale": 100.0,
+  "cases": [
+   {
+    "n_links": 8,
+    "link_mm": 10.0,
+    "joint_stiffness_Nm_per_deg": 0.064937856208436,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.007000081945668497,
+      "jitter_mm": 0.0011979315704505494
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.058491459643986436,
+      "jitter_mm": 0.00019730137346554244
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.12092956557589596,
+      "jitter_mm": 9.01666531007237e-05
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.23155760649207288,
+      "jitter_mm": 0.00013061552412669077
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.3548560762764683,
+      "jitter_mm": 0.0004541028722949308
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.4644294599792121,
+      "jitter_mm": 0.0007831739468035985
+     }
+    ],
+    "slope_N_per_mm": 8.599614470124683,
+    "young_backed_out_MPa": 45.15807586669662,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   },
+   {
+    "n_links": 16,
+    "link_mm": 5.0,
+    "joint_stiffness_Nm_per_deg": 0.129875712416872,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.006013142792434441,
+      "jitter_mm": 6.444565769925248e-06
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.05635600229166248,
+      "jitter_mm": 0.00017239805012527506
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.11463587920759571,
+      "jitter_mm": 0.00021558032424790906
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.22883771808693987,
+      "jitter_mm": 0.0009743887476511433
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.3376758655190138,
+      "jitter_mm": 0.004539078693857439
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.44897203532355384,
+      "jitter_mm": 0.0019866624646376076
+     }
+    ],
+    "slope_N_per_mm": 8.912232372633541,
+    "young_backed_out_MPa": 46.79968701192019,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   },
+   {
+    "n_links": 32,
+    "link_mm": 2.5,
+    "joint_stiffness_Nm_per_deg": 0.259751424833744,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.005221092232813677,
+      "jitter_mm": 1.2296084150875686e-06
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.05217448989279445,
+      "jitter_mm": 0.00022504994633428503
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.10575368288626885,
+      "jitter_mm": 0.0011548376222105207
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.21594689694195623,
+      "jitter_mm": 0.0001931701611262407
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.32049828380243556,
+      "jitter_mm": 0.002227438488979275
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.4244773759789248,
+      "jitter_mm": 0.0038235384826434244
+     }
+    ],
+    "slope_N_per_mm": 9.383923353201475,
+    "young_backed_out_MPa": 49.27661864183481,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.10369617810934281
+   }
+  ]
+ },
+ "span50_hz7680": {
+  "specimen": {
+   "length_mm": 80,
+   "outer_d_mm": 11.1,
+   "bast_mm": 3.64,
+   "density": 769.96,
+   "span_mm": 50.0,
+   "I_mm4": 734.7284935566337
+  },
+  "hz": 7680,
+  "density_scale": 100.0,
+  "cases": [
+   {
+    "n_links": 32,
+    "link_mm": 2.5,
+    "joint_stiffness_Nm_per_deg": 0.259751424833744,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.004091518491603867,
+      "jitter_mm": 0.00043503774804776185
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.03727584355667823,
+      "jitter_mm": 0.0006745366820222489
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.07412221096840134,
+      "jitter_mm": 0.0003353531031958552
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.14180384513238894,
+      "jitter_mm": 0.0011720978456111113
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.21036691807300445,
+      "jitter_mm": 0.0011079227871634153
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.2908736743112997,
+      "jitter_mm": 0.003469052381195061
+     }
+    ],
+    "slope_N_per_mm": 13.962744971319077,
+    "young_backed_out_MPa": 49.48945814454656,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.06999196656281745
+   }
+  ]
+ },
+ "span65_hz7680": {
+  "specimen": {
+   "length_mm": 80,
+   "outer_d_mm": 11.1,
+   "bast_mm": 3.64,
+   "density": 769.96,
+   "span_mm": 65.0,
+   "I_mm4": 734.7284935566337
+  },
+  "hz": 7680,
+  "density_scale": 100.0,
+  "cases": [
+   {
+    "n_links": 32,
+    "link_mm": 2.5,
+    "joint_stiffness_Nm_per_deg": 0.259751424833744,
+    "rows": [
+     {
+      "force_N": 0.05,
+      "deflection_mm": 0.008535087660484683,
+      "jitter_mm": 9.093920994018845e-05
+     },
+     {
+      "force_N": 0.5,
+      "deflection_mm": 0.08080161041209703,
+      "jitter_mm": 0.00044280148291709644
+     },
+     {
+      "force_N": 1.0,
+      "deflection_mm": 0.16560982812525257,
+      "jitter_mm": 0.0005160270090099576
+     },
+     {
+      "force_N": 2.0,
+      "deflection_mm": 0.32097725888832623,
+      "jitter_mm": 0.00019739722405574334
+     },
+     {
+      "force_N": 3.0,
+      "deflection_mm": 0.4663141289176799,
+      "jitter_mm": 0.0006292748541482135
+     },
+     {
+      "force_N": 4.0,
+      "deflection_mm": 0.6277024838735242,
+      "jitter_mm": 0.0006785220940659469
+     }
+    ],
+    "slope_N_per_mm": 6.4209947083257015,
+    "young_backed_out_MPa": 50.000490182149385,
+    "young_input_MPa": 50.64,
+    "beam_theory_deflection_per_N_mm": 0.1537723505385099
+   }
+  ]
+ },
+ "main_scene_side_shoots_60hz": {
+  "Branch_s2_o0_g421408": {
+   "stiffness_N_per_m": 48.196726817710754,
+   "static_displacement_mm": 1.0374148474669156
+  },
+  "Branch_s2_o1_g421414": {
+   "stiffness_N_per_m": 45.505724427710405,
+   "static_displacement_mm": 1.0987628617896004
+  },
+  "Branch_s3_o0_g421420": {
+   "stiffness_N_per_m": 48.195893415739434,
+   "static_displacement_mm": 1.0374327864139437
+  },
+  "Branch_s7_o0_g421471": {
+   "stiffness_N_per_m": 48.14987755497228,
+   "static_displacement_mm": 1.0384242398729977
+  }
+ },
+ "main_scene_side_shoots_240hz": {
+  "Branch_s2_o0_g421408": {
+   "stiffness_N_per_m": 59.074750686949194,
+   "static_displacement_mm": 0.8463852901379406
+  },
+  "Branch_s2_o1_g421414": {
+   "stiffness_N_per_m": 58.855579225997396,
+   "static_displacement_mm": 0.8495371323763007
+  },
+  "Branch_s3_o0_g421420": {
+   "stiffness_N_per_m": 59.076736601686996,
+   "static_displacement_mm": 0.8463568381766742
+  },
+  "Branch_s7_o0_g421471": {
+   "stiffness_N_per_m": 59.55188599483807,
+   "static_displacement_mm": 0.839603971641368
+  }
+ },
+ "main_scene_side_shoots_960hz": {
+  "Branch_s2_o0_g421408": {
+   "stiffness_N_per_m": 59.09767091774815,
+   "static_displacement_mm": 0.8460570310730141
+  },
+  "Branch_s2_o1_g421414": {
+   "stiffness_N_per_m": 58.841426888263385,
+   "static_displacement_mm": 0.8497414601271862
+  },
+  "Branch_s3_o0_g421420": {
+   "stiffness_N_per_m": 59.10019602889437,
+   "static_displacement_mm": 0.8460208824951234
+  },
+  "Branch_s7_o0_g421471": {
+   "stiffness_N_per_m": 59.529029340445405,
+   "static_displacement_mm": 0.8399263444067085
+  }
+ }
+}
