@@ -1,0 +1,240 @@
+{
+ "rows": [
+  {
+   "device": "cpu",
+   "variant": "d160_truss-supports",
+   "repeats": 2,
+   "dofs": 412,
+   "bodies": 216,
+   "d6": 206,
+   "frame_idle_ms": 18.7888814980397,
+   "frame_push_ms": 18.813980248523876,
+   "frame_push_p95_ms": 22.595971281407397,
+   "physics_ms": 10.228366249066312,
+   "render_static_ms": 6.027157505741343,
+   "sync_dynamic_ms": 2.5333577432320453,
+   "fps_idle": 53.223294198405654,
+   "spread_physics_pct": 3.2423603421817817,
+   "gpu_memory_mib": 3551.0,
+   "rss_mib": 5001.412109375
+  },
+  {
+   "device": "cpu",
+   "variant": "g206",
+   "repeats": 2,
+   "dofs": 412,
+   "bodies": 255,
+   "d6": 206,
+   "frame_idle_ms": 20.30423150426941,
+   "frame_push_ms": 20.272862006095238,
+   "frame_push_p95_ms": 23.847071473574033,
+   "physics_ms": 11.532939752214588,
+   "render_static_ms": 5.7727655075723305,
+   "sync_dynamic_ms": 2.998526244482491,
+   "fps_idle": 49.31305729230589,
+   "spread_physics_pct": 8.125512684676021,
+   "gpu_memory_mib": 3654.5,
+   "rss_mib": 5031.634765625
+  },
+  {
+   "device": "cpu",
+   "variant": "p160_b120_blend",
+   "repeats": 2,
+   "dofs": 232,
+   "bodies": 191,
+   "d6": 116,
+   "frame_idle_ms": 17.209365003509447,
+   "frame_push_ms": 17.76392149622552,
+   "frame_push_p95_ms": 21.872661962697745,
+   "physics_ms": 8.928253235353623,
+   "render_static_ms": 6.029204494552687,
+   "sync_dynamic_ms": 2.2519072736031376,
+   "fps_idle": 58.10832202208232,
+   "spread_physics_pct": 3.278866357049387,
+   "gpu_memory_mib": 3555.5,
+   "rss_mib": 4999.494140625
+  },
+  {
+   "device": "cpu",
+   "variant": "p160_b40_blend",
+   "repeats": 2,
+   "dofs": 80,
+   "bodies": 115,
+   "d6": 40,
+   "frame_idle_ms": 12.774901500961278,
+   "frame_push_ms": 12.370461496175267,
+   "frame_push_p95_ms": 15.912347380071878,
+   "physics_ms": 5.000395496608689,
+   "render_static_ms": 5.868775762792211,
+   "sync_dynamic_ms": 1.9057302415603772,
+   "fps_idle": 78.27900838052099,
+   "spread_physics_pct": 1.131190383299783,
+   "gpu_memory_mib": 3560.5,
+   "rss_mib": 4976.79296875
+  },
+  {
+   "device": "cpu",
+   "variant": "p160_b60_blend",
+   "repeats": 2,
+   "dofs": 120,
+   "bodies": 135,
+   "d6": 60,
+   "frame_idle_ms": 13.780302251689136,
+   "frame_push_ms": 13.291101749928202,
+   "frame_push_p95_ms": 16.2807557877386,
+   "physics_ms": 5.887702754989732,
+   "render_static_ms": 6.0335957605275325,
+   "sync_dynamic_ms": 1.8590037361718714,
+   "fps_idle": 72.57591593986028,
+   "spread_physics_pct": 0.0505375863922244,
+   "gpu_memory_mib": 3618.0,
+   "rss_mib": 4977.271484375
+  },
+  {
+   "device": "gpu",
+   "variant": "d160_truss-supports",
+   "repeats": 2,
+   "dofs": 412,
+   "bodies": 216,
+   "d6": 206,
+   "frame_idle_ms": 81.23785100178793,
+   "frame_push_ms": 77.72549799847184,
+   "frame_push_p95_ms": 101.95415124981082,
+   "physics_ms": 67.5581512550707,
+   "render_static_ms": 8.145353247527964,
+   "sync_dynamic_ms": 5.534346499189269,
+   "fps_idle": 12.822301696963123,
+   "spread_physics_pct": 24.91852160832986,
+   "gpu_memory_mib": 3705.0,
+   "rss_mib": 5110.45703125
+  },
+  {
+   "device": "gpu",
+   "variant": "g206",
+   "repeats": 2,
+   "dofs": 412,
+   "bodies": 255,
+   "d6": 206,
+   "frame_idle_ms": 85.7587547507137,
+   "frame_push_ms": 89.03567674860824,
+   "frame_push_p95_ms": 120.48529506937484,
+   "physics_ms": 66.02209425182082,
+   "render_static_ms": 6.013998005073518,
+   "sync_dynamic_ms": 13.72266249381937,
+   "fps_idle": 12.057379193525275,
+   "spread_physics_pct": 29.96962111847661,
+   "gpu_memory_mib": 3677.0,
+   "rss_mib": 5188.318359375
+  },
+  {
+   "device": "gpu",
+   "variant": "p160_b120_blend",
+   "repeats": 2,
+   "dofs": 232,
+   "bodies": 191,
+   "d6": 116,
+   "frame_idle_ms": 63.887526994221844,
+   "frame_push_ms": 63.329189011710696,
+   "frame_push_p95_ms": 84.64081904749037,
+   "physics_ms": 45.394195993139874,
+   "render_static_ms": 5.70701824472053,
+   "sync_dynamic_ms": 12.78631275636144,
+   "fps_idle": 16.29382254266201,
+   "spread_physics_pct": 31.785285915668045,
+   "gpu_memory_mib": 3656.5,
+   "rss_mib": 5155.267578125
+  },
+  {
+   "device": "gpu",
+   "variant": "p160_b40_blend",
+   "repeats": 2,
+   "dofs": 80,
+   "bodies": 115,
+   "d6": 40,
+   "frame_idle_ms": 42.67324775719317,
+   "frame_push_ms": 41.65739275777014,
+   "frame_push_p95_ms": 58.13847630124655,
+   "physics_ms": 25.63133575313259,
+   "render_static_ms": 5.861673242179677,
+   "sync_dynamic_ms": 11.1802387618809,
+   "fps_idle": 24.87638422815101,
+   "spread_physics_pct": 41.14862606072079,
+   "gpu_memory_mib": 3690.5,
+   "rss_mib": 5085.2421875
+  },
+  {
+   "device": "gpu",
+   "variant": "p160_b60_blend",
+   "repeats": 2,
+   "dofs": 120,
+   "bodies": 135,
+   "d6": 60,
+   "frame_idle_ms": 47.90655100077856,
+   "frame_push_ms": 48.704835506214295,
+   "frame_push_p95_ms": 67.27911393682007,
+   "physics_ms": 31.78487050900003,
+   "render_static_ms": 8.616647995950188,
+   "sync_dynamic_ms": 7.505032495828345,
+   "fps_idle": 21.93600251148655,
+   "spread_physics_pct": 42.9724135179205,
+   "gpu_memory_mib": 3690.5,
+   "rss_mib": 5082.2265625
+  }
+ ],
+ "fits": {
+  "cpu": {
+   "intercept_ms": 0.11406988191017632,
+   "ms_per_dof": 0.0027600735232399323,
+   "ms_per_body": 0.0411629997077771,
+   "r2": 0.994611782790446,
+   "loo_mean_abs_pct": 7.219407851158498,
+   "points": 5,
+   "terms": "dof+bodies"
+  },
+  "gpu": {
+   "intercept_ms": 16.58055036817445,
+   "ms_per_dof": 0.12220373879083732,
+   "ms_per_body": 0.0,
+   "r2": 0.9984745944891569,
+   "loo_mean_abs_pct": 2.7822076454660136,
+   "points": 5,
+   "terms": "dof"
+  }
+ },
+ "budgets": {
+  "cpu": {
+   "60fps": {
+    "frame_ms": 16.666666666666668,
+    "overhead_ms": 8.256004854047205,
+    "max_dofs": 256.72022579160245,
+    "max_d6": 128.36011289580122
+   },
+   "20fps": {
+    "frame_ms": 50.0,
+    "overhead_ms": 8.256004854047205,
+    "max_dofs": 2190.9882500194303,
+    "max_d6": 1095.4941250097152
+   }
+  },
+  "gpu": {
+   "60fps": {
+    "frame_ms": 16.666666666666668,
+    "overhead_ms": 17.01465674850624,
+    "max_dofs": -138.52718924572955,
+    "max_d6": -69.26359462286477
+   },
+   "20fps": {
+    "frame_ms": 50.0,
+    "overhead_ms": 17.01465674850624,
+    "max_dofs": 134.24133374018604,
+    "max_d6": 67.12066687009302
+   }
+  }
+ },
+ "hardware": {
+  "cpu": "13th Gen Intel(R) Core(TM) i9-13900HK",
+  "cores": 20,
+  "python": "3.10.15"
+ },
+ "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU"
+}

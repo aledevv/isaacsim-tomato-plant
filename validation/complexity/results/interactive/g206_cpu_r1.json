@@ -1,0 +1,103 @@
+{
+ "schema_version": "autotom_interactive_bench/1.0",
+ "usd": "g206.usda",
+ "physics": {
+  "solver": "TGS",
+  "gpu_dynamics": false,
+  "context_solver": "TGS",
+  "context_gpu_dynamics": false,
+  "threads": null,
+  "requested": {
+   "solver": "TGS",
+   "device": "cpu"
+  }
+ },
+ "regime": {
+  "physics_hz": 60,
+  "render_hz": 60,
+  "gui": true,
+  "viewport": [
+   1600,
+   900
+  ],
+  "pacing": "none (capacity)"
+ },
+ "model": {
+  "rigid_bodies": 255,
+  "dofs": 412,
+  "joints": {
+   "d6": 206,
+   "fixed": 49
+  },
+  "collision_shapes": 694,
+  "visible_triangles": 268214,
+  "visible_mesh_prims": 486
+ },
+ "load_seconds": 1.0876266160048544,
+ "phases": {
+  "idle": {
+   "frames": 600,
+   "mean_ms": 19.99888110876782,
+   "p50_ms": 19.58289201138541,
+   "p95_ms": 23.730667144991457,
+   "p99_ms": 26.787671934289385,
+   "fps_p50": 51.06498056663971,
+   "budget_60fps_p50": 1.1749735206831247,
+   "budget_20fps_p50": 0.3916578402277082
+  },
+  "push": {
+   "frames": 600,
+   "mean_ms": 20.05788785851716,
+   "p50_ms": 19.72874900093302,
+   "p95_ms": 23.53301109251333,
+   "p99_ms": 28.437096141860817,
+   "fps_p50": 50.68745108738053,
+   "budget_60fps_p50": 1.1837249400559813,
+   "budget_20fps_p50": 0.3945749800186604
+  },
+  "paused": {
+   "frames": 300,
+   "mean_ms": 5.537030187163812,
+   "p50_ms": 5.560193516430445,
+   "p95_ms": 5.995705416717101,
+   "p99_ms": 6.1941312416456595,
+   "fps_p50": 179.84985541330295,
+   "budget_60fps_p50": 0.3336116109858267,
+   "budget_20fps_p50": 0.1112038703286089
+  },
+  "physics": {
+   "frames": 600,
+   "mean_ms": 11.133083603150832,
+   "p50_ms": 11.064384510973468,
+   "p95_ms": 11.755756604543421,
+   "p99_ms": 12.213317608984651,
+   "fps_p50": 90.38008386351875,
+   "budget_60fps_p50": 0.6638630706584081,
+   "budget_20fps_p50": 0.22128769021946937
+  }
+ },
+ "memory": {
+  "rss_mib": 5012.91015625,
+  "gpu": {
+   "name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+   "driver": "575.57.08",
+   "memory_used_mib": 3623,
+   "memory_total_mib": 12282
+  }
+ },
+ "hardware": {
+  "cpu": "13th Gen Intel(R) Core(TM) i9-13900HK",
+  "cores": 20,
+  "python": "3.10.15"
+ },
+ "probes": {
+  "lateral_tip": "Branch_s2_o1_g421414_Link_04_Internode_g421675/TerminalForkYoungLeaf",
+  "truss_tip": "Truss_r5_o0_g421786_rachis_Link_07_TrussRachis_g421786_s07/OrganicVisual_07",
+  "leaf_blade": "LeafVisual_g421545_rachis_terminal_03/LeafBlade"
+ },
+ "breakdown_ms_p50": {
+  "physics": 11.064384510973468,
+  "render_static": 5.560193516430445,
+  "sync_and_dynamic_render": 2.9583139839814976
+ }
+}
