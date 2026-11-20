@@ -19,7 +19,7 @@ simulation:
   solver_velocity_iterations: 4
   fruit_solver_position_iterations: 32   # only used when fruits.mode is physical
   fruit_solver_velocity_iterations: 1
-  gpu_dynamics: true            # false runs PhysX on the CPU
+  gpu_dynamics: false           # true runs PhysX on the GPU (slower for one plant)
 
 joints:
   # One articulation in Isaac Sim 4.5 handles about 220 D6 joints well and

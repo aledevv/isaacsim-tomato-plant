@@ -40,7 +40,7 @@ DEFAULT_PHYSICS: dict[str, Any] = {
         "solver_velocity_iterations": 4,
         "fruit_solver_position_iterations": 32,
         "fruit_solver_velocity_iterations": 1,
-        "gpu_dynamics": True,
+        "gpu_dynamics": False,
     },
     "joints": {
         "joint_target": 220,
